@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" 
+    Inherits="hypeproject.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
+     <%--datatable css--%>
+    <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--fontawesome css--%>
+    <link href="bootstrap/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.google.com/icons" rel="icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css" rel="stylesheet"/>
+
+
+     <%--Custom css--%>
+    
+
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-git.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/css/bootstrap1.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+          <nav class="navbar navbar-inverse">
+              <div class="container-fluid"> 
+                <div class ="navbar header">
+                  <a href="homepage.aspx">  <img  src="images/980385239.png" style="border: none;max-width: 100px;height: auto;"/>
+                   </a>
+               </div>
+            <div class="nav navbar-nav navbar-right"  >
+                       <!--<a href="userregister.aspx"  class="btn btn-primary active" aria-current="page" style="text-align:end;">Join Now</a> -->
+                       <div class="form-group" style="display:flex;">
+                           <a href="login.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW"/></a>
+
+                           <%--<asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
+
+                         
+              
+           
+                   <label for="Language"></label>
+                   <select name="Languge" id="Languge">
+                       <option value="English">English</option>
+                       <option value=" Arabic "> Arabic </option>
+                       <option value="Bangali">Bangali</option>
+                       <option value="Bulgarian">Bulgarian</option>
+                       <option value="Chinese">Chinese</option>
+                       <option value="English">English</option>
+                       <option value="French">French</option>
+                       <option value="German">German</option>
+                       <option value="Hebrew">Hebrew</option>
+                       <option value="Hindi">Hindi</option>
+                       <option value="Italian">Italian</option>
+                       <option value="Hindi">Hindi</option>
+                       <option value="Japanese">Japanese</option>
+                       <option value="Polish">Polish</option>
+                       <option value="Romanian">Romanian</option>
+                       <option value="Russian">Russian</option>
+                       <option value="Spanish">Spanish</option>
+                       <option value="Swedish">Swedish</option>
+                       <option value="Thai">Thai</option>
+                       <option value="Turkish">Turkish</option>
+                       <option value="Urdu">Urdu</option>
+                       <option value="Vietnamese">Vietnamese</option>
+                    </select>
+                           </div>
+                 </div>
+                  </div>
+         </nav>
+      <hr style="border-top: solid 1px lightgray;" /> 
+        <!--HEADER AND NAVIGATION PART ENDS-->
+
+                
+      
+
+
+        <%--maincontent placeholder--%>
+        <div>
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+        </div>
+        <%--maincontent placeholder--%>
+        </form>
+    <footer style="background-color:black;box-sizing:border-box;" >
+                   <div class="row">
+
+                       <div class="col-md-6">
+
+                          <div class="row">
+                           <div class="col-md-2"></div>
+        
+                            <div class="col-md-9">
+                              <div class="logofoot">
+                                  <img src="images/980385239.png" />
+                                 <p style="color:silver">
+                                        Aenean sodales mattis augue. Morbi euismod, felis at volutpat volutpat, quam lectus porttitor massa, tur ex a neque pulvinar pulvinar.
+                                       </p>
+                                   </div>
+                                   </div>
+                                         <div class="col-md-1"></div>
+                             </div>
+                      </div>
+        
+                       <div class="col-md-6">
+                           <div class="foot">
+                               <div class="row">
+                          <div class="col-md-3">
+                          <div class=" footer-col1" style="color:darkgray">			
+				             <h6> My Account</h6>
+				              <ul style="list-style:none;">
+					           <li><a href="#">Login</a></li>
+					           <li><a href="#">Register</a></li>
+				                </ul>
+                          </div>
+			              </div>
+                           <div class="col-md-3">
+			                   <div class="footer-col2" style="color:darkgray">
+				                 <h6>Helpful Links</h6>
+				                  <ul style="list-style:none;">
+					                <li><a href="#">Blog</a></li>
+					                 <li><a href="#">Feedback</a></li>
+					                      <li><a href="#">Contact</a></li>
+				                      </ul>
+			                       </div>
+                                 </div>
+                         <div class="col-md-3">
+			                    <div class="footer-col3" style="color:darkgray">
+				                   <h6>Information</h6>
+				                    <ul style="list-style:none;">
+					                 <li><a href="#">FAQ</a></li>
+					                 <li><a href="#">Testinomials</a></li>
+				                   </ul>
+			                   </div>
+                         </div>
+                   </div>
+               </div>
+             </div>
+        
+  
+                    <div class="footer2">
+
+                           <div class="row">
+                              <div class="col-md-6"> 
+                                        <h8 style="color:white">&nbsp; &nbsp; &nbsp;&copy; 2023 Socius IGB Pvt Ltd, All right reserved</h8>
+                                        </div>
+                                        <div class="col-md-5" style="margin-left:800px;">
+                                            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>&nbsp;
+                                            &nbsp; <a href="https://twitter.com/" class="fa fa-twitter"></a>&nbsp;
+                                            &nbsp; <a href="https://www.instagram.com/" class="fa fa-instagram"></a>&nbsp;
+                                            &nbsp;<a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>&nbsp;
+                                            &nbsp; <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>&nbsp;
+                                            &nbsp;  <a href="https://www.youtube.com/" class="fa fa-youtube"></a>&nbsp;
+                                        </div>
+                                    </div>
+
+
+                               
+                               </div>
+    </footer>
+</body>
+
+
+</html>
