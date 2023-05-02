@@ -4,21 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="Site1.Master" rel="master"/>
      <%--bootstrap css--%>
     <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
      <%--fontawesome css--%>
     <link href="bootstrap/css/fontawesome.min.css" rel="stylesheet" />
-    <link href="https://fonts.google.com/icons" rel="icons" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css" rel="stylesheet" />
-    <link href="https://feathericons.com/" rel="icons" />
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" rel="icons" />
     
      <%--Custom css--%>
     
@@ -30,56 +25,174 @@
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="bootstrap/css/bootstrap1.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title></title>
     <style>
-       
-        body {
-  margin: 0;
-  width:100%;
-  height:100%;
+        /*header*/
+
+.topbar {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
+    width:100%;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr 1fr;
+    align-items: center;
+    z-index: 1;
 }
 
-ul {
-  list-style-type: none;
+.logo {
+   
+    border-right: 1px solid #e0e0e0;
+    justify-content: center;
+    height: 80px;
+    padding-top: 10px;
+    width: 200px;
+}
+
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+    
+
+.selectlang {
+    float: right;
+    padding-right: 30px;
+    border-left: 1px solid #e0e0e0;
+    padding-top: 20px;
+    padding-left: 30px;
+    height: 82px;
+}
+
+#langbtn {
+    border: none;
+    background-color: #444444;
+    width: 120px;
+    height: 40px;
+    border-radius: 4px 4px;
+    color: white;
+}
+
+option {
+    background-color: white;
+    box-sizing: border-box;
+    color: black;
+}
+
+#langbtn:hover {
+    background-color: #314cc6;
+}
+
+/*letf drop*/
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.sidebar {
   margin: 0;
   padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
+  width: 200px;
+  background-color: white;
   position: relative;
-  height: 100%;
-  overflow: scroll;
-  float:left;
-
+  height: 175%;
+  overflow: auto;
+  padding-top:100px;
+  border-spacing:5px;
 }
 
-li a {
+.sidebar a {
   display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration-color: blue;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: gray;
+  color: lightblue;
 }
 
-li a.active {
-  
+.sidebar a:hover:not(.active) {
+  background-color: #555;
   color: gray;
-            height: 40px;
-            width: 247px;
-        }
+}
 
-li a:hover:not(.active) {
-  background-color: gray;
-  color: white;
+div.content {
+  margin-left: 0px;
+  padding: 1px 0px;
+  height: 500px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }
 .container1{
     display: flex;
     flex-wrap: wrap;
-    padding:1px 1px 1px 1px;
+   
+    padding: 10px;
 }
 .word-box {
     background-color: white;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .10);
     border-radius: 4px;
-    padding: 30px;
+    padding: 10px;
     margin-right: 30px;
     margin-bottom: 30px;
     display: flex;
@@ -87,7 +200,7 @@ li a:hover:not(.active) {
     align-items: center;
     flex: 1 1 calc(25% - 30px);
     height: 150px;
-    cursor: default;
+    cursor: pointer;
     transition: .3s;
 }
 
@@ -99,149 +212,163 @@ li a:hover:not(.active) {
 }
 
 /*graph*/
-.dashboard-box main-box-in-row{
-    display: block;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
-    margin-top: 30px;
-    position: relative;
+.chart-container {
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  
 }
-.dashboard-box .headline {
-    display: flex;
-    align-items: center;
-    padding: 20px 30px;
-    border-bottom: 1px solid #e4e4e4;
-    position: relative;
+#myChart {
+  width: 50%;
+  height: auto;
 }
-.chartjs-size-monitor{
-    position: absolute;
-    inset: 0px;
-    overflow: hidden;
-    pointer-events: none;
-    visibility: hidden;
-    z-index: -1;
+/*footer*/
+.fa {
+  padding: 0px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
 }
-element.style {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    pointer-events: none;
-    visibility: hidden;
-    z-index: -1;
+
+.fa:hover {
+    opacity: 0.7;
 }
-element.style {
-    position: absolute;
-    width: 1000000px;
-    height: 1000000px;
-    left: 0;
-    top: 0;
+
+.fa-facebook {
+  color: gray;
 }
-element.style {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    pointer-events: none;
-    visibility: hidden;
-    z-index: -1;
+
+.fa-twitter {
+  color: gray;
 }
-element.style {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    left: 0;
-    top: 0;
+
+.fa-instagram {
+  color: gray;
+}
+
+.fa-linkedin {
+  color: gray;
+}
+
+.fa-pinterest {
+  color: gray;
+}
+
+.fa-youtube {
+  color: gray;
+}
+/*menu*/
+.btn {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:100px 100px 100px 100px;
+}
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: gray;
 }
 </style>
 </head>
 
 <body>
     <form id="form1" runat="server">
-        <div id="Container">
-            <div id="row">
-                <div id="col-4">
-                    <div id="col-md-1" style="display:flex">
-                        <imagebutton>
-                            <img width="150"src="images/980385239.png" />
-                        </imagebutton>
-                        <div id="col-md-2" style="margin-left:100px;padding:0%"> 
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            <button> <i class='fas fa-align-justify'></i></button>
-                       </div>
-                        <div id="col-md-3" style="margin-left:500px;display:flex;padding-top:10px">
-                           <label>
-                               <i class='far fa-user-circle' style='font-size:40px;color:gray;height:10px;border-style:none;    padding: 10px'></i>
-                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">AI Images</a>
-                                <a class="dropdown-item" href="#">AI Chat</a>
-                                <a class="dropdown-item" href="#">Speech to Text</a>
-                                <a class="dropdown-item" href="#">AI Code</a>
-                                <a class="dropdown-item" href="#">All Documents</a>
-                                <a class="dropdown-item" href="#">Membership</a>
-                                <a class="dropdown-item" href="#">Account Setting</a>
-                                <a class="dropdown-item" href="#">Logout</a>
-                                </div>
-                               
-                           </label> 
+        <header>
+            <div class="topbar">
+                    <div class="logo">
+                            <img src="images\980385239.png" />
+                    </div> 
+                        <div>
+                            <button><i class="fa fa-bars"></i></button>
+                        </div>    
+
+                <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                      </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                      </div>
+                    </div>
+               
+               
+
+
+
+
+
+
+
+
+                     <div class="selectlang">
+                         <select  id="langbtn" class="popup-with-zoom-anim button ripple-effect">
+                    <option value="EN">English</option>
+                     <option value="Ta">Tamil</option>
+                     <option value="Te">Telugu</option>
+                     <option value="HI">Hindi</option>
+                </select>
+                    </div>
+                 </div>
+        </header>
+            
+<div class="content">
+    <div class="content">
+           <div class="sidebar" style="position:relative;float:left">
+    
+                      <h5>&nbsp;My Account</h5>   
+                        <span>
+                            <a class="active" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+
+                        </span>
+                      <div class="dropdown">
+                        <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="true"></i>My Documents</a>
+                          <div id="myDropdown" class="dropdown-content" >
+                                   <a href="#">All Documents</a>
+                                   <a href="#">All AI Images</a>
+                              </div>
                             </div>
-                   
-                    <div class="dropdown" >
-                        &nbsp; &nbsp; &nbsp; 
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="height:35px;width:50px;float:right;color:white;background-color:black;">
-     en
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">English</a>
-      <a class="dropdown-item" href="#">Hindi</a>
-      <a class="dropdown-item" href="#">Kannada</a>
-
-    </div>
-  </div>
-  </div>
-</div>
-</div>
+                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
+                      <a href="#"><i class="fa fa-bars"></i> Templates</a>
+                      <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                      <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                      <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
+                      <h5>&nbsp;Account</h5> 
+                      <div class="dropdown">
+                        <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
+                          <div id="myDropdown1" class="dropdown-content" >
+                                   <a href="#">Affiliate Programs</a>
+                                   <a href="#">Withdrawals</a>
+                              </div>
+                            </div>                 
+                      <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                      <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+                      <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
-<div>
-    <ul>
-  <h6> My Account</h6>
-  <label><li><a class="active" href="dashboard.aspx">Dashboard</a></li>
-      
-  </label>
-        <div class="click">
-  <li style="height: 52px; width: 247px"><a href="#news">My Documents</a></li>
-  <h6>Organize and Manage</h6>
-  <li><a href="#contact">Templates</a></li>
-  <li><a href="#about">Ai Images</a></li>
-  <li><a href="#about">Ai Chat</a></li>
-  <li><a href="#about">Speech to Text</a></li>
-  <li><a href="#about">AI code</a></li>
-  <h6> Account</h6>
-  <li><a href="#contact">Affiliate Program</a></li>
-  <li><a href="#about">Membership</a></li>
-  <li><a href="#about">Transactions</a></li>
-  <li><a href="#about">Account Setting</a></li>
-  <li><a href="#about">Logout</a></li>
-</ul>
-</div>
-            <div id="left">
-            <h3>Dashboard</h3>
-                </div>
-<div id="right">
-   <ol style="float:right;list-style:none">
-  
-  
-  <li><a class="active" href="C:\Users\SIGB\source\repos\hypeproject\hypeproject\homepage.aspx">Home>Dashboard<br /></a></li>
-  </ol>
-
-</div>
-  <br /><br /><br />
-            <div class="container1">
+        <div class="word-box">
+            <div class="word-text">
+                        <h2>&nbsp;Dashboard</h2> </div>
+            </div>
+       <div class="word-text">
+                        <a style="float:right;padding-left:800px" href="homepage.aspx">Home>Dashboard</a>
+            </div>
+       <div class="container1">
       <div class="word-box">
           <div class="word-text">
                     <span>Words Used&nbsp; &nbsp;&nbsp; &nbsp; <br /><b>0/10,000</b></span>
@@ -264,65 +391,143 @@ element.style {
               <img style="float:right;" src="images/music.png" />
                </div>
 
-</div>  
-
-        
 </div>
-        <div>
-
-        </div>
-        
-     <div>
-         <%--graph--%>
-         <div class="dashboard-box main-box-in-row">
-                <div class="headline">
-                    <h6> Word used this Month</h6>
+  <div>
+        <h6><img width="40px" src="images/image%20used.PNG" />Words used this Month</h6>
+       <canvas id="chart" style="display: block; height:300px; width: 950px;" class="chartjs-render-monitor"></canvas>
+       </div>
+</div>
+        <footer>
+            <div style="float:left;margin-left:250px">
+                
+            <h6><br />2023 Socius IGB Pvt Ltd, All right reserve</h6>
+           <div style="float:right">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-youtube"></a>
+</div> 
                 </div>
-                <div class="content">
-                    <!-- Chart -->
-                    <div class="chart">
-                        <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; 
-overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                            <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;
-overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
-                                    </div></div>
-                            <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                <div style="position:absolute;width:50%;height:50%;left:0; top:0">
-                                    </div></div></div>
-<canvas id="chart" width="379" height="170" style="display: block; height: 189px; width: 422px;" 
-class="chartjs-render-monitor">
-</canvas>
-</div>
-</div>
-</div>
 
+        </footer>
 
-     </div>
     </form>
-
-</body>
+    
     <script>
-        let ul = document.querySelector("ul");
-        let ul = document.querySelector("ul");
-        sidebarBtn.onclick = function () {
-            sidebar.classList.toggle("active");
-            if (sidebar.classList.contains("active")) {
-                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-            } else
-                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        
+                    }
+                }
+            }
         }
     </script>
+   
     <script>
-        $(document).ready(function () {
-  $("button").click(function() {
-      $("li").toggle();
-    if ($.trim($(this).text()) == 'Hide') {
-      $(this).text('Show');
-    } else {
-      $(this).next('Hide');
-    }
-  });
-});
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction1() {
+            document.getElementById("myDropdown1").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+
+                    }
+                }
+            }
+        }
     </script>
+    
+<script>
+    Chart.defaults.global.defaultFontColor = '#888';
+    Chart.defaults.global.defaultFontSize = '18';
+
+    var ctx = document.getElementById('chart').getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ["01 Apr", "02 Apr", "03 Apr", "04 Apr", "05 Apr", "06 Apr", "07 Apr", "08 Apr", "09 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr"],
+            // Information about the dataset
+            datasets: [{
+                label: "Words Used",
+                backgroundColor: '#18469815',
+                borderColor: '#184698',
+                borderWidth: "3",
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                pointRadius: 5,
+                pointHoverRadius: 5,
+                pointHitRadius: 10,
+                pointBackgroundColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointBorderWidth: "2",
+            }]
+        },
+
+        // Configuration options
+        options: {
+            layout: {
+                padding: 10,
+            },
+            legend: { display: false },
+            title: { display: false },
+            scales: {
+                yAxes: [{
+                    scaleLabel: {
+                        display: false
+                    },
+                    gridLines: {
+                        borderDash: [5, 8],
+                        color: "#d8d8d8",
+                        lineWidth: 1,
+                    },
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                xAxes: [{
+                    scaleLabel: { display: false },
+                    gridLines: { display: false },
+                }],
+            },
+            tooltips: {
+                backgroundColor: '#333',
+                titleFontSize: 13,
+                titleFontColor: '#fff',
+                bodyFontColor: '#fff',
+                bodyFontSize: 13,
+                displayColors: false,
+                xPadding: 10,
+                yPadding: 10,
+                intersect: false
+            }
+        },
+    });
+
+</script>
+</body>
+    
 </html>

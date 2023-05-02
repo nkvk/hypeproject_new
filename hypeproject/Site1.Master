@@ -17,10 +17,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css" rel="stylesheet"/>
 
 
-     <%--Custom css--%>
     
-
-
     <%--jquery--%>
     <script src="bootstrap/js/jquery-git.js"></script>
     <%--popper js--%>
@@ -43,7 +40,7 @@
             <div class="nav navbar-nav navbar-right"  >
                        <!--<a href="userregister.aspx"  class="btn btn-primary active" aria-current="page" style="text-align:end;">Join Now</a> -->
                        <div class="form-group" style="display:flex;">
-                           <a href="login.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW"/></a>
+                           <a href="login.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW" style="color:white;background-color:blue"/></a>
 
                            <%--<asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
 
@@ -51,7 +48,7 @@
               
            
                    <label for="Language"></label>
-                  <%-- <select name="Languge" id="Languge">
+                <select name="Languge" id="Languge">
                        <option value="English">English</option>
                        <option value=" Arabic "> Arabic </option>
                        <option value="Bangali">Bangali</option>
@@ -74,7 +71,7 @@
                        <option value="Turkish">Turkish</option>
                        <option value="Urdu">Urdu</option>
                        <option value="Vietnamese">Vietnamese</option>
-                    </select>--%>
+                    </select>
                            </div>
                  </div>
                   </div>
@@ -153,15 +150,15 @@
 
                            <div class="row">
                               <div class="col-md-6"> 
-                                        <h8 style="color:white">&nbsp; &nbsp; &nbsp;&copy; 2023 Socius IGB Pvt Ltd, All right reserved</h8>
+                                        <h8 style="color:white;margin-left:50px;">&copy; 2023 Socius IGB Pvt Ltd, All right reserved</h8>
                                         </div>
-                                        <div class="col-md-5" style="margin-left:800px;">
-                                            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>&nbsp;
-                                            &nbsp; <a href="https://twitter.com/" class="fa fa-twitter"></a>&nbsp;
-                                            &nbsp; <a href="https://www.instagram.com/" class="fa fa-instagram"></a>&nbsp;
-                                            &nbsp;<a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>&nbsp;
-                                            &nbsp; <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>&nbsp;
-                                            &nbsp;  <a href="https://www.youtube.com/" class="fa fa-youtube"></a>&nbsp;
+                                        <div class="col-md-5" style="margin-left:1050px;">
+                                            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                                            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                                             <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                                            <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+                                           <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
+                                            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
                                         </div>
                                     </div>
 
