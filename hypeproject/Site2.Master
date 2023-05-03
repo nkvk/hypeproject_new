@@ -1,11 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="hypeproject.WebForm4" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="hypeproject.Site2" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-    <link href="Site1.Master" rel="master"/>
-     <%--bootstrap css--%>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--bootstrap css--%>
     <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -285,11 +287,17 @@ div.content {
   border-radius: 1px;
 }
 </style>
-</head>
 
+</head>
 <body>
     <form id="form1" runat="server">
-        <header>
+        <div>
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <header>
             <div class="topbar">
                     <div class="logo">
                             <img src="images\980385239.png" />
@@ -425,10 +433,54 @@ div.content {
 <a href="#" class="fa fa-youtube"></a>
 </div> 
                 </div>
+    
+    
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
-    
-    
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+
+                    }
+                }
+            }
+        }
+    </script>
+   
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction1() {
+            document.getElementById("myDropdown1").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+
+                    }
+                }
+            }
+        }
+    </script>
     
 <script>
     Chart.defaults.global.defaultFontColor = '#888';
@@ -499,8 +551,5 @@ div.content {
     });
 
 </script>
-    <%-- menu hide --%>
-    
 </body>
-    
 </html>
