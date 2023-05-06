@@ -35,6 +35,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title></title>
     <style>
+        /*toggle*/
+
         /*header*/
 
 .topbar {
@@ -133,15 +135,15 @@ option {
 
 .show {display: block;}
 .sidebar {
-  margin: 0;
-  padding: 0;
   width: 200px;
   background-color: white;
-  position: relative;
-  height: 175%;
-  overflow: auto;
+  height:calc(100% - 95px);
   padding-top:100px;
   border-spacing:5px;
+  position: fixed;
+  background: #fff;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
 
 .sidebar a {
@@ -164,7 +166,7 @@ option {
 div.content {
   margin-left: 0px;
   padding: 1px 0px;
-  height: 500px;
+
 }
 
 @media screen and (max-width: 700px) {
@@ -177,7 +179,7 @@ div.content {
   div.content {margin-left: 0;}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 200px) {
   .sidebar a {
     text-align: center;
     float: none;
@@ -276,7 +278,8 @@ div.content {
   background-color: gray;
 }
 /*menu toggle*/
-.sidebar .navbar-toggler .icon-bar {
+.sidebar .navbar-toggler .icon-bar .chart-container 
+#myChart {
   margin: 7px;
   display: block;
   width: 22px;
@@ -288,7 +291,8 @@ div.content {
 </head>
 
 <body>
-    <form id="form1" runat="server">
+       <form id="form1" runat="server">
+         
         <header>
             <div class="topbar">
                     <div class="logo">
@@ -296,7 +300,7 @@ div.content {
                     </div> 
                         <div>
                             <nav style="margin-left:200px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
-                            <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="false" aria-label="Toggle navigation">
+                            <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
                                 <span class="fa fa-bars"></span>
 
                             </button>
@@ -317,41 +321,30 @@ div.content {
                           <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-                          <a class="dropdown-item" href="#" target="_blank"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                          <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
-               
-               
-
-
-
-
-
-
-
-
-                     <div class="selectlang">
+                        <div class="selectlang">
                          <select  id="langbtn" class="popup-with-zoom-anim button ripple-effect">
-                    <option value="EN">English</option>
-                     <option value="Ta">Tamil</option>
-                     <option value="Te">Telugu</option>
-                     <option value="HI">Hindi</option>
-                </select>
+                            <option value="EN">English</option>
+                            <option value="Ta">Tamil</option>
+                            <option value="Te">Telugu</option>
+                            <option value="HI">Hindi</option>
+                          </select>
                     </div>
                  </div>
         </header>
             
 <div class="content">
-           <div class="sidebar" style="position:relative;float:left">
+           <div class="sidebar" style="position:relative;float:left;width:300px">
     
-                      <h5>&nbsp;My Account</h5>   
-                        <span>
-                            <a class="active" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-
+                      <h5>&nbsp;My Account</h5>  
+                         <span>
+                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
                         </span>
                       <div class="dropdown">
-                        <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="true"></i>My Documents</a>
+                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
                           <div id="myDropdown" class="dropdown-content" >
                                    <a href="#">All Documents</a>
                                    <a href="#">All AI Images</a>
@@ -373,15 +366,16 @@ div.content {
                             </div>                 
                       <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                       <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
-                      <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                      <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
+    </div>
         <div class="word-box">
             <div class="word-text">
                         <h2>&nbsp;Dashboard</h2> </div>
             </div>
        <div class="word-text">
-                        <a style="float:right;padding-left:800px" href="homepage.aspx">Home>Dashboard</a>
+                        <button style="margin-left:800px;background-color:black" ><a style="color:white" href="homepage.aspx">Home>Dashboard</a></button>
             </div>
        <div class="container1">
       <div class="word-box">
@@ -412,21 +406,64 @@ div.content {
        <canvas id="chart" style="display: block; height:300px; width: 950px;" class="chartjs-render-monitor"></canvas>
        </div>
 </div>
+    <footer>
         <div style="float:left;margin-left:100px">
                 
             <h6>2023 Socius IGB Pvt Ltd, All right reserve</h6>
-                </div>
+         </div>
            <div style="float:right;margin-left:400px">
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-linkedin"></a>
-<a href="#" class="fa fa-pinterest"></a>
-<a href="#" class="fa fa-youtube"></a>
-</div> 
-                </div>
+                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+           </div> 
+</footer>
     </form>
-    
+     <script>
+         /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function (event) {
+             if (!event.target.matches('.dropbtn')) {
+                 var dropdowns = document.getElementsByClassName("dropdown-content");
+                 var i;
+                 for (i = 0; i < dropdowns.length; i++) {
+                     var openDropdown = dropdowns[i];
+                     if (openDropdown.classList.contains('show')) {
+
+                     }
+                 }
+             }
+         }
+     </script>
+   
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction1() {
+            document.getElementById("myDropdown1").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+
+                    }
+                }
+            }
+        }
+    </script>
     
 
     
@@ -500,6 +537,15 @@ div.content {
 
 </script>
     <%-- menu hide --%>
+    <script>
+        $("#nav-btn").on("click", function () {
+                $(".sidebar").toggle();
+            $(".main").toggleClass();
+
+    });
+    </script>
+    
+
     
 </body>
     

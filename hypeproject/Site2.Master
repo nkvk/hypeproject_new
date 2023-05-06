@@ -551,5 +551,13 @@ div.content {
     });
 
 </script>
+    <script>
+
+        $("#nav-btn").on("click", function () {
+            $(".sidebar").toggle();
+            $(".content").toggleClass();
+
+        });
+    </script>
 </body>
 </html>

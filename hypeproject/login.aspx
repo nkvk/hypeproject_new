@@ -34,8 +34,7 @@
                   <div class="row">
                      <div class="col">
                        
-                     <%-- style for icon--%>
-   
+                   
                      
                         <div class="form-group">
                             
@@ -49,6 +48,7 @@
                         <div class="form-group">
                             <asp:Button  class="btn btn-info btn-block btn-lg" style="left:80%;float:right;background-color:blue;color:white" ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" /> <span><a href="" target="_blank"/></a></span>
                         </div>
+                         
                      </div>
                   </div> 
                </div>
@@ -57,6 +57,9 @@
          </div>
       </div>
    </div>
+    <div style="padding:100px 100px">
+
+                         </div>
 
 
 

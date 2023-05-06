@@ -93,8 +93,8 @@
     <Content Include="dashboard.aspx" />
     <Content Include="account setting.aspx" />
     <Content Include="WebForm5.aspx" />
-    <Content Include="dash1.aspx" />
-    <Content Include="WebForm6.aspx" />
+    <Content Include="membership.aspx" />
+    <Content Include="membership price.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="homepage.aspx.cs">
@@ -169,19 +169,19 @@
     <Compile Include="WebForm5.aspx.designer.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dash1.aspx.cs">
-      <DependentUpon>dash1.aspx</DependentUpon>
+    <Compile Include="membership.aspx.cs">
+      <DependentUpon>membership.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dash1.aspx.designer.cs">
-      <DependentUpon>dash1.aspx</DependentUpon>
+    <Compile Include="membership.aspx.designer.cs">
+      <DependentUpon>membership.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm6.aspx.cs">
-      <DependentUpon>WebForm6.aspx</DependentUpon>
+    <Compile Include="membership price.aspx.cs">
+      <DependentUpon>membership price.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm6.aspx.designer.cs">
-      <DependentUpon>WebForm6.aspx</DependentUpon>
+    <Compile Include="membership price.aspx.designer.cs">
+      <DependentUpon>membership price.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

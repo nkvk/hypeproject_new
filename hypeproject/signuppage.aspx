@@ -2,11 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+    <div class="container" style="width:100%">
                              <div class="row">
                              <div class="col">
                                  <h3>Register</h3>
-                                 <a href="homepage.aspx"><asp:Button  style="left:80%;float:right;background-color:blue;color:white" ID="Button3" runat="server" Text="Home>Register" /></a> 
+                                 <a href="C:\Users\SIGB\source\repos\hypeproject\hypeproject\homepage.aspx"><asp:Button  style="left:80%;float:right;background-color:blue;color:white" ID="Button3" runat="server" Text="Home>Register" /></a> 
                              </div>
 </div>
                          </div>
@@ -49,7 +49,7 @@
 
                         <div class="form-group">
                         
-                            <asp:Button Class="btn btn-success btn-block btn-lg" ID="Button2" runat="server" Text="REGISTER" OnClick="Button2_Click" />
+                            <asp:Button Class="btn btn-success btn-block btn-lg" style="background-color:blue" ID="Button2" runat="server" Text="REGISTER" OnClick="Button2_Click" />
                         </div>
                      </div>
                   </div> 
@@ -60,5 +60,7 @@
       </div>
    </div>
            
+    <div style="padding:100px 100px">
 
+                         </div>
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account setting.aspx.cs" Inherits="hypeproject.WebForm3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="membership.aspx.cs" Inherits="hypeproject.WebForm6" %>
 
 <!DOCTYPE html>
 
@@ -34,11 +34,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
+        /*table*/
+        table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th
+{
+color:white;
+}
+tr:nth-child(odd) {
+  background-color: gray;
+}
+        /*divs*/
         .container{
             margin:0;
         }
         .main{
-            padding: 0px;
+            padding-top: 75px;
             margin: 0;
             box-sizing: border-box;
             position: absolute;
@@ -50,9 +68,9 @@
         }
         .card{
           
-           margin-top:30px;
-           left:30px;
-           width:calc(100vh - 100px);
+           margin-top:75px;
+           left:95px;
+           width:calc(100vh - 50px);
         }
         .topbar {
     position: fixed;
@@ -270,8 +288,7 @@ div.container {
     <form id="form1" runat="server">
         
         <header>
-            <div>
-            <input style="position:fixed" type="text"/>
+           <input style="position:fixed" type="text"/>
             <div class="topbar">
                 
                     <div class="logo">
@@ -350,92 +367,44 @@ div.container {
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
-    </div>
-        <%-- -------------------------------------a/c setting---------------------------------- --%>
-    <div class="main">
-        <br /><h4>Account Settings</h4>
-        <button style="float:right;background-color:black;"><a href="homepage.aspx" style="color:white">Home > Account Setting</a></button>
-        <br /><div class="card" >
-    <div class="card-body">
-      <h4 class="card-title"><i class="fa fa-cog" aria-hidden="true"></i>Account Setting</h4><hr />
-      <p class="card-text">Avatar<br/></p>
-        <button type="button" class="btn btn-outline-primary"><a href="C:\Users\SIGB\Desktop\project video" >Upload Avatar</a></button>
-        <h7>Use 150x150px for better use</h7>
-        <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Name *</label>   
-      <input type="text" class="form-control"  placeholder="komala" />
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Email *</label>
-      <input type="text" class="form-control"  placeholder="komalavignesh1109@gmail.com"/>
-    </div>
-  </div>
-        <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">New Password</label>
-      <input type="password" class="form-control" id="" placeholder=""/>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Confirm Password</label>
-      <input type="password" class="form-control" id="" placeholder=""/>
-    </div>
-  </div>
-      <div style="margin-left:10px">
-    <br/><a href="#" target="_blank" onclick="myAlert() " class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Save Changes</a>
-     </div>
-      
-  
-  
-  </div>
-      </div>
+       <%----------------------------------body----------------------------%>
 
-        <%-----------------------------------billing------------------------------------------------------%>
-        <div class="card" >
-    <div class="card-body">
-      <h4 class="card-title"><i class="fa fa-file-image-o" aria-hidden="true"></i>Billing Settings</h4><hr />
-        <div class="notification notice"><input type="text" style="width:600px;background-color:#e9f7fe;height:50px;" value="These details will be used in invoice and payments."/></div>
-        <label for="text">Type</label>
-        <select class="form-control">
-        <option selected="">Personal</option>
-        <option>Business</option>
-      </select>
-       <label for="text">Name *</label>
-      <input type="text" required class="form-control" placeholder=" "/>
-   <label for="inputAddress">Address *</label>
-    <input type="text" required class="form-control" id="inputAddress" placeholder=""/>
-  
-  <div class="form-row">
-    <div class="form-group col-md-3">
-      <label for="inputCity">City *</label>
-      <input type="text" required class="form-control" id="inputCity"/>
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State *</label>
-      <input type="text" required class="form-control" id="inputstate" />
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip *</label>
-      <input type="text" required class="form-control" id="inputZip" />
-    </div>
-      </div>
-      <label for="text" required>Country *</label>
-      <select class="form-control">
-        <option selected=" ">India</option>
-        <option>USA</option>
-          <option>UK</option>
-          <option>Russia</option>
-          <option>Australia</option>
-      </select>
-      <div style="margin-left:10px">
-    <br/><a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" onclick="myAlert() ">Save Changes</a>
-     </div>
-      
-  
-  
-  </div>
-      </div>
+        <div class="main">
+            <h3>Current Plan</h3>
+            <button style="float:right;background-color:black;color:white">
+                <a href="homepage.aspx" style="color:white">Home > Membership</a></button>
 
+            <div class="card">
+                
+               <div class="card-body">
+                    <div class="card-text" style="display:flex">
+                        <i class="fa fa-gift" aria-hidden="true"></i><h6> Current Plan</h6><br />
+                     </div><hr />
+                        <table>
+                            <tr>
+                                <th>Membership</th>
+                                <th>Payment Mode</th>
+                                <th>Start Date</th>
+                                <th>Expiry Date</th>
+                            </tr>
+                            <tr>
+                                <td>Free Plan</td>
+                                <td>One Time</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr style="background-color:lightgray">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button style="background-color:blue;width:120px;height:30px">
+                                <a href="membership%20price.aspx" style="color:white;">Change Plan</a></button></td>
+                            </tr>
+                       </table>
+                 </div>
+              </div>
+           
+            
         <%-- footer --%>
         <footer>
             <hr />
@@ -452,10 +421,8 @@ div.container {
                  </div>
               </div>
          </footer>
-
-</div>
-        
-        
+            </div>
+       </div> 
         
     </form>
      <script>
@@ -517,5 +484,3 @@ div.container {
     </script>
 </body>
 </html>
-
-

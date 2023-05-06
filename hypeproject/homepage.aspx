@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 <!-- Brain logo -->
-
+    
          <br> 
                 <p style="text-align:center;">
                     <img width="200px" src="images/home-hero-icon.png" alt="brain"/> </p>
@@ -25,17 +25,8 @@
 }
 
 @keyframes animatedBackground_b{
-	0% {color: #ff8b00}
-	10% {color: #e8ff00}
-	20% {color: #5dff00}
-	30% {color: #00ff2e}
-	40% {color: #00ffb9}
-	50% {color: #00b9ff}
-	60% {color: #002eff}
-	70% {color: #5d00ff}
-	80% {color: #e800ff}
-	90% {color: #ff008b}
-	100% {color: #ff0000}
+	0% {color: #000000}
+    10% {color: #0094ff}
 }
 
 </style>
@@ -73,12 +64,12 @@
         <center>
    </section>
 
-       <!-- How its work part -->
+       <!-- How it work part -->
   
     <section>       
         <div class="container">
             
-              <div class="row">
+              <div class="row" style="margin-left:200px">
                 <div class="col-md-4">
                         
                             <img src="images/Capture.PNG" width="650px" height="400px"/> 
