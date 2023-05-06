@@ -514,7 +514,7 @@ div.container {
         function myAlert() {
             alert("Successfully Saved");
         }
-    </script>
+    </script>ipt>
 </body>
 </html>
 

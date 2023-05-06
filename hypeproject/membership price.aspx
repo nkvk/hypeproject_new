@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <style>
         @media only screen and (max-width: 600px) {
   .columns {
@@ -65,23 +66,14 @@ div {
 
 <br />
 <br /><br />
-<div class="container" style="margin-left:200px;display:flex">
-            
-                <input type="radio" checked="checked" class="checkmark" name="radio">
-                Monthly
-                <label class="container">
-                    <span ></span>
-                </label>
-                <input type="radio" name="radio">
-                Yearly
-                <label class="container">
-                    <span class="checkmark"></span>
-                </label>
-                <input type="radio" name="radio">
-                 Lifetime
-                <label class="container">
-                    <span class="checkmark"></span>
-                </label>
+<div class="container" style="margin-left:500px">
+    <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" class="checkmark">
+        <asp:ListItem id="btn1">Monthly</asp:ListItem>
+        <asp:ListItem  id="btn2">Yearly</asp:ListItem>
+        <asp:ListItem id="btn3">Lifetime</asp:ListItem>
+        
+    </asp:RadioButtonList>
+                
 </div>
     <br /><br /><br /><br />
     <label><input type="text" value="Recommended" 
@@ -143,7 +135,12 @@ div {
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal" style="color:darkblue"><b>5 ₹</b><small>/Monthly</small></h4>
+            <h4 class="my-0 font-weight-normal" style="color:darkblue">
+          <p id="test1" onclick="function ()">₹5/Monthly.</p> 
+                     
+<p id="test2" onclick="function ()">₹50/Monthly.</p>
+<p id="test3" onclick="function ()">₹550/Monthly.</p>
+            </h4>
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4" style="text-align:left;">
@@ -165,5 +162,20 @@ div {
       </div>
     </div>
     <div style="padding:10% 10%"></div>
-   
+    
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("₹5/Monthly");
+                });
+            
+                $("#btn2").click(function () {
+                    $("#test2").html("₹50/yearly");
+                });
+            $("#btn3").click(function () {
+                $("#test3").html("₹550/lifetime");
+            });
+        });
+    </script>
+   pt>
 </asp:Content>

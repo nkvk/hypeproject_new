@@ -365,7 +365,7 @@ div.content {
                               </div>
                             </div>                 
                       <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-                      <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+               <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>

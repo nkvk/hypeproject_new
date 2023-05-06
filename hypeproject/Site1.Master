@@ -38,7 +38,8 @@
             <p id="click"></p>
         </label>
     </div>
-          <nav class="navbar navbar-inverse">
+
+          <nav class="navbar navbar-inverse" >
               <div class="container-fluid"> 
                 <div class ="navbar header">
                   <a href="homepage.aspx">  <img  src="images/980385239.png" style="border: none;max-width: 100px;height: auto;"/>

@@ -92,9 +92,12 @@
     <Content Include="forgotpass.aspx" />
     <Content Include="dashboard.aspx" />
     <Content Include="account setting.aspx" />
+    <Content Include="upgrade.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="membership.aspx" />
     <Content Include="membership price.aspx" />
+    <Content Include="transaction.aspx" />
+    <Content Include="billing details.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="homepage.aspx.cs">
@@ -162,6 +165,13 @@
     <Compile Include="account setting.aspx.designer.cs">
       <DependentUpon>account setting.aspx</DependentUpon>
     </Compile>
+    <Compile Include="upgrade.aspx.cs">
+      <DependentUpon>upgrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upgrade.aspx.designer.cs">
+      <DependentUpon>upgrade.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm5.aspx.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,6 +192,20 @@
     </Compile>
     <Compile Include="membership price.aspx.designer.cs">
       <DependentUpon>membership price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="transaction.aspx.cs">
+      <DependentUpon>transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="transaction.aspx.designer.cs">
+      <DependentUpon>transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="billing details.aspx.cs">
+      <DependentUpon>billing details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="billing details.aspx.designer.cs">
+      <DependentUpon>billing details.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
