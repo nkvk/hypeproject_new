@@ -17,11 +17,16 @@
     <div class="card" >
     <div class="card-body">
         <div class="notification notice"><input type="text" style="width:900px;background-color:#e9f7fe;height:50px;" value="These details will be used in invoice and payments."/></div>
-        <label for="text">Type</label>
-        <select class="form-control">
-        <option selected="">Personal</option>
-        <option>Business</option>
-      </select>
+        <label for="text" >Type</label><br />
+        <select class="form-control" id="my-dropdown" onchange="toggleTextarea()">
+  <option value="1">Personal</option>
+  <option value="2" >Business</option>
+</select>
+<br />
+<div id="text-area-wrapper" style="display:none;">
+<label for="text">Tax Id</label><br/>
+  <input class="form-control" type="text" id="my-textarea"/>
+</div>
        <label for="text">Name *</label>
       <input type="text" required class="form-control" placeholder=" "/>
    <label for="inputAddress">Address *</label>
@@ -57,4 +62,17 @@
   
   </div>
         </div>
+    <script>
+        function toggleTextarea() {
+            var dropdown = document.getElementById("my-dropdown");
+            var selectedOption = dropdown.options[dropdown.selectedIndex].value;
+            var textareaWrapper = document.getElementById("text-area-wrapper");
+
+            if (selectedOption !== "") {
+                textareaWrapper.style.display = "block";
+            } else {
+                textareaWrapper.style.display = "none";
+            }
+        }
+    </script>
 </asp:Content>

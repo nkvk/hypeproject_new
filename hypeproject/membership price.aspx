@@ -4,6 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <style>
+        [data] {
+  display: none;
+}
         @media only screen and (max-width: 600px) {
   .columns {
     width: 50%;
@@ -67,17 +70,18 @@ div {
 <br />
 <br /><br />
 <div class="container" style="margin-left:500px">
-    <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" class="checkmark">
-        <asp:ListItem id="btn1">Monthly</asp:ListItem>
-        <asp:ListItem  id="btn2">Yearly</asp:ListItem>
-        <asp:ListItem id="btn3">Lifetime</asp:ListItem>
-        
-    </asp:RadioButtonList>
+    <input type="radio" id="radio1" name="options" value="1" onclick="toggleData()">
+<label for="radio1">&nbsp; Monthly&nbsp;</label>
+<input type="radio" id="radio2" name="options" value="2" onclick="toggleData()">
+<label for="radio2">&nbsp;Yearly&nbsp;</label>
+<input type="radio" id="radio3" name="options" value="3" onclick="toggleData()">
+<label for="radio3">&nbsp;Lifetime&nbsp;</label>
+    
                 
 </div>
     <br /><br /><br /><br />
     <label><input type="text" value="Recommended" 
-        style="width:350px;height:50px;margin-left:870px;background-color:darkblue;color:white;text-align:center;border-radius:6px 6px 0 0;"/></label>
+        style="width:350px;height:50px;margin-left:1000px;background-color:darkblue;color:white;text-align:center;border-radius:6px 6px 0 0;"/></label>
     <div class="card">
         <div class="container" style="text-align:center;padding-top:10px">
     <h4>Free Plan</h4>
@@ -135,16 +139,16 @@ div {
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal" style="color:darkblue">
-          <p id="test1" onclick="function ()">₹5/Monthly.</p> 
-                     
-<p id="test2" onclick="function ()">₹50/Monthly.</p>
-<p id="test3" onclick="function ()">₹550/Monthly.</p>
-            </h4>
+            <h4 class="my-0 font-weight-normal" style="color:darkblue"></h4>
+                <div id="data1"style="color:blue;font-size:25px"><b>₹5/</b>Month</div>
+                <div id="data2"style="color:blue;font-size:25px"><b>₹50/</b>Month</div>
+                <div id="data3"style="color:blue;font-size:25px"><b>₹550/</b>Month</div>
+          
+            
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4" style="text-align:left;">
-                <li>Features of Trial Plan</li>
+                <li>Features of Extended Plan</li>
               <li>61 AI Document Templates<br /></li>
               <li>100,000 Words per month<br /></li>
               <li>1000 Images per month<br /></li>
@@ -156,26 +160,35 @@ div {
                 <li><i class="mdi mdi-check"></i> Free Setup <span class="font-weight-bold"></span></li>
                 <li><i class="mdi mdi-check"></i> Free Support <span class="font-weight-bold"></span></li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Upgrade</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary"><a href="upgrade5.aspx" style="color:white">Upgrade</a></button>
           </div>
         </div>
       </div>
     </div>
     <div style="padding:10% 10%"></div>
-    
     <script>
-        $(document).ready(function () {
-            $("#btn1").click(function () {
-                $("#test1").text("₹5/Monthly");
-                });
-            
-                $("#btn2").click(function () {
-                    $("#test2").html("₹50/yearly");
-                });
-            $("#btn3").click(function () {
-                $("#test3").html("₹550/lifetime");
-            });
-        });
+        function toggleData() {
+            var radio1 = document.getElementById("radio1");
+            var radio2 = document.getElementById("radio2");
+            var radio3 = document.getElementById("radio3");
+            var data1 = document.getElementById("data1");
+            var data2 = document.getElementById("data2");
+            var data3 = document.getElementById("data3");
+
+            if (radio1.checked) {
+                data1.style.display = "block";
+                data2.style.display = "none";
+                data3.style.display = "none";
+            } else if (radio2.checked) {
+                data1.style.display = "none";
+                data2.style.display = "block";
+                data3.style.display = "none";
+            } else if (radio3.checked) {
+                data1.style.display = "none";
+                data2.style.display = "none";
+                data3.style.display = "block";
+            }
+        }
+
     </script>
-   pt>
 </asp:Content>

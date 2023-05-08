@@ -85,6 +85,8 @@
     <Content Include="images\layers.svg" />
     <Content Include="images\music.png" />
     <Content Include="images\select.PNG" />
+    <Content Include="images\user.PNG" />
+    <Content Include="images\wire.png" />
     <Content Include="login.aspx" />
     <Content Include="signuppage.aspx" />
     <Content Include="Web.config" />
@@ -92,7 +94,8 @@
     <Content Include="forgotpass.aspx" />
     <Content Include="dashboard.aspx" />
     <Content Include="account setting.aspx" />
-    <Content Include="upgrade.aspx" />
+    <Content Include="upgrade5.aspx" />
+    <Content Include="testi.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="membership.aspx" />
     <Content Include="membership price.aspx" />
@@ -165,12 +168,19 @@
     <Compile Include="account setting.aspx.designer.cs">
       <DependentUpon>account setting.aspx</DependentUpon>
     </Compile>
-    <Compile Include="upgrade.aspx.cs">
-      <DependentUpon>upgrade.aspx</DependentUpon>
+    <Compile Include="upgrade5.aspx.cs">
+      <DependentUpon>upgrade5.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="upgrade.aspx.designer.cs">
-      <DependentUpon>upgrade.aspx</DependentUpon>
+    <Compile Include="upgrade5.aspx.designer.cs">
+      <DependentUpon>upgrade5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testi.aspx.cs">
+      <DependentUpon>testi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testi.aspx.designer.cs">
+      <DependentUpon>testi.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm5.aspx.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>
