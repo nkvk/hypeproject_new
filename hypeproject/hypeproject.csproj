@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="all-documents.aspx" />
+    <Content Include="blogs\1Blog.aspx" />
+    <Content Include="blogs\1blogs.aspx" />
     <Content Include="bootstrap\css\bootstrap1.js" />
     <Content Include="bootstrap\css\fontawesome.min.css" />
     <Content Include="bootstrap\database\css\bootstrap.min.css" />
@@ -82,12 +85,15 @@
     <Content Include="images\growth.jpg" />
     <Content Include="images\home-hero-icon.png" />
     <Content Include="images\image used.PNG" />
+    <Content Include="images\image.png" />
     <Content Include="images\layers.svg" />
     <Content Include="images\music.png" />
     <Content Include="images\select.PNG" />
     <Content Include="images\user.PNG" />
     <Content Include="images\wire.png" />
     <Content Include="login.aspx" />
+    <Content Include="Membership\membership price.aspx" />
+    <Content Include="Membership\membership.aspx" />
     <Content Include="signuppage.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -96,6 +102,9 @@
     <Content Include="account setting.aspx" />
     <Content Include="upgrade5.aspx" />
     <Content Include="testi.aspx" />
+    <Content Include="blog.aspx" />
+    <Content Include="blog1.aspx" />
+    <Content Include="templates.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="membership.aspx" />
     <Content Include="membership price.aspx" />
@@ -103,6 +112,27 @@
     <Content Include="billing details.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="all-documents.aspx.cs">
+      <DependentUpon>all-documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="all-documents.aspx.designer.cs">
+      <DependentUpon>all-documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blogs\1Blog.aspx.cs">
+      <DependentUpon>1Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blogs\1Blog.aspx.designer.cs">
+      <DependentUpon>1Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blogs\1blogs.aspx.cs">
+      <DependentUpon>1blogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blogs\1blogs.aspx.designer.cs">
+      <DependentUpon>1blogs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -116,6 +146,20 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Membership\membership price.aspx.cs">
+      <DependentUpon>membership price.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership\membership price.aspx.designer.cs">
+      <DependentUpon>membership price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Membership\membership.aspx.cs">
+      <DependentUpon>membership.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership\membership.aspx.designer.cs">
+      <DependentUpon>membership.aspx</DependentUpon>
     </Compile>
     <Compile Include="signuppage.aspx.cs">
       <DependentUpon>signuppage.aspx</DependentUpon>
@@ -181,6 +225,27 @@
     </Compile>
     <Compile Include="testi.aspx.designer.cs">
       <DependentUpon>testi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog.aspx.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blog.aspx.designer.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog1.aspx.cs">
+      <DependentUpon>blog1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blog1.aspx.designer.cs">
+      <DependentUpon>blog1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates.aspx.cs">
+      <DependentUpon>templates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates.aspx.designer.cs">
+      <DependentUpon>templates.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm5.aspx.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>

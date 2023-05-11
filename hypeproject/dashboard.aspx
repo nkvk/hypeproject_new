@@ -402,7 +402,7 @@ div.content {
 
 </div>
   <div>
-        <h6><img width="40px" src="images/image%20used.PNG" />Words used this Month</h6>
+        <h6><img width="40" src="images/image%20used.PNG" />Words used this Month</h6>
        <canvas id="chart" style="display: block; height:300px; width: 950px;" class="chartjs-render-monitor"></canvas>
        </div>
 </div>
@@ -412,12 +412,12 @@ div.content {
             <h6>2023 Socius IGB Pvt Ltd, All right reserve</h6>
          </div>
            <div style="float:right;margin-left:400px">
-                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
-                <i class="fa fa-youtube" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+              <i class="fa fa-youtube" aria-hidden="true"></i>
            </div> 
 </footer>
     </form>

@@ -61,17 +61,321 @@
 
        <!-- How it work part -->
   
+    <hr style="border-top: dotted 1px;" /> 
     <section>       
-        <div class="container">
-            
-              <div class="row" style="margin-left:200px">
-                <div class="col-md-4">
-                        
-                            <img src="images/Capture.PNG" width="650" height="400"/> 
-                    </div>
-                  </div>
+        <div class="container3">
+            <div class="row">
+                <div class="col-12">
+                    <center>
+                        <h2>How it Works?</h2>
+                    <center>
+                </div>
             </div>
-   </section><br />
+              <div class="row">
+                <div class="col-md-4">
+                    <center>
+                        <img width="150" src="images/select.PNG" />
+                        <h2>Select a template</h2>
+                        <p class="text-justify">
+                            Choose a content creation template. Multiple templates are available for your all needs.
+                        </p>
+                    </center>
+                </div>
+
+                <div class="col-md-4">
+                        <center>
+                                <img width="150" src="images/fill.PNG" />
+                                <h2>Fill the form</h2>
+                                <p class="text-justify">
+                                    Enter a detailed description of your content. Tell the AI what do you want.
+                                </p>
+                        </center>
+                </div>
+
+                    <div class="col-md-4">
+                        <center>
+
+                                <img width="75" src="images/get%20content.PNG" />
+                                <h2>Get your content</h2>
+                                    <p class="text-justify">
+                                       Get a unique high quality content. The content is plagiarism free and you can use it anywhere.
+                                    </p>
+                        </center>
+                </div>
+            </div>
+        </div>
+    
+   </section>
+    <%-- templates --%>
+    <style>
+.card6-block{
+ padding: 1em;
+  border: 0px solid #b5b5b5;
+  border-radius: 10px;
+  width: fit-content;
+  transition: 0.2s;
+}
+.card6-block:hover{
+  margin-top: -10px;
+  transition: 0.2s;
+}
+</style>
+     <div class="py-5">
+    <div class="container">
+      <div class="row hidden-md-up">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+              <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <style>/*membership*/
+        [data] {
+  display: none;
+}
+        @media only screen and (max-width: 600px) {
+  .columns {
+    width: 50%;
+  }
+}
+        /*pricing*/
+         .card2 {
+    width: calc(100% - 250px);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border:1px  gray;
+    box-shadow:gray 2px 2px 2px 2px;
+}
+         /*check mark container*/
+        .container4 {
+            display:flex;
+           position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            justify-items: center;
+        }
+            /* On mouse-over, add a grey background color */
+            .container:hover input ~ .checkmark {
+                background-color: #ccc;
+            }
+
+            /* When the radio button is checked, add a blue background */
+            .container input:checked ~ .checkmark {
+                background-color: blue;
+            }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: block;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+div {
+    display: block;
+}
+.mdi-close{
+    color:red;
+}
+.mdi-check{
+    color:green;
+}
+    </style>
+    <%-- membership body --%>
+    <hr />
+    <h2 style="text-align:center">Membership Plan</h2>
+
+<br />
+<br /><br />
+<div class="container4" style="margin-left:500px">
+    <input type="radio" id="radio1" name="options" value="1" onclick="toggleData()">
+<label for="radio1">&nbsp; Monthly&nbsp;</label>
+<input type="radio" id="radio2" name="options" value="2" onclick="toggleData()">
+<label for="radio2">&nbsp;Yearly&nbsp;</label>
+<input type="radio" id="radio3" name="options" value="3" onclick="toggleData()">
+<label for="radio3">&nbsp;Lifetime&nbsp;</label>
+    
+                
+</div>
+    <br /><br /><br /><br />
+    <label><input type="text" value="Recommended" 
+        style="width:350px;height:50px;margin-left:1000px;background-color:darkblue;color:white;text-align:center;border-radius:6px 6px 0 0;"/></label>
+    <div class="card2   ">
+        <div class="container4" style="text-align:center;padding-top:10px">
+    <h4>Free Plan</h4>
+        <h4 style="margin-left:300px;">Trial Plan</h4>
+        <h4 style="margin-left:250px;">Extended Plan</h4>
+    </div>
+        <br />
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+		
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Free </h4>
+          </div>
+          <div class="card-body">
+            
+            <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
+                <li>Features of Free Plan</li>
+              <li>32 AI Document Templates<br /></li>
+              <li>10,000 Words per month<br /></li>
+              <li>100 Images per month<br /></li>
+              <li>0 Speech to Text per month<br /></li>
+              <li>0 MB Audio file size limit<br /></li>
+                <li><i class="mdi mdi-close"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
+                <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
+                <li><i class="mdi mdi-close"></i> Free Setup <span class="font-weight-bold"></span></li>
+                <li><i class="mdi mdi-close"></i> Free Support <span class="font-weight-bold"></span></li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Current Plan</button>
+          </div>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+            
+          <div class="card-header">
+              
+            <h4 class="my-0 font-weight-normal">Trial</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4" style="text-align:left;">
+                <li>Features of Trial Plan</li>
+              <li>61 AI Document Templates<br /></li>
+              <li>50,000 Words per month<br /></li>
+              <li>500 Images per month<br /></li>
+              <li>0 Speech to Text per month<br /></li>
+              <li>0 MB Audio file size limit<br /></li>
+                <li><i class="mdi mdi-close"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
+                <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
+                <li><i class="mdi mdi-close"></i> Free Setup <span class="font-weight-bold"></span></li>
+                <li><i class="mdi mdi-close"></i> Free Support <span class="font-weight-bold"></span></li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Upgrade</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal" style="color:darkblue"></h4>
+                <div id="data1"style="color:blue;font-size:25px"><b>₹5/</b>Month</div>
+                <div id="data2"style="color:blue;font-size:25px"><b>₹50/</b>Month</div>
+                <div id="data3"style="color:blue;font-size:25px"><b>₹550/</b>Month</div>
+          
+            
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4" style="text-align:left;">
+                <li>Features of Extended Plan</li>
+              <li>61 AI Document Templates<br /></li>
+              <li>100,000 Words per month<br /></li>
+              <li>1000 Images per month<br /></li>
+              <li>0 Speech to Text per month<br /></li>
+              <li>0 MB Audio file size limit<br /></li>
+                <li><i class="mdi mdi-close"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
+                <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
+                <li><i class="mdi mdi-check"></i> Free Setup <span class="font-weight-bold"></span></li>
+                <li><i class="mdi mdi-check"></i> Free Support <span class="font-weight-bold"></span></li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary"><a href="upgrade5.aspx" style="color:white">Upgrade</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:10% 10%"></div>
+    <script>
+        function toggleData() {
+            var radio1 = document.getElementById("radio1");
+            var radio2 = document.getElementById("radio2");
+            var radio3 = document.getElementById("radio3");
+            var data1 = document.getElementById("data1");
+            var data2 = document.getElementById("data2");
+            var data3 = document.getElementById("data3");
+
+            if (radio1.checked) {
+                data1.style.display = "block";
+                data2.style.display = "none";
+                data3.style.display = "none";
+            } else if (radio2.checked) {
+                data1.style.display = "none";
+                data2.style.display = "block";
+                data3.style.display = "none";
+            } else if (radio3.checked) {
+                data1.style.display = "none";
+                data2.style.display = "none";
+                data3.style.display = "block";
+            }
+        }
+
+    </script>
     <%-- testimonials --%>
     
       <style>
@@ -230,6 +534,70 @@
             </div>
         </div>
     </div>
+    <hr />
+    <%-- blog --%>
+    <%-- blog css --%>
+    <style>
+        .container2 {
+  position: absolute;
+  text-align: left;
+  color: gray;
+  margin-left:350px;
+  cursor:pointer;
+  
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  
+}
+
+.top-left {
+  position: absolute;
+  top: 60px;
+  left: 26px;
+  border:1px solid black;
+  width:65px;
+  height:30px;
+  text-align:center;
+  padding:0px 8px;
+  background-color:white;
+}
+.container2{
+  border: 0px solid #b5b5b5;
+  border-radius: 10px;
+  width: fit-content;
+  transition: 0.2s;
+}
+.container2:hover {
+  box-shadow: 0 0 0px black;
+  margin-top: -10px;
+
+}
+
+
+        </style>
+    <%-- blog body --%>
+    <br /> <br /> <br />
+    <a href="#" rel="Blog" style="margin-left:1200px">View Blog --></a>
+    <div class="container2">
+        <h3>Recent Blog</h3>
+       <a href="blogs/1Blog.aspx" style="color:gray">
+        <img src="images/image.png" alt="blog"
+            style="height:400px;width:400px"/>
+        <div class="top-left" ><span >Admin</span></div>
+  <div class="bottom-left">
+  <h6>3 Years Ago<br/>First Blog<br/>Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut eni...
+  </h6>
+      
+  </div>
+  </a>
+</div>
+        
+<br /> <br />
+    <br /> <br />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="main.js"></script>
     <script>
@@ -366,4 +734,5 @@
         });
 
     </script>
+    <div style="padding:200px 200px"></div>
     </asp:Content>

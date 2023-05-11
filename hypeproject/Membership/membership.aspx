@@ -1,13 +1,11 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="hypeproject.Site2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="membership.aspx.cs" Inherits="hypeproject.WebForm6" %>
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-    <%--bootstrap css--%>
+    <title></title>
+    <link href="Site1.Master" rel="master"/>
     <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -35,12 +33,47 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <title></title>
     <style>
-        /*header*/
+        /*table*/
+        table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
-.topbar {
-    position: relative fixed;
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th
+{
+color:white;
+}
+tr:nth-child(odd) {
+  background-color: gray;
+}
+        /*divs*/
+        .container{
+            margin:0;
+        }
+        .main{
+            padding-top: 75px;
+            margin: 0;
+            box-sizing: border-box;
+            position: absolute;
+            top: 85px;
+            width: calc(100% - 400px);
+            left: 350px;
+            min-height: calc(100vh - 85px);
+            background-color: #f5f5f5;
+        }
+        .card{
+          
+           margin-top:75px;
+           left:95px;
+           width:calc(100vh - 50px);
+        }
+        .topbar {
+    position: fixed;
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
     width:100%;
@@ -62,8 +95,7 @@
 
 .user {
     position: relative;
-    width: 50px;
-    height: 50px;
+    
 }
 
     
@@ -135,15 +167,18 @@ option {
 
 .show {display: block;}
 .sidebar {
-  margin: 0;
-  padding: 0;
   width: 200px;
   background-color: white;
-  position: relative;
-  height: 175%;
-  overflow: auto;
+  height:calc(100% - 95px);
+  
   padding-top:100px;
   border-spacing:5px;
+  position: fixed;
+
+  
+    background: #fff;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
 
 .sidebar a {
@@ -163,10 +198,10 @@ option {
   color: dodgerblue;
 }
 
-div.content {
+div.container {
   margin-left: 0px;
   padding: 1px 0px;
-  height: 500px;
+  
 }
 
 @media screen and (max-width: 700px) {
@@ -184,6 +219,17 @@ div.content {
     text-align: center;
     float: none;
   }
+}
+
+/*footer*/
+.fa {
+  padding: 0px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+
 }
 
 .fa:hover {
@@ -221,7 +267,6 @@ div.content {
   padding: 12px 16px;
   font-size: 16px;
   cursor: pointer;
-  border-radius:100px 100px 100px 100px;
 }
 /* Darker background on mouse-over */
 .btn:hover {
@@ -241,22 +286,17 @@ div.content {
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-           </asp:ContentPlaceHolder>
-        </div>
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                <header>
+        
+        <header>
+           <input style="position:fixed" type="text"/>
             <div class="topbar">
+                
                     <div class="logo">
                             <img src="images\980385239.png" />
                     </div> 
                         <div>
                             <nav style="margin-left:200px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
-                            <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                                data-target="#navbarDiv"  
-                                aria-expanded="false" aria-label="Toggle navigation">
+                            <button id="navbtn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="fa fa-bars"></span>
 
                             </button>
@@ -269,7 +309,7 @@ div.content {
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
                         <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
@@ -277,21 +317,11 @@ div.content {
                           <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-                          <a class="dropdown-item" href="#" target="_blank"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                          <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
-               
-               
-
-
-
-
-
-
-
-
-                     <div class="selectlang">
+               <div class="selectlang">
                          <select  id="langbtn" class="popup-with-zoom-anim button ripple-effect">
                     <option value="EN">English</option>
                      <option value="Ta">Tamil</option>
@@ -300,18 +330,19 @@ div.content {
                 </select>
                     </div>
                  </div>
+
         </header>
-            
-<div class="content">
-           <div class="sidebar" style="position:relative;float:left">
+           
+<div class="container">
+           <div class="sidebar" style="position:relative;float:left;width:300px">
     
-                      <h5>&nbsp;My Account</h5>   
-                        <span>
-                            <a class="active" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                      <h5>&nbsp;My Account</h5>  
+                         <span>
+                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
 
                         </span>
                       <div class="dropdown">
-                        <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="true"></i>My Documents</a>
+                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="true"></i>My Documents</a>
                           <div id="myDropdown" class="dropdown-content" >
                                    <a href="#">All Documents</a>
                                    <a href="#">All AI Images</a>
@@ -333,49 +364,88 @@ div.content {
                             </div>                 
                       <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                       <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
-                      <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                      <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
-       
-        <div style="float:left;margin-left:100px">
+       <%----------------------------------body----------------------------%>
+
+        <div class="main">
+            <h3>Current Plan</h3>
+            <button style="float:right;background-color:black;color:white">
+                <a href="homepage.aspx" style="color:white">Home > Membership</a></button>
+
+            <div class="card">
                 
-            <h6>2023 Socius IGB Pvt Ltd, All right reserve</h6>
-                </div>
-           <div style="float:right;margin-left:400px">
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-linkedin"></a>
-<a href="#" class="fa fa-pinterest"></a>
-<a href="#" class="fa fa-youtube"></a>
-</div> 
-                </div>
-    
-    
-            </asp:ContentPlaceHolder>
-        </div>
+               <div class="card-body">
+                    <div class="card-text" style="display:flex">
+                        <i class="fa fa-gift" aria-hidden="true"></i><h6> Current Plan</h6><br />
+                     </div><hr />
+                        <table>
+                            <tr>
+                                <th>Membership</th>
+                                <th>Payment Mode</th>
+                                <th>Start Date</th>
+                                <th>Expiry Date</th>
+                            </tr>
+                            <tr>
+                                <td>Free Plan</td>
+                                <td>One Time</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr style="background-color:lightgray">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button style="background-color:blue;width:120px;height:30px">
+                                <a href="membership%20price.aspx" style="color:white;">Change Plan</a></button></td>
+                            </tr>
+                       </table>
+                 </div>
+              </div>
+           
+            
+        <%-- footer --%>
+        <footer>
+            <hr />
+            <div class="row">
+             <div class="col-md-6"> 
+             <h8 style="color:black;margin-left:50px;">2023 Socius IGB Pvt Ltd, All right reserved</h8>
+              </div>
+               <div class="col-md-5" style="margin-left:1200px;">
+                     <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                     <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                     <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                     <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+                     <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
+                 </div>
+              </div>
+         </footer>
+            </div>
+       </div> 
+        
     </form>
-    <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+     <script>
+         /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function (event) {
+             if (!event.target.matches('.dropbtn')) {
+                 var dropdowns = document.getElementsByClassName("dropdown-content");
+                 var i;
+                 for (i = 0; i < dropdowns.length; i++) {
+                     var openDropdown = dropdowns[i];
+                     if (openDropdown.classList.contains('show')) {
 
-                    }
-                }
-            }
-        }
-    </script>
+                     }
+                 }
+             }
+         }
+     </script>
    
     <script>
         /* When the user clicks on the button, 
@@ -400,81 +470,17 @@ div.content {
     </script>
     
 <script>
-    Chart.defaults.global.defaultFontColor = '#888';
-    Chart.defaults.global.defaultFontSize = '18';
+    
+    $("#navbtn").on("click", function () {
+        $(".sidebar").toggle();
+        $(".main").toggleClass();
 
-    var ctx = document.getElementById('chart').getContext('2d');
-
-    var chart = new Chart(ctx, {
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: ["01 Apr", "02 Apr", "03 Apr", "04 Apr", "05 Apr", "06 Apr", "07 Apr", "08 Apr", "09 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr"],
-            // Information about the dataset
-            datasets: [{
-                label: "Words Used",
-                backgroundColor: '#18469815',
-                borderColor: '#184698',
-                borderWidth: "3",
-                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                pointRadius: 5,
-                pointHoverRadius: 5,
-                pointHitRadius: 10,
-                pointBackgroundColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointBorderWidth: "2",
-            }]
-        },
-
-        // Configuration options
-        options: {
-            layout: {
-                padding: 10,
-            },
-            legend: { display: false },
-            title: { display: false },
-            scales: {
-                yAxes: [{
-                    scaleLabel: {
-                        display: false
-                    },
-                    gridLines: {
-                        borderDash: [5, 8],
-                        color: "#d8d8d8",
-                        lineWidth: 1,
-                    },
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }],
-                xAxes: [{
-                    scaleLabel: { display: false },
-                    gridLines: { display: false },
-                }],
-            },
-            tooltips: {
-                backgroundColor: '#333',
-                titleFontSize: 13,
-                titleFontColor: '#fff',
-                bodyFontColor: '#fff',
-                bodyFontSize: 13,
-                displayColors: false,
-                xPadding: 10,
-                yPadding: 10,
-                intersect: false
-            }
-        },
     });
-
 </script>
     <script>
-
-        $("#nav-btn").on("click", function () {
-            $(".sidebar").toggle();
-            $(".content").toggleClass();
-
-        });
+        function myAlert() {
+            alert("Successfully Saved");
+        }
     </script>
 </body>
 </html>

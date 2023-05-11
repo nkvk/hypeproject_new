@@ -31,19 +31,20 @@ namespace hypeproject
                     con.Open();
                 }
 
+                string userEmail = TextBox2.Text.ToString();
 
 
-                SqlCommand cmd = new SqlCommand("select * from logins where email ='" + TextBox2.Text.Trim() +"' AND password='" + TextBox4.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("select * from logins where email ='" + userEmail + "' AND password='" + TextBox4.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
                         Response.Write("<script>alert('"+dr.GetValue(3).ToString()+"');</Script>");
-                        Session["email"] = dr.GetValue(3).ToString();
-                        Session["username"] = dr.GetValue(2).ToString();
+                        Session["email"] = dr.GetValue(2).ToString();
+                        Session["username"] = dr.GetValue(1).ToString();
                     }
-                    Response.Redirect("dashboard.aspx");
+                    Response.Redirect("dashboard.aspx?email='"+userEmail+"'");
                 }
                     
              
