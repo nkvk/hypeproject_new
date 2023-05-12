@@ -346,8 +346,8 @@ div.content {
                       <div class="dropdown">
                          <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
                           <div id="myDropdown" class="dropdown-content" >
-                                   <a href="#">All Documents</a>
-                                   <a href="#">All AI Images</a>
+                              <a href="alldocuments.aspx">All Documents</a>
+                                   <a href="AIImages.aspx">All AI Images</a>
                               </div>
                             </div>
                       <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>

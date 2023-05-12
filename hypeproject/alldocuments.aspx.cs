@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hypeproject
 {
-    public partial class all_documents : System.Web.UI.Page
+    public partial class WebForm13 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -269,8 +269,7 @@ div.container {
 <body>
     <form id="form1" runat="server">
         
-        <header>
-            <div>
+        <header>          
             <input style="position:fixed" type="text"/>
             <div class="topbar">
                 

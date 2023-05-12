@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="membership.aspx.cs" Inherits="hypeproject.WebForm6" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="alldocuments.aspx.cs" Inherits="hypeproject.WebForm13" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
     <link href="Site1.Master" rel="master"/>
+     <%--bootstrap css--%>
     <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -33,16 +33,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title></title>
     <style>
-        /*table*/
-        table {
+        /*body*/
+ table {
   border-collapse: collapse;
   width: 100%;
 }
 
 th, td {
   text-align: left;
-  padding: 8px;
+  padding: 10px;
+  border-radius:1px;
+
 }
 th
 {
@@ -72,7 +75,9 @@ tr:nth-child(odd) {
            left:95px;
            width:calc(100vh - 50px);
         }
-        .topbar {
+        /*header*/
+
+.topbar {
     position: fixed;
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
@@ -95,7 +100,8 @@ tr:nth-child(odd) {
 
 .user {
     position: relative;
-    
+    width: 50px;
+    height: 50px;
 }
 
     
@@ -170,15 +176,12 @@ option {
   width: 200px;
   background-color: white;
   height:calc(100% - 95px);
-  
   padding-top:100px;
   border-spacing:5px;
   position: fixed;
-
-  
-    background: #fff;
-    overflow-y: scroll;
-    box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
+  background: #fff;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
 
 .sidebar a {
@@ -198,10 +201,10 @@ option {
   color: dodgerblue;
 }
 
-div.container {
+div.content {
   margin-left: 0px;
   padding: 1px 0px;
-  
+
 }
 
 @media screen and (max-width: 700px) {
@@ -214,12 +217,13 @@ div.container {
   div.content {margin-left: 0;}
 }
 
-@media screen and (max-width: 400px) {
-  .sidebar a {
+@media screen and (max-width: 600px) {
+  main span  {
     text-align: center;
     float: none;
   }
 }
+
 
 /*footer*/
 .fa {
@@ -267,13 +271,15 @@ div.container {
   padding: 12px 16px;
   font-size: 16px;
   cursor: pointer;
+  border-radius:100px 100px 100px 100px;
 }
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: gray;
 }
 /*menu toggle*/
-.sidebar .navbar-toggler .icon-bar {
+.sidebar .navbar-toggler .icon-bar .chart-container 
+#myChart {
   margin: 7px;
   display: block;
   width: 22px;
@@ -282,21 +288,17 @@ div.container {
   border-radius: 1px;
 }
 </style>
-
 </head>
 <body>
     <form id="form1" runat="server">
-        
         <header>
-           <input style="position:fixed" type="text"/>
             <div class="topbar">
-                
                     <div class="logo">
                             <img src="images\980385239.png" />
                     </div> 
                         <div>
                             <nav style="margin-left:200px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
-                            <button id="navbtn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="false" aria-label="Toggle navigation">
+                            <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
                                 <span class="fa fa-bars"></span>
 
                             </button>
@@ -309,7 +311,7 @@ div.container {
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
                         <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
@@ -321,31 +323,29 @@ div.container {
                           <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
-               <div class="selectlang">
+                        <div class="selectlang">
                          <select  id="langbtn" class="popup-with-zoom-anim button ripple-effect">
-                    <option value="EN">English</option>
-                     <option value="Ta">Tamil</option>
-                     <option value="Te">Telugu</option>
-                     <option value="HI">Hindi</option>
-                </select>
+                            <option value="EN">English</option>
+                            <option value="Ta">Tamil</option>
+                            <option value="Te">Telugu</option>
+                            <option value="HI">Hindi</option>
+                          </select>
                     </div>
                  </div>
-
         </header>
-           
-<div class="container">
+            
+<div class="content">
            <div class="sidebar" style="position:relative;float:left;width:300px">
     
                       <h5>&nbsp;My Account</h5>  
                          <span>
-                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-
+                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
                         </span>
                       <div class="dropdown">
-                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="true"></i>My Documents</a>
+                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
                           <div id="myDropdown" class="dropdown-content" >
                                    <a href="#">All Documents</a>
-                                   <a href="#">All AI Images</a>
+                                   <a href="AIImages.aspx">All AI Images</a>
                               </div>
                             </div>
                       <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
@@ -363,67 +363,48 @@ div.container {
                               </div>
                             </div>                 
                       <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-                      <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+               <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
-       <%----------------------------------body----------------------------%>
-
-        <div class="main">
-            <h3>Current Plan</h3>
+    <div class="main">
+            <h4>All Documents 
+    <span style="border-radius:30px;background-color:#2980B9;padding:10px 10px;color:blue
+    "><img src="images/all.PNG" />0/10,000 Words Used</span></h4>
             <button style="float:right;background-color:black;color:white">
-                <a href="homepage.aspx" style="color:white" >Home > Membership</a></button>
+                <a href="homepage.aspx" style="color:white">Home > Membership</a></button>
 
             <div class="card">
                 
                <div class="card-body">
                     <div class="card-text" style="display:flex">
-                        <i class="fa fa-gift" aria-hidden="true"></i><h6> Current Plan</h6><br />
+                        <i class="fa fa-file-text-o" aria-hidden="true"></i><h6> All Documents</h6>
+                        
                      </div><hr />
                         <table>
                             <tr>
-                                <th>Membership</th>
-                                <th>Payment Mode</th>
-                                <th>Start Date</th>
-                                <th>Expiry Date</th>
+                                <th>Document</th>
+                                <th>Content</th>
+                                <th>Date</th>
+                                <th>Action</th>
                             </tr>
-                            <tr>
-                                <td>Free Plan</td>
-                                <td>One Time</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
+                            
                             <tr style="background-color:lightgray">
                             <td></td>
                             <td></td>
+                            <td>No documents found.</td>
                             <td></td>
-                            <td><button style="background-color:blue;width:120px;height:30px">
-                                <a href="membership%20price.aspx" style="color:white;">Change Plan</a></button></td>
                             </tr>
                        </table>
                  </div>
               </div>
+               </div>
+        <br />
+   
+    </div>
+  <%-- all documents --%>
            
-            
-        <%-- footer --%>
-        <footer>
-            <hr />
-            <div class="row">
-             <div class="col-md-6"> 
-             <h8 style="color:black;margin-left:50px;">2023 Socius IGB Pvt Ltd, All right reserved</h8>
-              </div>
-               <div class="col-md-5" style="margin-left:1200px;">
-                     <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-                     <a href="https://twitter.com/" class="fa fa-twitter"></a>
-                     <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-                     <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
-                     <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
-                 </div>
-              </div>
-         </footer>
-            </div>
-       </div> 
-        
+    
     </form>
      <script>
          /* When the user clicks on the button, 
@@ -469,18 +450,16 @@ div.container {
         }
     </script>
     
-<script>
+
     
-    $("#navbtn").on("click", function () {
-        $(".sidebar").toggle();
-        $(".main").toggleClass();
+
+    <%-- menu hide --%>
+    <script>
+        $("#nav-btn").on("click", function () {
+                $(".sidebar").toggle();
+            $(".main").toggleClass();
 
     });
-</script>
-    <script>
-        function myAlert() {
-            alert("Successfully Saved");
-        }
     </script>
 </body>
 </html>

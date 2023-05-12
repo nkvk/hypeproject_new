@@ -67,9 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="all-documents.aspx" />
-    <Content Include="blogs\1Blog.aspx" />
-    <Content Include="blogs\1blogs.aspx" />
     <Content Include="bootstrap\css\bootstrap1.js" />
     <Content Include="bootstrap\css\fontawesome.min.css" />
     <Content Include="bootstrap\database\css\bootstrap.min.css" />
@@ -79,6 +76,7 @@
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="homepage.aspx" />
     <Content Include="images\980385239.png" />
+    <Content Include="images\all.PNG" />
     <Content Include="images\Capture.PNG" />
     <Content Include="images\fill.PNG" />
     <Content Include="images\get content.PNG" />
@@ -105,6 +103,8 @@
     <Content Include="blog.aspx" />
     <Content Include="blog1.aspx" />
     <Content Include="templates.aspx" />
+    <Content Include="alldocuments.aspx" />
+    <Content Include="AIImages.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="membership.aspx" />
     <Content Include="membership price.aspx" />
@@ -112,27 +112,6 @@
     <Content Include="billing details.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="all-documents.aspx.cs">
-      <DependentUpon>all-documents.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="all-documents.aspx.designer.cs">
-      <DependentUpon>all-documents.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="blogs\1Blog.aspx.cs">
-      <DependentUpon>1Blog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="blogs\1Blog.aspx.designer.cs">
-      <DependentUpon>1Blog.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="blogs\1blogs.aspx.cs">
-      <DependentUpon>1blogs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="blogs\1blogs.aspx.designer.cs">
-      <DependentUpon>1blogs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -246,6 +225,20 @@
     </Compile>
     <Compile Include="templates.aspx.designer.cs">
       <DependentUpon>templates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alldocuments.aspx.cs">
+      <DependentUpon>alldocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alldocuments.aspx.designer.cs">
+      <DependentUpon>alldocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AIImages.aspx.cs">
+      <DependentUpon>AIImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AIImages.aspx.designer.cs">
+      <DependentUpon>AIImages.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm5.aspx.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>
