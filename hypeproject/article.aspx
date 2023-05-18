@@ -1,114 +1,369 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="hypeproject.homepage" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
- <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css" rel="stylesheet" >
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="article.aspx.cs" Inherits="hypeproject.article" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <link href="Site1.Master" rel="master"/>
+     <%--bootstrap css--%>
+    <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
+     <%--datatable css--%>
+    <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--fontawesome css--%>
+    <link href="bootstrap/css/fontawesome.min.css" rel="stylesheet" />
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" rel="icons" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css" rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-<!-- Brain logo -->
+
+
     
-         <br> 
-                <p style="text-align:center;">
-                    <img width ="200" src="images/home-hero-icon.png" alt="brain"/> </p>
-                    
-                <div class="animated_rainbow_2" style="margin-left:425px/;text-align:center;">
-                    <h1>Best AI Content Writer</h1>
 
-                </div>
 
-                
- <!-- Colored text -->
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-git.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/css/bootstrap1.js"></script>
 
-<style>
-.animated_rainbow_2 {
-	font-size: 42px;
-	font-family: Arial Black, Gadget, sans-serif;
-    -webkit-animation: animatedBackground_b 5s linear infinite alternate;
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title></title>
+    <style>
+        /*toggle*/
+
+        /*header*/
+
+.topbar {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
+    width:100%;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr 1fr;
+    align-items: center;
+    z-index: 1;
 }
 
-@keyframes animatedBackground_b{
-	0% {color: #000000}
-    10% {color: #0094ff}
+.logo {
+   
+    border-right: 1px solid #e0e0e0;
+    justify-content: center;
+    height: 80px;
+    padding-top: 10px;
+    width: 200px;
 }
 
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+    
+
+.selectlang {
+    float: right;
+    padding-right: 30px;
+    border-left: 1px solid #e0e0e0;
+    padding-top: 20px;
+    padding-left: 30px;
+    height: 82px;
+}
+
+#langbtn {
+    border: none;
+    background-color: #444444;
+    width: 120px;
+    height: 40px;
+    border-radius: 4px 4px;
+    color: white;
+}
+
+option {
+    background-color: white;
+    box-sizing: border-box;
+    color: black;
+}
+
+#langbtn:hover {
+    background-color: #314cc6;
+}
+
+/*letf drop*/
+.dropbtn {
+  background-color: white;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.sidebar {
+  width: 200px;
+  background-color: white;
+  height:calc(100% - 95px);
+  padding-top:100px;
+  border-spacing:5px;
+  position: fixed;
+  background: #fff;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: white;
+  color: lightblue;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: dodgerblue;
+}
+
+div.content {
+  margin-left: 0px;
+  padding: 1px 0px;
+
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 200px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+   
+    padding: 10px;
+}
+.word-box {
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .10);
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1 1 calc(25% - 30px);
+    height: 150px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.word-text{
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display:inline-flex;
+}
+
+
+/*footer*/
+.fa {
+  padding: 0px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  color: gray;
+}
+
+.fa-twitter {
+  color: gray;
+}
+
+.fa-instagram {
+  color: gray;
+}
+
+.fa-linkedin {
+  color: gray;
+}
+
+.fa-pinterest {
+  color: gray;
+}
+
+.fa-youtube {
+  color: gray;
+}
+/*menu*/
+.btn {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:100px 100px 100px 100px;
+}
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: gray;
+}
+/*menu toggle*/
+.sidebar .navbar-toggler .icon-bar .chart-container 
+#myChart {
+  margin: 7px;
+  display: block;
+  width: 22px;
+  height: 1px;
+  background-color: #cccccc;
+  border-radius: 1px;
+}
 </style>
-<!-- Written part and a button -->
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div class="topbar">
+                    <div class="logo">
+                            <img src="images\980385239.png" />
+                    </div> 
+                        <div>
+                            <nav style="margin-left:200px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
+                            <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
+                                <span class="fa fa-bars"></span>
 
-   <section>
-         <center>
-                <div>                
-                    <p> SEO-optimized and unique content for your blogs,ads, <br>
-                            emails,and website 10X faster & save hours of work. <p>
-               </div>     
-               <div class="form-group">
-                   <a href="signuppage.aspx"><input  class="btn btn-info btn200" id="Button2" type="button"  value="Get Started For Free" /></a>
-               </div>
-         </center>
+                            </button>
+                                </nav>
+                        </div>    
 
-        <style>  
-            .btn btn-info btn200
-            {
-               border : 5px solid;
-            }
-       </style>  
+                <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                      </a>
 
-        <center>
-               <p>
-                 <h7>   No credit card required.  <h7>
-              </p>
-        <center>
-   </section>
-
-       <!-- How it work part -->
-  
-    <hr style="border-top: dotted 1px;" /> 
-    <section>       
-        <div class="container3">
-            <div class="row">
-                <div class="col-12">
-                    <center>
-                        <h2>How it Works?</h2>
-                    <center>
-                </div>
-            </div>
-              <div class="row">
-                <div class="col-md-4">
-                    <center>
-                        <img width="150" src="images/select.PNG" />
-                        <h2>Select a template</h2>
-                        <p class="text-justify">
-                            Choose a content creation template. Multiple templates are available for your all needs.
-                        </p>
-                    </center>
-                </div>
-
-                <div class="col-md-4">
-                        <center>
-                                <img width="150" src="images/fill.PNG" />
-                                <h2>Fill the form</h2>
-                                <p class="text-justify">
-                                    Enter a detailed description of your content. Tell the AI what do you want.
-                                </p>
-                        </center>
-                </div>
-
-                    <div class="col-md-4">
-                        <center>
-
-                                <img width="75" src="images/get%20content.PNG" />
-                                <h2>Get your content</h2>
-                                    <p class="text-justify">
-                                       Get a unique high quality content. The content is plagiarism free and you can use it anywhere.
-                                    </p>
-                        </center>
-                </div>
-            </div>
-        </div>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                          <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                      </div>
+                    </div>
+                        <div class="selectlang">
+                         <select  id="langbtn" class="popup-with-zoom-anim button ripple-effect">
+                            <option value="EN">English</option>
+                            <option value="Ta">Tamil</option>
+                            <option value="Te">Telugu</option>
+                            <option value="HI">Hindi</option>
+                          </select>
+                    </div>
+                 </div>
+        </header>
+            
+<div class="content">
+           <div class="sidebar" style="position:relative;float:left;width:300px">
     
-   </section>
-    <%-- css for temp --%>
+                      <h5>&nbsp;My Account</h5>  
+                         <span>
+                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
+                        </span>
+                      <div class="dropdown">
+                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
+                          <div id="myDropdown" class="dropdown-content" >
+                              <a href="alldocuments.aspx">All Documents</a>
+                                   <a href="AIImages.aspx">All AI Images</a>
+                              </div>
+                            </div>
+                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
+                      <a href="#"><i class="fa fa-bars"></i> Templates</a>
+                      <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                      <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                      <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
+                      <h5>&nbsp;Account</h5> 
+                      <div class="dropdown">
+                        <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
+                          <div id="myDropdown1" class="dropdown-content" >
+                                   <a href="#">Affiliate Programs</a>
+                                   <a href="#">Withdrawals</a>
+                              </div>
+                            </div>                 
+                      <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+               <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+                      <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+            </div>
+    </div>
+            <%-- css for temp --%>
         <style>
 .card6-block{
    padding: 1em;
@@ -197,7 +452,7 @@ margin-left:300px;font-size:13px;">
             </div>
           </div>
         </div>
-      <br>
+      <br/>
       <div class="row hidden-md-up" style="padding:20px 20px">
         <div class="col-md-4">
           <div class="card">
@@ -320,7 +575,7 @@ margin-left:300px;font-size:13px;">
             </div>
           </div>
         </div>
-      <br>
+      <br/>
       <div class="row hidden-md-up" style="padding:20px 20px">
         <div class="col-md-4">
           <div class="card">
@@ -398,7 +653,7 @@ margin-left:300px;font-size:13px;">
             </div>
           </div>
         </div>
-     <br>
+     <br/>
       <div class="row hidden-md-up" style="padding:20px 20px">
         <div class="col-md-4">
           <div class="card">
@@ -605,7 +860,7 @@ margin-left:300px;font-size:13px;">
             </div>
           </div>
         </div>
-      <br>
+      <br/>
       <div class="row hidden-md-up" style="padding:20px 20px">
         <div class="col-md-4">
           <div class="card">
@@ -663,7 +918,7 @@ margin-left:300px;font-size:13px;">
             </div>
           </div>
         </div>
-     <br>
+     <br />
       <div class="row hidden-md-up" style="padding:20px 20px" >
         <div class="col-md-4">
           <div class="card">
@@ -774,7 +1029,7 @@ margin-left:300px;font-size:13px;">
             </div>
           </div>
         </div>
-      </div><br>
+      </div><br />
       
          <%-- Other --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data7">
@@ -809,7 +1064,7 @@ margin-left:300px;font-size:13px;">
             </div>
           </div>
         </div>
-      <br>
+      <br/>
       <div class="row hidden-md-up" style="padding:20px 20px">
         <div class="col-md-4">
           <div class="card">
@@ -847,571 +1102,74 @@ margin-left:300px;font-size:13px;">
   </div>
       </div>
     
-    <style>
-.card6-block{
- padding: 1em;
-  border: 0px solid #b5b5b5;
-  border-radius: 10px;
-  width: fit-content;
-  transition: 0.2s;
-}
-.card6-block:hover{
-  margin-top: -10px;
-  transition: 0.2s;
-}
-</style>
-     
-    <style>/*membership*/
-        [data] {
-  display: none;
-}
-        @media only screen and (max-width: 600px) {
-  .columns {
-    width: 50%;
-  }
-}
-        /*pricing*/
-         .card2 {
-    width: calc(100% - 250px);
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    border:1px  gray;
-    box-shadow:gray 2px 2px 2px 2px;
-}
-         /*check mark container*/
-        .container4 {
-            display:flex;
-           position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-            justify-items: center;
-        }
-            /* On mouse-over, add a grey background color */
-            .container:hover input ~ .checkmark {
-                background-color: #ccc;
-            }
-
-            /* When the radio button is checked, add a blue background */
-            .container input:checked ~ .checkmark {
-                background-color: blue;
-            }
-
-        /* Create the indicator (the dot/circle - hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: block;
-        }
-
-        /* Show the indicator (dot/circle) when checked */
-        .container input:checked ~ .checkmark:after {
-            display: block;
-        }
-div {
-    display: block;
-}
-.mdi-close{
-    color:red;
-}
-.mdi-check{
-    color:green;
-}
-    </style>
-    <%-- membership body --%>
-    <hr />
-    <h2 style="text-align:center">Membership Plan</h2>
-
-<br />
-<br /><br />
-<div class="container4" style="margin-left:500px">
-    <input type="radio" id="radio1" name="options" value="1" onclick="toggleData()">
-<label for="radio1">&nbsp; Monthly&nbsp;</label>
-<input type="radio" id="radio2" name="options" value="2" onclick="toggleData()">
-<label for="radio2">&nbsp;Yearly&nbsp;</label>
-<input type="radio" id="radio3" name="options" value="3" onclick="toggleData()">
-<label for="radio3">&nbsp;Lifetime&nbsp;</label>
-    
+    <footer>
+        <div style="float:left;margin-left:100px">
                 
-</div>
-    <br /><br /><br /><br />
-    <label><input type="text" value="Recommended" 
-        style="width:350px;height:50px;margin-left:1000px;background-color:darkblue;color:white;text-align:center;border-radius:6px 6px 0 0;"/></label>
-    <div class="card2   ">
-        <div class="container4" style="text-align:center;padding-top:10px">
-    <h4>Free Plan</h4>
-        <h4 style="margin-left:300px;">Trial Plan</h4>
-        <h4 style="margin-left:250px;">Extended Plan</h4>
-    </div>
-        <br />
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-		
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Free </h4>
-          </div>
-          <div class="card-body">
-            
-            <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
-                <li>Features of Free Plan</li>
-              <li>32 AI Document Templates<br /></li>
-              <li>10,000 Words per month<br /></li>
-              <li>100 Images per month<br /></li>
-              <li>0 Speech to Text per month<br /></li>
-              <li>0 MB Audio file size limit<br /></li>
-                <li><i class="mdi mdi-close"></i> AI Chat <span class="font-weight-bold">?</span></li>
-                <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
-                <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
-                <li><i class="mdi mdi-close"></i> Free Setup <span class="font-weight-bold"></span></li>
-                <li><i class="mdi mdi-close"></i> Free Support <span class="font-weight-bold"></span></li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Current Plan</button>
-          </div>
-        </div>
+            <h6>2023 Socius IGB Pvt Ltd, All right reserve</h6>
+         </div>
+           <div style="float:right;margin-left:400px">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+           </div> 
+</footer>
+    </form>
+     <script>
+         /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
 
-        <div class="card mb-4 box-shadow">
-            
-          <div class="card-header">
-              
-            <h4 class="my-0 font-weight-normal">Trial</h4>
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled mt-3 mb-4" style="text-align:left;">
-                <li>Features of Trial Plan</li>
-              <li>61 AI Document Templates<br /></li>
-              <li>50,000 Words per month<br /></li>
-              <li>500 Images per month<br /></li>
-              <li>0 Speech to Text per month<br /></li>
-              <li>0 MB Audio file size limit<br /></li>
-                <li><i class="mdi mdi-close"></i> AI Chat <span class="font-weight-bold">?</span></li>
-                <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
-                <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
-                <li><i class="mdi mdi-close"></i> Free Setup <span class="font-weight-bold"></span></li>
-                <li><i class="mdi mdi-close"></i> Free Support <span class="font-weight-bold"></span></li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Upgrade</button>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal" style="color:darkblue"></h4>
-                <div id="data8"style="color:blue;font-size:25px"><b>₹5/</b>Month</div>
-                <div id="data9"style="color:blue;font-size:25px"><b>₹50/</b>Month</div>
-                <div id="data10"style="color:blue;font-size:25px"><b>₹550/</b>Month</div>
-          
-            
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled mt-3 mb-4" style="text-align:left;">
-                <li>Features of Extended Plan</li>
-              <li>61 AI Document Templates<br /></li>
-              <li>100,000 Words per month<br /></li>
-              <li>1000 Images per month<br /></li>
-              <li>0 Speech to Text per month<br /></li>
-              <li>0 MB Audio file size limit<br /></li>
-                <li><i class="mdi mdi-close"></i> AI Chat <span class="font-weight-bold">?</span></li>
-                <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
-                <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
-                <li><i class="mdi mdi-check"></i> Free Setup <span class="font-weight-bold"></span></li>
-                <li><i class="mdi mdi-check"></i> Free Support <span class="font-weight-bold"></span></li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary"><a href="upgrade5.aspx" style="color:white">Upgrade</a></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="padding:10% 10%"></div>
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function (event) {
+             if (!event.target.matches('.dropbtn')) {
+                 var dropdowns = document.getElementsByClassName("dropdown-content");
+                 var i;
+                 for (i = 0; i < dropdowns.length; i++) {
+                     var openDropdown = dropdowns[i];
+                     if (openDropdown.classList.contains('show')) {
+
+                     }
+                 }
+             }
+         }
+     </script>
+   
     <script>
-        function toggleData() {
-            var radio1 = document.getElementById("radio1");
-            var radio2 = document.getElementById("radio2");
-            var radio3 = document.getElementById("radio3");
-            var data8 = document.getElementById("data8");
-            var data9 = document.getElementById("data9");
-            var data10 = document.getElementById("data10");
-
-            if (radio1.checked) {
-                data8.style.display = "block";
-                data9.style.display = "none";
-                data10.style.display = "none";
-            } else if (radio2.checked) {
-                data8.style.display = "none";
-                data9.style.display = "block";
-                data10.style.display = "none";
-            } else if (radio3.checked) {
-                data8.style.display = "none";
-                data9.style.display = "none";
-                data10.style.display = "block";
-            }
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction1() {
+            document.getElementById("myDropdown1").classList.toggle("show");
         }
 
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+
+                    }
+                }
+            }
+        }
     </script>
-    <%-- testimonials --%>
     
-      <style>
-    .container {
-                background: black;
-                color: white;
-                height: 100%;
-                margin-top: 220px;
-            }
-
-
-        .content-wrapper {
-            height: 100%;
-            width: 70%;
-            max-width: 100rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 5rem;
-        }
-
-        h1 {
-            margin-bottom: calc(0.7rem + 0.5vmin);
-            font-size: calc(2.3rem + 1vmin);
-        }
-
-        .blue-line {
-            height: 0.3rem;
-            width: 6rem;
-            background-color: rgb(79, 143, 226);
-            margin-bottom: calc(3rem + 2vmin);
-        }
-
-        .wrapper-for-arrows {
-            position: relative;
-            width: 70%;
-            border-radius: 2rem;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            overflow: hidden;
-            display: grid;
-            place-items: center;
-        }
-
-        .review-wrap {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-top: calc(2rem + 1vmin);
-            width: 100%;
-        }
-
-        #imgDiv {
-            border-radius: 50%;
-            width: calc(6rem + 4vmin);
-            height: calc(6rem + 4vmin);
-            position: relative;
-            box-shadow: 5px -3px rgb(79, 143, 226);
-            background-size: cover;
-            margin-bottom: calc(0.7rem + 0.5vmin);
-        }
-
-
-
-            #imgDiv::after {
-                content: "''";
-                font-size: calc(2rem + 2vmin);
-                font-family: sans-serif;
-                line-height: 150%;
-                color: #fff;
-                display: grid;
-                place-items: center;
-                border-radius: 50%;
-                background-color: rgb(79, 143, 226);
-                position: absolute;
-                top: 10%;
-
-
-
-
-                left: -10%;
-                width: calc(2rem + 2vmin);
-                height: calc(2rem + 2vmin);
-            }
-
-        #personName {
-            margin-bottom: calc(0.7rem + 0.5vmin);
-            font-size: calc(1rem + 0.5vmin);
-            letter-spacing: calc(0.1rem + 0.1vmin);
-            font-weight: bold;
-        }
-
-        #profession {
-            font-size: calc(0.8rem + 0.3vmin);
-            margin-bottom: calc(0.7rem + 0.5vmin);
-            color: rgb(79, 143, 226);
-        }
-
-        #description {
-            font-size: calc(0.8rem + 0.3vmin);
-            width: 70%;
-            max-width: 40rem;
-            text-align: center;
-            margin-bottom: calc(1.4rem + 1vmin);
-            color: rgb(92, 92, 92);
-            line-height: 2rem;
-        }
-
-        .arrow-wrap {
-            position: absolute;
-            top: 50%;
-        }
-
-        .arrow {
-            width: calc(1.4rem + 0.6vmin);
-            height: calc(1.4rem + 0.6vmin);
-            border: solid rgb(79, 143, 226);
-            border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-            .arrow:hover {
-                transition: 0.3s;
-                transform: scale(1.15);
-            }
-
-        .left-arrow-wrap {
-            left: 5%;
-            transform: rotate(135deg);
-            -webkit-transform: rotate(135deg);
-        }
-
-        .right-arrow-wrap {
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-            right: 5%;
-        }
-        </style>
-    <h1 style="text-align:center">Testimonials</h1>
-    <div class="content-wrapper" style="margin-left:250px;">
-        <h2>Our Reviews</h2>
-
-       <div class="blue-line"></div>
-        <div class="wrapper-for-arrows">
-
-            <div id="reviewWrap" class="review-wrap" style="transform: translate(0px, 0px); opacity: 1;">
-                <div id="imgDiv" class="" style="background-image: url(&quot;&quot;);">
-                </div>
-                <div id="personName">Tony Stark</div>
-                <div id="profession">Social Marketing</div>
-                <div id="description" style="height: 96px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-            </div>
-            <div class="left-arrow-wrap arrow-wrap">
-                <div class="arrow" id="leftArrow"></div>
-            </div>
-            <div class="right-arrow-wrap arrow-wrap">
-                <div class="arrow" id="rightArrow"></div>
-            </div>
-        </div>
-    </div>
-    <hr />
-    <%-- blog --%>
-    <%-- blog css --%>
-    <style>
-        .container2 {
-  position: absolute;
-  text-align: left;
-  color: gray;
-  margin-left:350px;
-  cursor:pointer;
-  
-}
-
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  
-}
-
-.top-left {
-  position: absolute;
-  top: 60px;
-  left: 26px;
-  border:1px solid black;
-  width:65px;
-  height:30px;
-  text-align:center;
-  padding:0px 8px;
-  background-color:white;
-}
-.container2{
-  border: 0px solid #b5b5b5;
-  border-radius: 10px;
-  width: fit-content;
-  transition: 0.2s;
-}
-.container2:hover {
-  box-shadow: 0 0 0px black;
-  margin-top: -10px;
-
-}
-
-
-        </style>
-    <%-- blog body --%>
-    <br /> <br /> <br />
-    <a href="blog.aspx" rel="Blog" style="margin-left:1200px">View Blog --></a>
-    <div class="container2">
-        <h3>Recent Blog</h3>
-       <a href="blog.aspx" style="color:gray">
-        <img src="images/image.png" alt="blog"
-            style="height:400px;width:400px"/>
-        <div class="top-left" ><span >Admin</span></div>
-  <div class="bottom-left">
-  <h6>3 Years Ago<br/>First Blog<br/>Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut eni...
-  </h6>
-      
-  </div>
-  </a>
-</div>
-        
-<br /> <br />
-    <br /> <br />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="main.js"></script>
+    <%-- menu hide --%>
     <script>
-        const reviewWrap = document.getElementById("reviewWrap");
-        const leftArrow = document.getElementById("leftArrow");
-        const rightArrow = document.getElementById("rightArrow");
-        const imgDiv = document.getElementById("imgDiv");
-        const personName = document.getElementById("personName");
-        const profession = document.getElementById("profession");
-        const description = document.getElementById("description");
+        $("#nav-btn").on("click", function () {
+                $(".sidebar").toggle();
+            $(".main").toggleClass();
 
-        /*testi js*/
-        let isChickenVisible;
-
-        let people = [
-
-            {
-                photo:
-                    'url("")',
-                name: "Natasha",
-                profession: "Designer",
-                description:
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat. Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-            },
-
-            {
-                photo:
-                    "url('')",
-                name: "Steve Roger",
-                profession: "Content Writer",
-                description:
-                    "Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
-            },
-
-            {
-                photo:
-                    "url('')",
-                name: "Tony Stark",
-                profession: "Social Marketing",
-                description:
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            },
-
-
-        ];
-
-        imgDiv.style.backgroundImage = people[0].photo;
-        personName.innerText = people[0].name;
-        profession.innerText = people[0].profession;
-        description.innerText = people[0].description;
-        let currentPerson = 0;
-
-        //Select the side where you want to slide
-        function slide(whichSide, personNumber) {
-            let reviewWrapWidth = reviewWrap.offsetWidth + "px";
-            let descriptionHeight = description.offsetHeight + "px";
-            //(+ or -)
-            let side1symbol = whichSide === "left" ? "" : "-";
-            let side2symbol = whichSide === "left" ? "-" : "";
-
-            let tl = gsap.timeline();
-
-
-            tl.to(reviewWrap, {
-                duration: 0.4,
-                opacity: 0,
-                translateX: `${side1symbol + reviewWrapWidth}`
-            });
-
-            tl.to(reviewWrap, {
-                duration: 0,
-                translateX: `${side2symbol + reviewWrapWidth}`
-            });
-
-            setTimeout(() => {
-                imgDiv.style.backgroundImage = people[personNumber].photo;
-            }, 400);
-            setTimeout(() => {
-                description.style.height = descriptionHeight;
-            }, 400);
-            setTimeout(() => {
-                personName.innerText = people[personNumber].name;
-            }, 400);
-            setTimeout(() => {
-                profession.innerText = people[personNumber].profession;
-            }, 400);
-            setTimeout(() => {
-                description.innerText = people[personNumber].description;
-            }, 400);
-
-            tl.to(reviewWrap, {
-                duration: 0.4,
-                opacity: 1,
-                translateX: 0
-            });
-
-            if (isChickenVisible) {
-                tl.to(chicken, {
-                    duration: 0.4,
-                    opacity: 1
-                });
-            }
-        }
-
-        function setNextCardLeft() {
-            if (currentPerson === 0) {
-                currentPerson = 3;
-                slide("left", currentPerson);
-            } else {
-                currentPerson++;
-            }
-
-            slide("left", currentPerson);
-        }
-
-        function setNextCardRight() {
-            if (currentPerson === 0) {
-                currentPerson = 3;
-                slide("right", currentPerson);
-            } else {
-                currentPerson--;
-            }
-
-            slide("right", currentPerson);
-        }
-
-        leftArrow.addEventListener("click", setNextCardLeft);
-        rightArrow.addEventListener("click", setNextCardRight);
-
-        
-
-        window.addEventListener("resize", () => {
-            description.style.height = "100%";
-        });
-
+    });
     </script>
-    <%-- for templates --%>
+     <%-- for templates --%>
     <script>
         $("#All-tab2").on("click", function () {
             $("#data").show();
@@ -1498,4 +1256,5 @@ div {
 
     </script>
     <div style="padding:200px 200px"></div>
-    </asp:Content>
+</body>
+</html>

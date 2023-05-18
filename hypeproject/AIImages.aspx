@@ -319,7 +319,7 @@ div.content {
                           <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                          <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
@@ -363,7 +363,7 @@ div.content {
                                    <a href="#">Withdrawals</a>
                               </div>
                             </div>                 
-                      <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                      <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
@@ -371,7 +371,7 @@ div.content {
     <div class="main">
             <h4>All Images 
     <span style="border-radius:30px;background-color:#2980B9;padding:10px 10px;color:blue
-    "><img src="images/all.PNG" />0/100 Words Used</span></h4>
+    "><img src="images/all.PNG" />0/100 Images Used</span></h4>
             <button style="float:right;background-color:black;color:white">
                 <a href="homepage.aspx" style="color:white">Home > All Images</a></button>
 

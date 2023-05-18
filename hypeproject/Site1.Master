@@ -135,7 +135,7 @@
 			                   <div class="footer-col2" style="color:darkgray">
 				                 <h6>Helpful Links</h6>
 				                  <ul style="list-style:none;">
-					                <li><a href="#">Blog</a></li>
+                                    <li><a href="blog1.aspx">Blog</a></li>
 					                 <li><a href="#">Feedback</a></li>
 					                      <li><a href="#">Contact</a></li>
 				                      </ul>

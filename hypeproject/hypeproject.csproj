@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AIChat.aspx" />
+    <Content Include="AIImage.aspx" />
+    <Content Include="article.aspx" />
+    <Content Include="articleblog.aspx" />
     <Content Include="bootstrap\css\bootstrap1.js" />
     <Content Include="bootstrap\css\fontawesome.min.css" />
     <Content Include="bootstrap\database\css\bootstrap.min.css" />
@@ -93,6 +97,8 @@
     <Content Include="Membership\membership price.aspx" />
     <Content Include="Membership\membership.aspx" />
     <Content Include="signuppage.aspx" />
+    <Content Include="speech to text.aspx" />
+    <Content Include="template.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="forgotpass.aspx" />
@@ -102,9 +108,10 @@
     <Content Include="testi.aspx" />
     <Content Include="blog.aspx" />
     <Content Include="blog1.aspx" />
-    <Content Include="templates.aspx" />
     <Content Include="alldocuments.aspx" />
     <Content Include="AIImages.aspx" />
+    <Content Include="WebForm15.aspx" />
+    <Content Include="WebForm17.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="membership.aspx" />
     <Content Include="membership price.aspx" />
@@ -112,6 +119,34 @@
     <Content Include="billing details.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AIChat.aspx.cs">
+      <DependentUpon>AIChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AIChat.aspx.designer.cs">
+      <DependentUpon>AIChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AIImage.aspx.cs">
+      <DependentUpon>AIImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AIImage.aspx.designer.cs">
+      <DependentUpon>AIImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="article.aspx.cs">
+      <DependentUpon>article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="article.aspx.designer.cs">
+      <DependentUpon>article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articleblog.aspx.cs">
+      <DependentUpon>articleblog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articleblog.aspx.designer.cs">
+      <DependentUpon>articleblog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,7 +197,21 @@
     <Compile Include="Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
+    <Compile Include="speech to text.aspx.cs">
+      <DependentUpon>speech to text.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="speech to text.aspx.designer.cs">
+      <DependentUpon>speech to text.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sqlDataReader.cs" />
+    <Compile Include="template.aspx.cs">
+      <DependentUpon>template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template.aspx.designer.cs">
+      <DependentUpon>template.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,13 +268,6 @@
     <Compile Include="blog1.aspx.designer.cs">
       <DependentUpon>blog1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="templates.aspx.cs">
-      <DependentUpon>templates.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="templates.aspx.designer.cs">
-      <DependentUpon>templates.aspx</DependentUpon>
-    </Compile>
     <Compile Include="alldocuments.aspx.cs">
       <DependentUpon>alldocuments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,6 +281,20 @@
     </Compile>
     <Compile Include="AIImages.aspx.designer.cs">
       <DependentUpon>AIImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm15.aspx.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm15.aspx.designer.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm17.aspx.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm17.aspx.designer.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm5.aspx.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>

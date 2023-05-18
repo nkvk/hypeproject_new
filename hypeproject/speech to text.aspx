@@ -1,11 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="hypeproject.WebForm4" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="speech to text.aspx.cs" Inherits="hypeproject.speech_to_text" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="Site1.Master" rel="master"/>
-     <%--bootstrap css--%>
+    <title></title>
     <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -33,12 +32,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <title></title>
-    <style>
-        /*toggle*/
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'/>
 
-        /*header*/
+<script src="https://use.typekit.net/hoy3lrg.js"></script>
 
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'/>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'/>             
+<style>
 .topbar {
     position: fixed;
     background-color: #fff;
@@ -185,46 +185,7 @@ div.content {
     float: none;
   }
 }
-.container1{
-    display: flex;
-    flex-wrap: wrap;
-   
-    padding: 10px;
-}
-.word-box {
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .10);
-    border-radius: 4px;
-    padding: 10px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex: 1 1 calc(25% - 30px);
-    height: 150px;
-    cursor: pointer;
-    transition: .3s;
-}
 
-.word-text{
-    flex: 1;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    display:inline-flex;
-}
-
-/*graph*/
-.chart-container {
-  position: absolute;
-  width: 80%;
-  margin: auto;
-  
-}
-#myChart {
-  width: 50%;
-  height: auto;
-}
 /*footer*/
 .fa {
   padding: 0px;
@@ -263,23 +224,12 @@ div.content {
 .fa-youtube {
   color: gray;
 }
-/*menu*/
-.btn {
-  background-color: dodgerblue;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius:100px 100px 100px 100px;
-}
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: gray;
 }
 /*menu toggle*/
-.sidebar .navbar-toggler .icon-bar .chart-container 
-#myChart {
+.sidebar .navbar-toggler .icon-bar {
   margin: 7px;
   display: block;
   width: 22px;
@@ -287,12 +237,10 @@ div.content {
   background-color: #cccccc;
   border-radius: 1px;
 }
-</style>
+    </style>
 </head>
-
 <body>
-       <form id="form1" runat="server">
-         
+    <form id="form1" runat="server">
         <header>
             <div class="topbar">
                     <div class="logo">
@@ -370,56 +318,6 @@ div.content {
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     </div>
-        <div class="word-box">
-            <div class="word-text">
-                        <h2>&nbsp;Dashboard</h2> </div>
-            </div>
-       <div class="word-text">
-                        <button style="margin-left:800px;background-color:black" ><a style="color:white" href="homepage.aspx">Home>Dashboard</a></button>
-            </div>
-       <div class="container1">
-      <div class="word-box">
-          <div class="word-text">
-                    <span>Words Used&nbsp; &nbsp;&nbsp; &nbsp; <br /><b>0/10,000</b></span>
-               <img style="float:right;" src="images/growth.jpg" />
-               </div>
-      </div>
-            <div class="word-box">
-          <div class="word-text">
-              <span>Image Used&nbsp; &nbsp;<br />
-                  <b>0/100</b>
-              </span>
-              <img style="float:right;" src="images/image%20used.PNG" />
-              <h4></h4>
-              
-               </div>
-                </div>
-                <div class="word-box">
-          <div class="word-text" style="width:10px">
-              <span>Speech to Text &nbsp; &nbsp;<br /><b>0/0</b></span>
-              <img style="float:right;" src="images/music.png" />
-               </div>
-
-</div>
-  <div>
-        <h6><img width="40" src="images/image%20used.PNG" />Words used this Month</h6>
-       <canvas id="chart" style="display: block; height:300px; width: 950px;" class="chartjs-render-monitor"></canvas>
-       </div>
-</div>
-    <footer>
-        <div style="float:left;margin-left:100px">
-                
-            <h6>2023 Socius IGB Pvt Ltd, All right reserve</h6>
-         </div>
-           <div style="float:right;margin-left:400px">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-              <i class="fa fa-youtube" aria-hidden="true"></i>
-           </div> 
-</footer>
     </form>
      <script>
          /* When the user clicks on the button, 
@@ -467,75 +365,7 @@ div.content {
     
 
     
-<script>
-    Chart.defaults.global.defaultFontColor = '#888';
-    Chart.defaults.global.defaultFontSize = '18';
 
-    var ctx = document.getElementById('chart').getContext('2d');
-
-    var chart = new Chart(ctx, {
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: ["01 Apr", "02 Apr", "03 Apr", "04 Apr", "05 Apr", "06 Apr", "07 Apr", "08 Apr", "09 Apr", "10 Apr", "11 Apr", "12 Apr", "13 Apr", "14 Apr", "15 Apr", "16 Apr", "17 Apr", "18 Apr", "19 Apr", "20 Apr", "21 Apr", "22 Apr", "23 Apr", "24 Apr", "25 Apr", "26 Apr", "27 Apr", "28 Apr", "29 Apr", "30 Apr"],
-            // Information about the dataset
-            datasets: [{
-                label: "Words Used",
-                backgroundColor: '#18469815',
-                borderColor: '#184698',
-                borderWidth: "3",
-                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                pointRadius: 5,
-                pointHoverRadius: 5,
-                pointHitRadius: 10,
-                pointBackgroundColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointBorderWidth: "2",
-            }]
-        },
-
-        // Configuration options
-        options: {
-            layout: {
-                padding: 10,
-            },
-            legend: { display: false },
-            title: { display: false },
-            scales: {
-                yAxes: [{
-                    scaleLabel: {
-                        display: false
-                    },
-                    gridLines: {
-                        borderDash: [5, 8],
-                        color: "#d8d8d8",
-                        lineWidth: 1,
-                    },
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }],
-                xAxes: [{
-                    scaleLabel: { display: false },
-                    gridLines: { display: false },
-                }],
-            },
-            tooltips: {
-                backgroundColor: '#333',
-                titleFontSize: 13,
-                titleFontColor: '#fff',
-                bodyFontColor: '#fff',
-                bodyFontSize: 13,
-                displayColors: false,
-                xPadding: 10,
-                yPadding: 10,
-                intersect: false
-            }
-        },
-    });
-
-</script>
     <%-- menu hide --%>
     <script>
         $("#nav-btn").on("click", function () {
@@ -544,9 +374,5 @@ div.content {
 
     });
     </script>
-    
-
-    
 </body>
-    
 </html>
