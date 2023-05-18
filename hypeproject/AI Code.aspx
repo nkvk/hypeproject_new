@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="speech to text.aspx.cs" Inherits="hypeproject.speech_to_text" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AI Code.aspx.cs" Inherits="hypeproject.AI_Code" %>
+
 
 <!DOCTYPE html>
 
@@ -405,146 +406,50 @@ input[type="color"]::-moz-color-swatch {
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     <div class="card" style="margin-top: 100px;padding:15px 15px;background-color:#f8f8f8;height:75px">
-        <span >Speech to Text &nbsp;&nbsp; <h7 style="background-color:cornflowerblue;border-radius:8px;height:20px"><img src="images/all.PNG" /><i >0 / 0 Used</i></h7></span>
+        <span >AI Code &nbsp;&nbsp; <h7 style="background-color:cornflowerblue;border-radius:8px;height:20px"><img src="images/all.PNG" /><i >0 / 10,000 Used</i></h7></span>
         <div style="margin-left:600px;">
         <a href="homepage.aspx" style="background-color:black;width:175px;border-radius:3px"><span style="color:white;padding:10px 10px;">Home > Speech to Text</span></a>
         </div>
         <div class="card-body" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 550px)">
             <div class="headline" >
-                            <span><i class="fa fa-headphones" aria-hidden="true" style="color:darkblue"></i>&nbsp;
-                                Speech to Text</span>
+                            <span><i class="fa fa-chevron-left" aria-hidden="true"style="color:darkblue"></i><i class="fa fa-chevron-right" aria-hidden="true" style="color:darkblue"></i>
+                                &nbsp;
+                                AI Code</span>
                         </div><hr />
-            <span style="color:white;background-color:cornflowerblue;padding:2px 2px">Create audio transcription from a file.</span>
+            <p style="color:white;background-color:cornflowerblue;padding:2px 2px;font-size:12px">Use this code generator to create code in any programming language.</p>
            <span>Title</span><br />
-            <input type="text" style="width:275px;" min-length="100"/><br />
+            <input type="text" style="width:275px;" min-length="100" value="New Code"/><br />
             
-            <label for="fileInput" style="
-  color:darkblue;" class="customFileUpload"></label>
-<div class="customButton"><span>Upload Media  *</span></div>
-<input type="file"  id="fileInput" name="fileInput" class="hiddenInput"/><br />
-            <span>.mp3, .mp4, .mpeg, .mpga, .m4a, .wav, .webm allowed. Max file size: 0 MB</span><br />
             
-<div>
-    <br /><label for="text" >Audio Description</label>
-    <textarea style="width:250px"></textarea>
-    <p>Describe the speech from the file to help the AI. (Optional)</p>
+    <br /><label for="text" > Description *</label>
+    <textarea style="width:250px" placeholder="Generate a Javascript function to generate a random string"></textarea>
+    
 
-</div>
+
             <div>
                 <span class="alert alert-danger" role="alert" id="error-msg" style="display:none;background-color:white;border:none;font-size:10px">
-  Unexpected error, please try again.
+  Upgrade your membership plan to use this feature
 </span>
 <button type="button" id="submit-btn" style="color:white;background-color:darkblue;width: 150px;">
     <span>Generate &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></span>
 
 </button>
-                <p style="background-color:#3184ae;opacity: 0.4;color:darkblue">Audio transcription may takes time due to the file size.</p>
+              
             </div>
     </div>
         </div>
-        <div class="card-body" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 650px);display:flex; margin-left: 620px;">
+    <div class="card" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 650px);display:flex; margin-left: 620px;">
+        <div class="card-body">
             <div class="container8">
             <div style="padding:1px 1px;margin:1px 1px;display:flex">
-              <i class='fas fa-align-left fa-2x' style='color:#0769e9;font-size:20px'></i>
-            <h4 style='font-size:20px'>Generated Result<br /></h4>
-            <div style="margin-left:210px;">
-            <i class='fas fa-file-word fa-2x' data-bs-toggle="popover" data-bs-trigger="hover"  data-bs-placement="top" data-bs-content="Export as word Document" style='color:#007bff;font-size:20px'></i>
-            <i class='fas fa-file-alt fa-2x' data-bs-toggle="popover" data-bs-trigger="hover"  data-bs-placement="top" data-bs-content="Export as Text"  style='color:#0a18e6;font-size:20px'></i>
-            <i class='far fa-copy fa-2x' data-bs-toggle="popover" data-bs-trigger="hover"  data-bs-placement="top" data-bs-content="Copy Text"  style='color:#1708e2;font-size:20px'></i>
-                </div>
-      
-            </div>
-        
-                 <hr />
-          
-      <div class="options">
-          
-          <!-- Headings -->
-        <select id="formatBlock" class="adv-option-button">
-            <option value="H1">Paragraph</option>
-          <option value="H1">Heading 1</option>
-          <option value="H2">Heading 2</option>
-          <option value="H3">Heading 3</option>
-          <option value="H4">Heading 4</option>
-          <option value="H5">Heading 5</option>
-          <option value="H6">Heading 6</option>
-        </select>
-
-        <!-- Text Format -->
-        <button id="bold" class="option-button format">
-          <i class="fa fa-bold " aria-hidden="true"></i>
-        </button>
-        <button id="italic" class="option-button format">
-         <i class="fa fa-italic" aria-hidden="true"></i>
-        </button>
-        <button id="underline" class="option-button format">
-          <i class="fa fa-underline" aria-hidden="true"></i>
-        </button>
-        <button id="strikethrough" class="option-button format">
-          <i class="fa fa-strikethrough" aria-hidden="true"></i>
-        </button>
-
-        <!-- Alignment -->
-        <button id="justifyLeft" class="option-button align">
-         <i class="fa fa-align-left" aria-hidden="true"></i>
-        </button>
-        <button id="justifyCenter" class="option-button align">
-          <i class="fa fa-align-center" aria-hidden="true"></i>
-        </button>
-        <button id="justifyRight" class="option-button align">
-          <i class="fa fa-align-right" aria-hidden="true"></i>
-        </button>
-
-          <!-- Link -->
-        <button id="createLink" class="adv-option-button">
-          <i class="fa fa-link"></i>
-        </button>
-          <!-- blockquote -->
-          <button>
-        <i class="fa fa-quote-right" aria-hidden="true"></i>
-    </button>
-                    </div>
-        <hr />
-<div class="options">
-    
-          <!-- Undo/Redo -->
-        <button id="undo" class="option-button">
-          <i class="fa fa-undo" aria-hidden="true"></i>
-        </button>
-        <button id="redo" class="option-button">
-          <i class="fa fa-repeat" aria-hidden="true"></i>
-        </button>
-    <button id="clearFormattingBtn">
-        <i class="fa fa-i-cursor" aria-hidden="true"></i>
-    </button>
-        <i class="fa fa-table" aria-hidden="true"></i>
-        <!-- List -->
-        <button id="insertOrderedList" class="option-button">
-          <i class="fa fa-list-ol" aria-hidden="true"></i>
-        </button>
-        <button id="insertUnorderedList" class="option-button">
-          <i class="fa fa-list-ul" aria-hidden="true"></i>
-        </button>
-       <%-- indentation --%>
-    <button id="outdent" class="option-button spacing">
-          <i class="fa fa-outdent" aria-hidden="true"></i>
-        </button>
-
-        <button id="indent" class="option-button spacing">
-          <i class="fa fa-indent" aria-hidden="true"></i>
-        </button>
-    </div>
+            <span style='font-size:15px'><i class='fas fa-align-left fa-2x' style='color:#0769e9;font-size:15px'></i>Generated Result</span>
                 
-<textarea id="inputText" oninput="countWords()"style="width:450px;height:200px"></textarea>
-  <p id="wordCount" style="float:right"></p>
-   
-               
-         </div>
-      
-
-          
-      
-      </div>
+        
+             </div> <hr />
+                <label style="height:50px;background-color:#3184ae;opacity:0.7;width:450px;padding:7px 7px;color:darkblue">Generated code will appear here.</label>
+                </div>
+            </div>
+           </div>
     </div>
     <footer></footer>
     </form>
@@ -734,3 +639,4 @@ input[type="color"]::-moz-color-swatch {
    </script>
 </body>
 </html>
+

@@ -3,8 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
+    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!-- Google Fonts -->
@@ -583,7 +582,7 @@ input[type="color"]::-moz-color-swatch {
 
         <!-- Text Format -->
         <button id="bold" class="option-button format">
-          <i class="fa-solid fa-bold"></i>
+          <i class="fa fa-bold " aria-hidden="true"></i>
         </button>
         <button id="italic" class="option-button format">
           <i class="fa-solid fa-italic"></i>
@@ -714,7 +713,8 @@ input[type="color"]::-moz-color-swatch {
         }
     </script>
     <!--Script-->
-    <script>let optionsButtons = document.querySelectorAll(".option-button");
+    <script>
+        let optionsButtons = document.querySelectorAll(".option-button");
         let advancedOptionButton = document.querySelectorAll(".adv-option-button");
         let fontName = document.getElementById("fontName");
         let fontSizeRef = document.getElementById("fontSize");
@@ -831,6 +831,8 @@ input[type="color"]::-moz-color-swatch {
             });
         };
 
-        window.onload = initializer();</script>
+        window.onload = initializer();
+
+    </script>
   </body>
 </html>

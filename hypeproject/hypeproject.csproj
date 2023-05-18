@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AI Code.aspx" />
     <Content Include="AIChat.aspx" />
     <Content Include="AIImage.aspx" />
     <Content Include="article.aspx" />
@@ -119,6 +120,13 @@
     <Content Include="billing details.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI Code.aspx.cs">
+      <DependentUpon>AI Code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AI Code.aspx.designer.cs">
+      <DependentUpon>AI Code.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AIChat.aspx.cs">
       <DependentUpon>AIChat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
