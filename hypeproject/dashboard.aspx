@@ -311,16 +311,16 @@ div.content {
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-                        <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                        <a class="dropdown-item" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="template.aspx"> <i class="fa fa-bars"></i> Templates</a>
+                        <a class="dropdown-item" href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                          <a class="dropdown-item" href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="speech%20to%20text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="AI%20Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="alldocuments.aspx"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
                           <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                          <a class="dropdown-item" href="homepage.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
                         <div class="selectlang">
@@ -349,11 +349,12 @@ div.content {
                               </div>
                             </div>
                       <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
-                      <a href="#"><i class="fa fa-bars"></i> Templates</a>
-                      <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                      <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                      <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
+               
+               <a href="template.aspx"><i class="fa fa-bars"></i> Templates</a>
+                      <a href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                      <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                      <a href="speech%20to%20text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                      <a href="AI%20Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
                       <h5>&nbsp;Account</h5> 
                       <div class="dropdown">
                         <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
@@ -368,14 +369,15 @@ div.content {
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     </div>
-        <div class="word-box">
+        
+       <div class="container1">
+           <div class="word-box">
             <div class="word-text">
                         <h2>&nbsp;Dashboard</h2> </div>
             </div>
        <div class="word-text">
-                        <button style="margin-left:800px;background-color:black" ><a style="color:white" href="homepage.aspx">Home>Dashboard</a></button>
+                        <button style="margin-left:700px;background-color:black" ><a style="color:white" href="homepage.aspx">Home>Dashboard</a></button>
             </div>
-       <div class="container1">
       <div class="word-box">
           <div class="word-text">
                     <span>Words Used&nbsp; &nbsp;&nbsp; &nbsp; <br /><b>0/10,000</b></span>
@@ -404,19 +406,20 @@ div.content {
        <canvas id="chart" style="display: block; height:300px; width: 950px;" class="chartjs-render-monitor"></canvas>
        </div>
 </div>
-    <footer>
-        <div style="float:left;margin-left:100px">
-                
-            <h6>2023 Socius IGB Pvt Ltd, All right reserve</h6>
-         </div>
-           <div style="float:right;margin-left:400px">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-              <i class="fa fa-youtube" aria-hidden="true"></i>
-           </div> 
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+      
+      <span class="mb-3 mb-md-0 text-muted">2023 Socius IGB Pvt Ltd, All right reserved</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a  href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+    </ul>
 </footer>
     </form>
      <script>

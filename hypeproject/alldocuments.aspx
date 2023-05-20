@@ -369,7 +369,7 @@ div.content {
             </div>
     <div class="main">
             <h4>All Documents 
-    <span style="border-radius:30px;background-color:#2980B9;padding:10px 10px;color:blue
+    <span style="border-radius:20px;background-color:#2980B9;padding:5px 5px;color:blue;display: inline-block;
     "><img src="images/all.PNG" />0/10,000 Words Used</span></h4>
             <button style="float:right;background-color:black;color:white">
                 <a href="homepage.aspx" style="color:white">Home > Membership</a></button>

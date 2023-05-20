@@ -370,7 +370,7 @@ div.content {
             </div>
     <div class="main">
             <h4>All Images 
-    <span style="border-radius:30px;background-color:#2980B9;padding:10px 10px;color:blue
+    <span style="border-radius:20px;background-color:#2980B9;padding:10px 10px;color:blue;display:inline-block
     "><img src="images/all.PNG" />0/100 Images Used</span></h4>
             <button style="float:right;background-color:black;color:white">
                 <a href="homepage.aspx" style="color:white">Home > All Images</a></button>

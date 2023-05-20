@@ -1008,9 +1008,9 @@ border-radius:20px;width:250px;height:35px">
       <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
       <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
     </ul>
   </footer>
          </form>

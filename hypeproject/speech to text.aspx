@@ -138,13 +138,14 @@ option {
 
 .show {display: block;}
 .sidebar {
-  width: 200px;
+  width: 175px;
   background-color: white;
   height:calc(100% - 95px);
   padding-top:100px;
   border-spacing:5px;
-  position: fixed;
+  position: sticky;
   background: #fff;
+  overflow:auto;
   overflow-y: scroll;
   box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
@@ -201,6 +202,7 @@ div.content {
   font-size: 16px;
   cursor: pointer;
   border-radius:100px 100px 100px 100px;
+  position:sticky;
 }
 /* Darker background on mouse-over */
 .btn:hover {
@@ -351,10 +353,10 @@ input[type="color"]::-moz-color-swatch {
                         <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
                         <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                          <a class="dropdown-item" href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="speech%20to%20text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="AI%20Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="alldocuments.aspx"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
                           <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                           <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
@@ -442,110 +444,111 @@ input[type="color"]::-moz-color-swatch {
             </div>
     </div>
         </div>
-        <div class="card-body" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 650px);display:flex; margin-left: 620px;">
-            <div class="container8">
-            <div style="padding:1px 1px;margin:1px 1px;display:flex">
-              <i class='fas fa-align-left fa-2x' style='color:#0769e9;font-size:20px'></i>
-            <h4 style='font-size:20px'>Generated Result<br /></h4>
-            <div style="margin-left:210px;">
-            <i class='fas fa-file-word fa-2x' data-bs-toggle="popover" data-bs-trigger="hover"  data-bs-placement="top" data-bs-content="Export as word Document" style='color:#007bff;font-size:20px'></i>
-            <i class='fas fa-file-alt fa-2x' data-bs-toggle="popover" data-bs-trigger="hover"  data-bs-placement="top" data-bs-content="Export as Text"  style='color:#0a18e6;font-size:20px'></i>
-            <i class='far fa-copy fa-2x' data-bs-toggle="popover" data-bs-trigger="hover"  data-bs-placement="top" data-bs-content="Copy Text"  style='color:#1708e2;font-size:20px'></i>
-                </div>
-      
+        <div class="card-body" style="border: 1px solid gray;margin-top:15px;
+        width:calc(100% - 650px);display:flex; margin-left: 620px;">
+        <div class="container8">
+    <div style="padding:1px 1px;margin:1px 1px;display:flex">
+          <i class='fas fa-align-left fa-2x' style='color:#0769e9'></i>
+        <h4>Generated Result<br /></h4>
+        <div style="float:right;">
+        <i class='fas fa-file-word fa-2x' style='color:#007bff'></i>
+        <i class='fas fa-file-alt fa-2x' style='color:#0a18e6'></i>
+        <i class='far fa-copy fa-2x' style='color:#1708e2'></i>
             </div>
-        
-                 <hr />
-          
-      <div class="options">
-          
-          <!-- Headings -->
-        <select id="formatBlock" class="adv-option-button">
-            <option value="H1">Paragraph</option>
-          <option value="H1">Heading 1</option>
-          <option value="H2">Heading 2</option>
-          <option value="H3">Heading 3</option>
-          <option value="H4">Heading 4</option>
-          <option value="H5">Heading 5</option>
-          <option value="H6">Heading 6</option>
-        </select>
-
-        <!-- Text Format -->
-        <button id="bold" class="option-button format">
-          <i class="fa fa-bold " aria-hidden="true"></i>
-        </button>
-        <button id="italic" class="option-button format">
-         <i class="fa fa-italic" aria-hidden="true"></i>
-        </button>
-        <button id="underline" class="option-button format">
-          <i class="fa fa-underline" aria-hidden="true"></i>
-        </button>
-        <button id="strikethrough" class="option-button format">
-          <i class="fa fa-strikethrough" aria-hidden="true"></i>
-        </button>
-
-        <!-- Alignment -->
-        <button id="justifyLeft" class="option-button align">
-         <i class="fa fa-align-left" aria-hidden="true"></i>
-        </button>
-        <button id="justifyCenter" class="option-button align">
-          <i class="fa fa-align-center" aria-hidden="true"></i>
-        </button>
-        <button id="justifyRight" class="option-button align">
-          <i class="fa fa-align-right" aria-hidden="true"></i>
-        </button>
-
-          <!-- Link -->
-        <button id="createLink" class="adv-option-button">
-          <i class="fa fa-link"></i>
-        </button>
-          <!-- blockquote -->
-          <button>
-        <i class="fa fa-quote-right" aria-hidden="true"></i>
-    </button>
-                    </div>
-        <hr />
-<div class="options">
+  
+        </div>
     
-          <!-- Undo/Redo -->
-        <button id="undo" class="option-button">
-          <i class="fa fa-undo" aria-hidden="true"></i>
-        </button>
-        <button id="redo" class="option-button">
-          <i class="fa fa-repeat" aria-hidden="true"></i>
-        </button>
-    <button id="clearFormattingBtn">
-        <i class="fa fa-i-cursor" aria-hidden="true"></i>
+             <hr />
+      
+  <div class="options">
+      
+      <!-- Headings -->
+    <select id="formatBlock" class="adv-option-button">
+        <option value="H1">Paragraph</option>
+      <option value="H1">Heading 1</option>
+      <option value="H2">Heading 2</option>
+      <option value="H3">Heading 3</option>
+      <option value="H4">Heading 4</option>
+      <option value="H5">Heading 5</option>
+      <option value="H6">Heading 6</option>
+    </select>
+
+    <!-- Text Format -->
+    <button id="bold" class="option-button format">
+      <i class="fa fa-bold " aria-hidden="true"></i>
     </button>
-        <i class="fa fa-table" aria-hidden="true"></i>
-        <!-- List -->
-        <button id="insertOrderedList" class="option-button">
-          <i class="fa fa-list-ol" aria-hidden="true"></i>
-        </button>
-        <button id="insertUnorderedList" class="option-button">
-          <i class="fa fa-list-ul" aria-hidden="true"></i>
-        </button>
-       <%-- indentation --%>
-    <button id="outdent" class="option-button spacing">
-          <i class="fa fa-outdent" aria-hidden="true"></i>
-        </button>
+    <button id="italic" class="option-button format">
+      <i class="fa-solid fa-italic"></i>
+    </button>
+    <button id="underline" class="option-button format">
+      <i class="fa-solid fa-underline"></i>
+    </button>
+    <button id="strikethrough" class="option-button format">
+      <i class="fa-solid fa-strikethrough"></i>
+    </button>
 
-        <button id="indent" class="option-button spacing">
-          <i class="fa fa-indent" aria-hidden="true"></i>
-        </button>
-    </div>
-                
-<textarea id="inputText" oninput="countWords()"style="width:450px;height:200px"></textarea>
-  <p id="wordCount" style="float:right"></p>
-   
-               
-         </div>
-      
+    <!-- Alignment -->
+    <button id="justifyLeft" class="option-button align">
+      <i class="fa-solid fa-align-left"></i>
+    </button>
+    <button id="justifyCenter" class="option-button align">
+      <i class="fa-solid fa-align-center"></i>
+    </button>
+    <button id="justifyRight" class="option-button align">
+      <i class="fa-solid fa-align-right"></i>
+    </button>
 
-          
-      
-      </div>
-    </div>
+      <!-- Link -->
+    <button id="createLink" class="adv-option-button">
+      <i class="fa fa-link"></i>
+    </button>
+      <!-- blockquote -->
+      <button>
+    <i class="fa fa-quote-right" aria-hidden="true"></i>
+</button>
+                </div>
+    <hr />
+<div class="options">
+
+      <!-- Undo/Redo -->
+    <button id="undo" class="option-button">
+      <i class="fa-solid fa-rotate-left"></i>
+    </button>
+    <button id="redo" class="option-button">
+      <i class="fa-solid fa-rotate-right"></i>
+    </button>
+
+    <!-- List -->
+    <button id="insertOrderedList" class="option-button">
+      <div class="fa-solid fa-list-ol"></div>
+    </button>
+    <button id="insertUnorderedList" class="option-button">
+      <i class="fa-solid fa-list"></i>
+    </button>
+    
+    
+
+    
+    
+
+    
+    <!-- indentation -->
+<button id="outdent" class="option-button spacing">
+      <i class="fa-solid fa-outdent"></i>
+    </button>
+
+    <button id="indent" class="option-button spacing">
+      <i class="fa-solid fa-indent"></i>
+    </button>
+    
+
+    
+
+    
+  </div>
+  <div id="text-input" contenteditable="true"></div>
+</div>
+</div>
     <footer></footer>
     </form>
     <script>
@@ -649,6 +652,7 @@ input[type="color"]::-moz-color-swatch {
          //For basic operations which don't need value parameter
          optionsButtons.forEach((button) => {
              button.addEventListener("click", () => {
+                 event.preventDefault();
                  modifyText(button.id, false, null);
              });
          });
@@ -662,6 +666,7 @@ input[type="color"]::-moz-color-swatch {
 
          //link
          linkButton.addEventListener("click", () => {
+             event.preventDefault();
              let userLink = prompt("Enter a URL");
              //if link has http then pass directly else add https
              if (/http/i.test(userLink)) {
@@ -676,6 +681,7 @@ input[type="color"]::-moz-color-swatch {
          const highlighter = (className, needsRemoval) => {
              className.forEach((button) => {
                  button.addEventListener("click", () => {
+                     event.preventDefault();
                      //needsRemoval = true means only one button should be highlight and other would be normal
                      if (needsRemoval) {
                          let alreadyActive = false;

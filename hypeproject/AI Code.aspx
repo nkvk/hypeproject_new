@@ -10,11 +10,7 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
+    
       
      <%--bootstrap css--%>
     <link href="bootstrap/database/css/bootstrap.min.css" rel="stylesheet" />
@@ -22,23 +18,14 @@
     <link href="bootstrap/database/css/jquery.dataTables.min.css" rel="stylesheet" />
      <%--fontawesome css--%>
     <link href="bootstrap/css/fontawesome.min.css" rel="stylesheet" />
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="icons" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" rel="icons" />
+   
     <%--jquery--%>
     <script src="bootstrap/js/jquery-git.js"></script>
     <%--popper js--%>
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="bootstrap/css/bootstrap1.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-   
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
     <title></title>
     <style>
         
@@ -240,90 +227,6 @@ input[type="file"]:hover::before {
 .card-body{
 box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
 }
-.container7 {
-  background-color: #ffffff;
-  width: 412px;
-  height:646px;
-  padding: 20px 30px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 62%;
-  top: 67%;
-  border-radius: 10px;
-  box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
-}
-#container8 {
-  background-color: #ffffff;
-  width: 296px;
-  padding: 10px 10px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 26%;
-  top: 68%;
-  border-radius: 10px;
-  box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
-  height:715px;
-}
-.options {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-  padding-top:1px;
-}
-button {
-  height: 28px;
-  width: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 3px;
-  border: none;
-  background-color: #ffffff;
-  outline: none;
-  color: #020929;
-}
-select {
-  padding: 0px;
-  border: 1px solid #020929;
-  border-radius: 3px;
-            width: 149px;
-        }
-.options label,
-.options select {
-  font-family: "Poppins", sans-serif;
-}
-.input-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-input[type="color"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  width: 15px;
-  height: 18px;
-  border: none;
-  cursor: pointer;
-}
-input[type="color"]::-webkit-color-swatch {
-  border-radius: 15px;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-}
-input[type="color"]::-moz-color-swatch {
-  border-radius: 15px;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-}
-#text-input {
-  margin-top: 10px;
-  border: 1px solid #dddddd;
-  padding: 2px;
-  height: 50vh;
-}
-.active {
-  background-color: #e0e9ff;
-}
 
 </style>
 </head>
@@ -408,7 +311,7 @@ input[type="color"]::-moz-color-swatch {
     <div class="card" style="margin-top: 100px;padding:15px 15px;background-color:#f8f8f8;height:75px">
         <span >AI Code &nbsp;&nbsp; <h7 style="background-color:cornflowerblue;border-radius:8px;height:20px"><img src="images/all.PNG" /><i >0 / 10,000 Used</i></h7></span>
         <div style="margin-left:600px;">
-        <a href="homepage.aspx" style="background-color:black;width:175px;border-radius:3px"><span style="color:white;padding:10px 10px;">Home > Speech to Text</span></a>
+        <a href="homepage.aspx" style="background-color:black;width:175px;border-radius:3px"><span style="color:white;padding:10px 10px;">Home > AI Code</span></a>
         </div>
         <div class="card-body" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 550px)">
             <div class="headline" >
@@ -450,8 +353,9 @@ input[type="color"]::-moz-color-swatch {
                 </div>
             </div>
            </div>
+
     </div>
-    <footer></footer>
+    
     </form>
     <script>
          /* When the user clicks on the button, 
@@ -511,132 +415,7 @@ input[type="color"]::-moz-color-swatch {
             document.getElementById("error-msg").style.display = "block";
             });
     </script>
-     <script>
-         let optionsButtons = document.querySelectorAll(".option-button");
-         let advancedOptionButton = document.querySelectorAll(".adv-option-button");
-         let fontSizeRef = document.getElementById("fontSize");
-         let writingArea = document.getElementById("text-input");
-         let linkButton = document.getElementById("createLink");
-         let blockquote = document.getElementById("blockquote");
-         let alignButtons = document.querySelectorAll(".align");
-         let spacingButtons = document.querySelectorAll(".spacing");
-         let formatButtons = document.querySelectorAll(".format");
-         let scriptButtons = document.querySelectorAll(".script");
-
-         
-
-         //Initial Settings
-         const initializer = () => {
-             //function calls for highlighting buttons
-             //No highlights for link, unlink,lists, undo,redo since they are one time operations
-             highlighter(alignButtons, true);
-             highlighter(spacingButtons, true);
-             highlighter(formatButtons, false);
-             highlighter(scriptButtons, true);
-             //fontSize allows only till 7
-             for (let i = 1; i <= 7; i++) {
-                 let option = document.createElement("option");
-                 option.value = i;
-                 option.innerHTML = i;
-                 fontSizeRef.appendChild(option);
-             }
-
-             //default size
-             fontSizeRef.value = 3;
-         };
-
-         //main logic
-         const modifyText = (command, defaultUi, value) => {
-             //execCommand executes command on selected text
-             document.execCommand(command, defaultUi, value);
-         };
-
-         //For basic operations which don't need value parameter
-         optionsButtons.forEach((button) => {
-             button.addEventListener("click", () => {
-                 modifyText(button.id, false, null);
-             });
-         });
-
-         //options that require value parameter (e.g colors, fonts)
-         advancedOptionButton.forEach((button) => {
-             button.addEventListener("change", () => {
-                 modifyText(button.id, true, button.value);
-             });
-         });
-
-         //link
-         linkButton.addEventListener("click", () => {
-             let userLink = prompt("Enter a URL");
-             //if link has http then pass directly else add https
-             if (/http/i.test(userLink)) {
-                 modifyText(linkButton.id, false, userLink);
-             } else {
-                 userLink = "http://" + userLink;
-                 modifyText(linkButton.id, false, userLink);
-             }
-         });
-
-         //Highlight clicked button
-         const highlighter = (className, needsRemoval) => {
-             className.forEach((button) => {
-                 button.addEventListener("click", () => {
-                     //needsRemoval = true means only one button should be highlight and other would be normal
-                     if (needsRemoval) {
-                         let alreadyActive = false;
-
-                         //If currently clicked button is already active
-                         if (button.classList.contains("active")) {
-                             alreadyActive = true;
-                         }
-
-                         //Remove highlight from other buttons
-                         highlighterRemover(className);
-                         if (!alreadyActive) {
-                             //highlight clicked button
-                             button.classList.add("active");
-                         }
-                     } else {
-                         //if other buttons can be highlighted
-                         button.classList.toggle("active");
-                     }
-                 });
-             });
-         };
-
-         const highlighterRemover = (className) => {
-             className.forEach((button) => {
-                 button.classList.remove("active");
-             });
-         };
-
-         window.onload = initializer();
-
-     </script>
-       <script>
-           function countWords() {
-               // Get the input value
-               var inputText = document.getElementById("inputText").value;
-
-               // Remove leading and trailing whitespaces
-               inputText = inputText.trim();
-
-               // Split the input into an array of words
-               var words = inputText.split(/\s+/);
-
-               // Count the number of words
-               var wordCount = words.length;
-
-               // Display the word count
-               document.getElementById("wordCount").textContent = wordCount + " Word ";
-           }
-       </script>
-   <script>
-       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-       var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-           return new bootstrap.Popover(popoverTriggerEl)
-       })
-   </script>
+    
 </body>
 </html>
 

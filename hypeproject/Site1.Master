@@ -17,7 +17,8 @@
     <link href="https://fonts.google.com/icons" rel="icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css" rel="stylesheet"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js">
 
     
     <%--jquery--%>
@@ -26,19 +27,84 @@
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="bootstrap/css/bootstrap1.js"></script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        footer {
+	padding: 0 0;
+    width:100%;
+    
+}
+
+.single-box p {
+	color: #fff;
+	line-height: 1.9;
+}
+.single-box h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+}
+.single-box .card-area i {
+	color: #ffffff;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.single-box ul {
+	list-style: none;
+	padding: 0;
+}
+.single-box ul li a {
+	text-decoration: none;
+	color: #fff;
+	line-height: 2.5;
+	font-weight: 100;
+}
+.single-box h2 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+}
+#basic-addon2 {
+	background: #fe1e4f;
+	color: #fff;
+}
+.socials i {
+	font-size: 18px;
+	margin-right: 15px;
+    color:gray;
+}
+@media (max-width: 767px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+    </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="height:100%;width:100%">
+<body>
     <form id="form1" runat="server">
-        <div>
-        <label style="height:75px;width:100%;padding:20px 20px;background-color:lightgoldenrodyellow;"><i class="fa fa-lock" aria-hidden="true">Your email address is not verified. Please verify your email address to use all the features.</i>
-            <button onclick="myFunction()" style="background-color:gray;margin-left:750px;width:105px;height:55px;">Resend Email</button>
+        <div class="row" style="background-color:lightgoldenrodyellow;">
+            <div class="col-lg-10">
+        <label style="height:75px;padding:20px 20px;">
+            <i class="fa fa-lock" aria-hidden="true">Your email address is not verified. Please verify your email address to use all the features.</i>
+            </label> </div>
+            <div class="col-lg-2" style="padding:20px 20px;">
+            <button onclick="myFunction()" style="background-color:gray;float:right;width:105px;height:55px;">Resend Email</button>
             <p id="click"></p>
-        </label>
+            </div>
+               
     </div>
-
+        
           <nav class="navbar navbar-inverse" >
               <div class="container-fluid"> 
                 <div class ="navbar header">
@@ -46,11 +112,10 @@
                    </a>
                </div>
             <div class="nav navbar-nav navbar-right"  >
-                       <!--<a href="userregister.aspx"  class="btn btn-primary active" aria-current="page" style="text-align:end;">Join Now</a> -->
+                      
                        <div class="form-group" style="display:flex;">
-                           <a href="login.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW" style="color:white;background-color:blue"/></a>
-
-                           <%--<asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
+                          <a href="login.aspx"  class="btn btn-primary active" id="Button1" aria-current="page" style="text-align:end;">Join Now</a>
+                         <%-- <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
 
                          
               
@@ -92,89 +157,82 @@
 
 
         <%--maincontent placeholder--%>
-        <div>
-           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-           </asp:ContentPlaceHolder>
-        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
         <%--maincontent placeholder--%>
-        
-        </form>
-    <footer style="background-color:black;box-sizing:border-box;" >
-                   <div class="row">
-
-                       <div class="col-md-6">
-
-                          <div class="row">
-                           <div class="col-md-2"></div>
-        
-                            <div class="col-md-9">
-                              <div class="logofoot">
-                                  <img src="images/980385239.png" />
-                                 <p style="color:silver">
-                                        Aenean sodales mattis augue. Morbi euismod, felis at volutpat volutpat, quam lectus porttitor massa, tur ex a neque pulvinar pulvinar.
-                                       </p>
-                                   </div>
-                                   </div>
-                                         <div class="col-md-1"></div>
-                             </div>
-                      </div>
-        
-                       <div class="col-md-6">
-                           <div class="foot">
-                               <div class="row">
-                          <div class="col-md-3">
-                          <div class=" footer-col1" style="color:darkgray">			
-				             <h6> My Account</h6>
-				              <ul style="list-style:none;">
-					           <li><a href="login.aspx">Login</a></li>
-					           <li><a href="signuppage.aspx">Register</a></li>
-				                </ul>
-                          </div>
-			              </div>
-                           <div class="col-md-3">
-			                   <div class="footer-col2" style="color:darkgray">
-				                 <h6>Helpful Links</h6>
-				                  <ul style="list-style:none;">
-                                    <li><a href="blog1.aspx">Blog</a></li>
-					                 <li><a href="#">Feedback</a></li>
-					                      <li><a href="#">Contact</a></li>
-				                      </ul>
-			                       </div>
-                                 </div>
-                         <div class="col-md-3">
-			                    <div class="footer-col3" style="color:darkgray">
-				                   <h6>Information</h6>
-				                    <ul style="list-style:none;">
-					                 <li><a href="#">FAQ</a></li>
-                                        <li><a href="testi.aspx">Testinomials</a></li>
-				                   </ul>
-			                   </div>
-                         </div>
-                   </div>
-               </div>
-             </div>
-        
-  </div>
-                    <div class="footer2">
-
-                           <div class="row">
-                              <div class="col-md-6"> 
-                                        <h8 style="color:white;margin-left:50px;">&copy; 2023 Socius IGB Pvt Ltd, All right reserved</h8>
-                                        </div>
-                                        <div class="col-md-5" style="margin-left:1200px;">
-                                            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-                                            <a href="https://twitter.com/" class="fa fa-twitter"></a>
-                                             <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-                                            <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
-                                           <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
-                                            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
-                                        </div>
-                                    </div>
-
-
-                               
-                               </div>
+        <div style="padding:100px 100px"></div>
+           <footer style="background-color:black">
+              
+        <div class="container" style="background-color:black">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <img src="images/980385239.png" alt="">
+                    <p>Aenean sodales mattis augue. Morbi euismod, felis at volutpat volutpat, quam lectus porttitor massa, tur ex a neque pulvinar pulvinar.</p>
+                    
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>My Account</h2>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">All Images</a></li>
+                        <li><a href="#">Logout</a></li>
+                        
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>Helpful Links</h2>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact</a></li>
+                        
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>Information</h2>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                
+            </div>
+            <hr style="color: gray;"/>
+            <div class="col-lg-3" style="color: gray;">
+                <p>2023 Socius IGB Pvt Ltd, All right reserved</p>
+            </div>
+                <div class="col-sm-9" >
+                <p class="socials" style="float: right;color: gray;">
+                 <a href="https://www.facebook.com/">   <i class="fa fa-facebook"></i></a>
+                  <a href="https://twitter.com/">   <i class="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/">   <i class="fa fa-instagram"></i></a>
+                   <a href="https://in.pinterest.com/">  <i class="fa fa-pinterest"></i></a>
+                   <a href="https://www.youtube.com/">  <i class="fa fa-youtube"></i></a>
+                    
+                </p>
+            </div>
+            
+        </div>
+            </div>
     </footer>
+           
+        </form>
+    
+        
+   
+
+
+    
 </body>
 <script>
 function myFunction() {
