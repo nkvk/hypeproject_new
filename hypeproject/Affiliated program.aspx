@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="membership.aspx.cs" Inherits="hypeproject.WebForm6" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Affiliated program.aspx.cs" Inherits="hypeproject.Affiliated_program" %>
 
 <!DOCTYPE html>
 
@@ -34,44 +34,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
-        /*table*/
-        table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-th
-{
-color:white;
-}
-tr:nth-child(odd) {
-  background-color: gray;
-}
-        /*divs*/
-        .container{
-            margin:0;
-        }
-        .main{
-            padding-top: 75px;
-            margin: 0;
-            box-sizing: border-box;
-            position: absolute;
-            top: 85px;
-            width: calc(100% - 400px);
-            left: 350px;
-            min-height: calc(100vh - 85px);
-            background-color: #f5f5f5;
-        }
-        .card{
-          
-           margin-top:75px;
-           left:95px;
-           width:calc(100vh - 50px);
-        }
         .topbar {
     position: fixed;
     background-color: #fff;
@@ -87,9 +49,8 @@ tr:nth-child(odd) {
 .logo {
    
     border-right: 1px solid #e0e0e0;
-    justify-content: center;
     height: 80px;
-    padding-top: 10px;
+    padding: 15px 15px;
     width: 200px;
 }
 
@@ -167,18 +128,14 @@ option {
 
 .show {display: block;}
 .sidebar {
-  width: 200px;
-  background-color: white;
-  height:calc(100% - 95px);
-  
+ background-color: white;
+  height:calc(100% - 100px);
   padding-top:100px;
   border-spacing:5px;
   position: fixed;
-
-  
-    background: #fff;
-    overflow-y: scroll;
-    box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
+  background: #fff;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
 
 .sidebar a {
@@ -198,7 +155,7 @@ option {
   color: dodgerblue;
 }
 
-div.container {
+div.col-lg-9 {
   margin-left: 0px;
   padding: 1px 0px;
   
@@ -211,7 +168,7 @@ div.container {
     position: relative;
   }
   .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+  div.col-lg-9 {margin-left: 0;}
 }
 
 @media screen and (max-width: 400px) {
@@ -220,80 +177,45 @@ div.container {
     float: none;
   }
 }
-
-/*footer*/
-.fa {
-  padding: 0px;
-  font-size: 20px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-
+#color, #color1, #color2{
+    float:right;
+    font-size:40px;
+    border:1px  black;
+    padding:10px 10px;
+    box-shadow:1px 1px 1px 1px lightgray;
 }
-
-.fa:hover {
-    opacity: 0.7;
+.card{
+   box-shadow:1px 1px 1px 1px lightgray;
 }
-
-.fa-facebook {
-  color: gray;
+#insidecolor{
+    background-color:#e9f7fe;
+    color:#3184ae;
+    height:60px;
+    padding:2px 2px;
 }
-
-.fa-twitter {
-  color: gray;
+ul{
+  color:gray;
+  font-family:sans-serif;
+  list-style:none;
+  display:flex;
 }
-
-.fa-instagram {
-  color: gray;
+li
+{
+padding: 15px 15px 15px 15px;
+align-items:center;
 }
-
-.fa-linkedin {
-  color: gray;
-}
-
-.fa-pinterest {
-  color: gray;
-}
-
-.fa-youtube {
-  color: gray;
-}
-/*menu*/
-.btn {
-  background-color: dodgerblue;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
-}
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: gray;
-}
-/*menu toggle*/
-.sidebar .navbar-toggler .icon-bar {
-  margin: 7px;
-  display: block;
-  width: 22px;
-  height: 1px;
-  background-color: #cccccc;
-  border-radius: 1px;
-}
-</style>
-
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        
-        <header>
-           <input style="position:fixed" type="text"/>
+        <header>          
+            <div class="row">
             <div class="topbar">
-                
+               
                     <div class="logo">
                             <img src="images\980385239.png" />
                     </div> 
+               
                         <div>
                             <nav style="margin-left:200px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
                             <button id="navbtn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="false" aria-label="Toggle navigation">
@@ -301,8 +223,7 @@ div.container {
 
                             </button>
                                 </nav>
-                        </div>    
-
+                    </div>
                 <div class="dropdown show">
                       <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-user-circle" aria-hidden="true"></i>
@@ -321,6 +242,8 @@ div.container {
                           <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
+                    
+               
                <div class="selectlang">
                          <select  id="langbtn" class="popup-with-zoom-anim button ripple-effect">
                     <option value="EN">English</option>
@@ -329,14 +252,16 @@ div.container {
                      <option value="HI">Hindi</option>
                 </select>
                     </div>
-                 </div>
-
+                 
+                </div>
+</div>
         </header>
-           
-<div class="container">
-           <div class="sidebar" style="position:relative;float:left;width:300px">
+         
+<div class="row">
+    <div class="col-lg-3">
+           <div class="sidebar">
     
-                      <h5>&nbsp;My Account</h5>  
+                      <h5>My Account</h5>  
                          <span>
                             <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
 
@@ -348,13 +273,13 @@ div.container {
                                    <a href="#">All AI Images</a>
                               </div>
                             </div>
-                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
+                      <h5>Organize And Manage</h5>
                       <a href="#"><i class="fa fa-bars"></i> Templates</a>
                       <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
                       <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
                       <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
                       <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
-                      <h5>&nbsp;Account</h5> 
+                      <h5>Account</h5> 
                       <div class="dropdown">
                         <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
                           <div id="myDropdown1" class="dropdown-content" >
@@ -367,63 +292,155 @@ div.container {
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
-       <%----------------------------------body----------------------------%>
-
-        <div class="main">
-            <h3>Current Plan</h3>
-            <button style="float:right;background-color:black;color:white">
-                <a href="homepage.aspx" style="color:white" >Home > Membership</a></button>
-
-            <div class="card">
+        </div>
+   
+      <%------------------------  ----------------------------%>
+    <div class="col-lg-9" style="margin-top:100px">
+    <div>
+        <p><strong>Affiliate Program</strong></p>
+        <label style="float:right;height:30px;background-color:black"><a href="homepage.aspx" style="color:white">Home > Affiliate Program</a></label>
+        </div>
+         <br /><br />
+        <div style="display:flex">
+    <div class="col-lg-5">
+        <div class="card">
+             <div class="card-body" style="display:flex">
+                 <div class="col-lg-6">
+                <span>Wallet</span>
+                <p><strong>0.00</strong></p>
+                     </div>
                 
-               <div class="card-body">
-                    <div class="card-text" style="display:flex">
-                        <i class="fa fa-gift" aria-hidden="true"></i><h6> Current Plan</h6><br />
-                     </div><hr />
-                        <table>
-                            <tr>
-                                <th>Membership</th>
-                                <th>Payment Mode</th>
-                                <th>Start Date</th>
-                                <th>Expiry Date</th>
-                            </tr>
-                            <tr>
-                                <td>Free Plan</td>
-                                <td>One Time</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr style="background-color:lightgray">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button style="background-color:blue;width:120px;height:30px">
-                                <a href="membership%20price.aspx" style="color:white;">Change Plan</a></button></td>
-                            </tr>
-                       </table>
-                 </div>
-              </div>
+               <div class="col-lg-6" >
+                <i id="color" class="fa fa-chevron-circle-down" aria-hidden="true" style="color:rgb(184, 27, 127);background-color:rgba(184, 27, 127, 0.07);"></i>
+               </div>
+             </div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+        <div class="card">
+             <div class="card-body" style="display:flex">
+                 <div class="col-lg-6">
+                <span>Total Referred</span>
+                <p><strong>0</strong></p>
+                     </div>
+                
+               <div class="col-lg-6" >
+                <i id="color1" class="fa fa-user-plus" aria-hidden="true" style="background-color:rgba(54, 189, 120, 0.07);color:rgba(54, 189, 120);"></i>
+               </div>
+             </div>
+            </div>
+        </div>
+        </div>
            
             
-        <%-- footer --%>
+         <br />
+       <div class="col-lg-5">
+        <div class="card">
+             <div class="card-body" style="display:flex">
+                 <div class="col-lg-6" >
+                <span>Total Earning</span>
+                     </div>
+                
+               <div class="col-lg-6">
+                <i id="color2" class="fa fa-money" aria-hidden="true" style="background-color: rgba(239, 168, 15, 0.07);color: rgba(239, 168, 15);"></i>
+               </div>
+             </div>
+            </div>
+        </div>
+<br />
+    <div class="col-lg-10">
+        <div class="card">
+            <div class="card-head">
+                <i class="fa fa-share-alt" aria-hidden="true" style="color:darkblue;padding:15px 15px"></i>&nbsp;
+                <span>Start earning with the affiliate program</span>
+             </div><hr />
+            <div class="card-body">
+                <p id="insidecolor">Invite new customers to our site using your affiliate link and when they purchase any membership plan, you will get a commission.</p>
+                <div style="display:flex">
+                <div class="col-lg-5">
+                    <p>Current Commission Rate</p>
+                    <strong>30%</strong>
+               </div>
+                <div class="col-lg-8" style="float:right">
+                    <p>Affiliate Rule</p>
+                    <strong>First Subscription </strong><i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                </div>
+                 </div>
+                <div>
+                    <br />
+                     <div class="container">
+                <p>Affiliate URL</p>
+                    <input type="text" style="width:300px;height:35px" value="http://hype.sociusus.com/?ref=ehm6q6437a0f128940" readonly=""/>
+                 
+<a href="#" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Copy URL">
+    <i class="fa fa-files-o" aria-hidden="true" style="font-size:28px;color:darkblue"></i></a>
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+        <div class="col-lg-10">
+        <div class="card">
+            <div class="card-head">
+                <i class="fa fa-money" aria-hidden="true"  style="color:darkblue;padding:15px 15px"></i>&nbsp;
+                <span>Commissions</span>
+             </div><hr />
+            <div class="card-body" >
+            <div class="card-text" style="border:1px solid gray">
+                    <ul>
+                                <li>Title</li>
+                                <li>Amount</li>
+                                <li>Premium</li>
+                                <li>Payment</li>
+                                <li>Method</li>
+                                <li>Date</li>
+                                <li>Status</li>
+                        
+                    </ul>
+                    <hr style="border:1px medium black"/>
+                    <center><h8>No result found.</h8></center>
+                </div>
+                </div>
+        </div>
+    </div>
         <footer>
             <hr />
             <div class="row">
-             <div class="col-md-6"> 
-             <h8 style="color:black;margin-left:50px;">2023 Socius IGB Pvt Ltd, All right reserved</h8>
-              </div>
-               <div class="col-md-5" style="margin-left:1200px;">
+             <div class="col-lg-3"> </div>
+                 <div class="col-lg-6"> 
+             <span style="color:black;float:left">2023 Socius IGB Pvt Ltd, All right reserved</span>
+             
+               <div class="col-lg-3" style="margin-left:1200px;">
                      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
                      <a href="https://twitter.com/" class="fa fa-twitter"></a>
                      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
                      <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
                      <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
+                   </div>
                  </div>
               </div>
          </footer>
-            </div>
-       </div> 
+        </div>
+     
+</div>
+
+
+
+           
+
+
+
+
+            
+      
+   
+        <%-- footer --%>
         
+
+
+        
+     
     </form>
      <script>
          /* When the user clicks on the button, 
@@ -472,15 +489,15 @@ div.container {
 <script>
     
     $("#navbtn").on("click", function () {
-        $(".sidebar").toggle();
-        $(".main").toggleClass();
+        $(".col-lg-3").toggle();
+        $(".col-lg-9").toggleClass("col-lg-12,");
 
     });
 </script>
     <script>
-        function myAlert() {
-            alert("Successfully Saved");
-        }
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
     </script>
 </body>
 </html>

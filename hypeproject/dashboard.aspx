@@ -231,35 +231,7 @@ div.content {
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  color: gray;
-}
-
-.fa-twitter {
-  color: gray;
-}
-
-.fa-instagram {
-  color: gray;
-}
-
-.fa-linkedin {
-  color: gray;
-}
-
-.fa-pinterest {
-  color: gray;
-}
-
-.fa-youtube {
-  color: gray;
+    color:gray;
 }
 /*menu*/
 .btn {
@@ -351,7 +323,7 @@ div.content {
                       <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
                
                <a href="template.aspx"><i class="fa fa-bars"></i> Templates</a>
-                      <a href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                      <a href="AIImages.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
                       <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
                       <a href="speech%20to%20text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
                       <a href="AI%20Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
@@ -359,14 +331,14 @@ div.content {
                       <div class="dropdown">
                         <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
                           <div id="myDropdown1" class="dropdown-content" >
-                                   <a href="#">Affiliate Programs</a>
+                              <a href="Affiliated%20program.aspx">Affiliate Programs</a>
                                    <a href="#">Withdrawals</a>
                               </div>
-                            </div>                 
+                            </div>                
                       <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                      <a href="homepage.aspx"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     </div>
         
@@ -412,13 +384,13 @@ div.content {
       <span class="mb-3 mb-md-0 text-muted">2023 Socius IGB Pvt Ltd, All right reserved</span>
     </div>
 
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a  href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+    <ul class="nav col-md-4 justify-content-end list-unstyled ">
+      <li ><a  href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li ><a  href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li ><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li ><a  href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li ><a  href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      <li ><a  href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
     </ul>
 </footer>
     </form>

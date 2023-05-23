@@ -2,12 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style>
+        td{
+            padding-left: 20px;
+        }
+    </style>
     <div style="background-color:lightgray;width:100%;height:100px;padding:30px 40px 30px 40px">
         <h4>Upgrade Membership</h4>
         <button style="float:right;background-color:lightgray;"><a style="color:black" href="homepage.aspx">home > Upgrade</a></button>
     </div>
     <div style="float:right;background-color:lightgray;margin-top:80px;">
-             <div style="width:250px;margin-left:200px;padding:0;">
+             <div style="width:250px;padding-left:20px;">
             <h4 >Package Summary</h4><hr />
                 <table>
                     <tbody>
@@ -35,7 +40,7 @@
             </div>
         </div>
     
-    <h4 style="padding-left:95px;margin-top:100px">Payment Method</h4>
+    <h4 style="padding-left:95px;margin-top:100px">Payment Method</h4><br />
     <div style="box-sizing:border-box;width:800px;padding-left:15px;margin-left:95px;
 border:1px solid gray;">
         

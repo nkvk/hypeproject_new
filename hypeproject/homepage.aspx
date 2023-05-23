@@ -35,14 +35,7 @@
 }
 
 
-.card6-block{
- padding: 1em;
-  border: 0px solid #b5b5b5;
-  border-radius: 10px;
-  width: fit-content;
-  transition: 0.2s;
-  word-wrap:break-word;
-}
+
 .card6-block:hover{
   margin-top: -10px;
   transition: 0.2s;
@@ -106,12 +99,12 @@ div {
 .mdi-check{
     color:green;
 }
-  <%-- css for temp --%>
+  /*-- css for temp --*/
     .card6-block{
    padding: 1em;
   border: 0px solid gray;
   border-radius: 20px;
-  width: 55%;
+/*  width: 55%;*/
   box-sizing:content-box;
   transition: 0.2s;
 }
@@ -373,9 +366,9 @@ font-size:13px;margin-left:200px">
     <button class="nav-link rounded-5" onclick="toggleData()" id="other-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Other</button>
   </li>
 </ul>
-    
-    <div class="py-5">
-    <div class="container5" id="data" style="width:100%;margin-left:64px">
+   <div class="py-5">
+        
+      <div class="container5" id="data" style="width:100%;margin-left:100px">
       <div class="row hidden-md-up" style="padding:20px 20px;width:100%" id="data1" >
           <div class="col-lg-10">
           <h5>Article And Blogs</h5><hr style="border:2px dotted" />
@@ -418,7 +411,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-address-book" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Blog Section</h6>
+              <h6 class="card-subtitle text-muted">Blog Section<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Write a few paragraphs about a subheading of your article.</p>
               
             </div>
@@ -438,7 +431,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-pencil-square" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Article Write</h6>
+              <h6 class="card-subtitle text-muted">Article Write<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1"> Create a fully complete high quality article from a title and outline text.</p>
               
             </div>
@@ -479,7 +472,7 @@ font-size:13px;margin-left:200px">
         </div>
             </div>
             </div>
-          </div>
+          
          <%-- ads and marketing --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data2">
             <div class="col-lg-10">
@@ -510,7 +503,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Google Ad Titles</h6>
+              <h6 class="card-subtitle text-muted">Google Ad Titles<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Creating ads with unique and appealing titles that entice people to click on your ad and purchase from your site.</p>
               
             </div>
@@ -522,7 +515,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Google Ad Descriptions</h6>
+              <h6 class="card-subtitle text-muted">Google Ad Descriptions<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">The best-performing Google ad copy converts visitors into customers.</p>
               
             </div>
@@ -591,7 +584,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-quora" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Quora Answers</h6>
+              <h6 class="card-subtitle text-muted">Quora Answers<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Answers to Quora questions that will position you as an authority.</p>
               
             </div>
@@ -613,7 +606,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-heart-o" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Stories</h6>
+              <h6 class="card-subtitle text-muted">Stories<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Engaging and persuasive stories that will capture your reader's attention and interest.</p>
               
             </div>
@@ -677,7 +670,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-key" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Pros and Cons</h6>
+              <h6 class="card-subtitle text-muted">Pros and Cons<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">List of the main benefits versus the most common problems and concerns.</p>
               
             </div>
@@ -687,7 +680,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-refresh" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Rewrite With Keywords</h6>
+              <h6 class="card-subtitle text-muted">Rewrite With Keywords<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Rewrite your existing content to include more keywords and boost your search engine rankings.</p>
               
             </div>
@@ -699,7 +692,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Emails</h6>
+              <h6 class="card-subtitle text-muted">Emails<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Professional-looking emails that help you engage leads and customers.</p>
               
             </div>
@@ -709,7 +702,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Emails V2</h6>
+              <h6 class="card-subtitle text-muted">Emails V2<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Personalized email outreach to your target prospects that get better results.</p>
               
             </div>
@@ -751,7 +744,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-list-ol" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Company Mission</h6>
+              <h6 class="card-subtitle text-muted">Company Mission<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">A clear and concise statement of your company's goals and purpose.</p>
               
             </div>
@@ -763,7 +756,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-align-left" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Company Vision</h6>
+              <h6 class="card-subtitle text-muted">Company Vision<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">A vision that attracts the right people, clients, and employees.</p>
               
             </div>
@@ -800,7 +793,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-amazon" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Amazon Product Titles</h6>
+              <h6 class="card-subtitle text-muted">Amazon Product Titles<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Product titles that will make your product stand out in a sea of competition.</p>
               
             </div>
@@ -812,7 +805,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-amazon" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Amazon Product Descriptions</h6>
+              <h6 class="card-subtitle text-muted">Amazon Product Descriptions<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Descriptions for Amazon products that rank on the first page of the search results.</p>
               
             </div>
@@ -822,7 +815,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-amazon" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Amazon Product Features</h6>
+              <h6 class="card-subtitle text-muted">Amazon Product Features<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Advantages and features of your products that will make them irresistible to shoppers.</p>
               
             </div>
@@ -850,7 +843,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-facebook-square" aria-hidden="true"></i></h4>
-              <p class="card-subtitle text-muted">Social Media Post (Business)</p>
+              <p class="card-subtitle text-muted">Social Media Post (Business)<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></p>
               <p class="card-text p-y-1">Write a post for your business to be published on any social media platform.</p>
               
             </div>
@@ -872,7 +865,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-instagram" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Instagram Hashtags</h6>
+              <h6 class="card-subtitle text-muted">Instagram Hashtags<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Trending and highly relevant hashtags to help you get more followers and engagement.</p>
               
             </div>
@@ -904,7 +897,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">YouTube Descriptions</h6>
+              <h6 class="card-subtitle text-muted">YouTube Descriptions<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1"> Catchy and persuasive YouTube descriptions that help your videos rank higher.</p>
               
             </div>
@@ -914,7 +907,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">YouTube Outlines</h6>
+              <h6 class="card-subtitle text-muted">YouTube Outlines<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Video outlines that are a breeze to create and uber-engaging.</p>
               
             </div>
@@ -936,7 +929,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-film" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">TikTok Video Scripts</h6>
+              <h6 class="card-subtitle text-muted">TikTok Video Scripts<i class="fa fa-gift" aria-hidden="true" style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Video scripts that are ready to shoot and will make you go viral.</p>
               
             </div>
@@ -954,7 +947,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
-               <p class="card-subtitle text-muted">SEO Meta Tags (Blog Post)</p> 
+               <p class="card-subtitle text-muted">SEO Meta Tags (Blog Post)<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></p> 
               <p class="card-text p-y-1">A set of optimized meta title and meta description tags that will boost your search rankings for your blog.</p>
               
             </div>
@@ -964,7 +957,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
-              <p class="card-subtitle text-muted">SEO Meta Tags (Homepage)</p>
+              <p class="card-subtitle text-muted">SEO Meta Tags (Homepage)<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></p>
               <p class="card-text p-y-1">A set of optimized meta title and meta description tags that will boost your search rankings for your home page.</p>
               
             </div>
@@ -974,13 +967,13 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">SEO Meta Tags (Product Page)</h6>
+              <h6 class="card-subtitle text-muted">SEO Meta Tags (Product Page)<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">A set of optimized meta title and meta description tags that will boost your search rankings for your product page.</p>
               
             </div>
           </div>
         </div>
-      </div><br>
+      </div>
       
          <%-- Other --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data7">
@@ -992,7 +985,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-refresh" aria-hidden="true"></i></h4>
-               <p class="card-subtitle text-muted">Tone Changer</p> 
+               <p class="card-subtitle text-muted">Tone Changer<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></p> 
               <p class="card-text p-y-1">Change the tone of your writing to match your audience and copy.</p>
               
             </div>
@@ -1002,7 +995,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-music" aria-hidden="true"></i></h4>
-              <p class="card-subtitle text-muted">Song Lyrics</p>
+              <p class="card-subtitle text-muted">Song Lyrics<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></p>
               <p class="card-text p-y-1">Unique song lyrics that will be perfect for your next hit song.</p>
               
             </div>
@@ -1024,7 +1017,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">FAQs</h6>
+              <h6 class="card-subtitle text-muted">FAQs<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Generate frequently asked questions based on your product description.</p>
               
             </div>
@@ -1034,7 +1027,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">FAQ Answers</h6>
+              <h6 class="card-subtitle text-muted">FAQ Answers<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Generate creative answers to questions (FAQs) about your business or website.</p>
               
             </div>
@@ -1044,7 +1037,7 @@ font-size:13px;margin-left:200px">
           <div class="card">
             <div class="card6-block">
               <h4 class="card-title"><i class="fa fa-star-half-o" aria-hidden="true"></i></h4>
-              <h6 class="card-subtitle text-muted">Testimonials / Reviews</h6>
+              <h6 class="card-subtitle text-muted">Testimonials / Reviews<i class="fa fa-gift" aria-hidden="true"style="color:darkgoldenrod;">Pro</i></h6>
               <p class="card-text p-y-1">Add social proof to your website by generating user testimonials.</p>
               
             </div>
@@ -1054,7 +1047,7 @@ font-size:13px;margin-left:200px">
         
     </div>
   </div>
-    
+       </div>
     
     <%-- membership body --%>
     <hr />

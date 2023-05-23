@@ -176,10 +176,8 @@
                     <div class="single-box">
                         <h2>My Account</h2>
                     <ul>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Templates</a></li>
-                        <li><a href="#">All Images</a></li>
-                        <li><a href="#">Logout</a></li>
+                       <li><a href="login.aspx">Login</a></li>
+                        <li><a href="signuppage.aspx">Register</a></li>
                         
                     </ul>
                     </div>                    
@@ -188,8 +186,8 @@
                     <div class="single-box">
                         <h2>Helpful Links</h2>
                     <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Feedback</a></li>
+                        <li><a href="blog1.aspx">Blog</a></li>
+                        <li><a href="Feedback.aspx">Feedback</a></li>
                         <li><a href="#">Contact</a></li>
                         
                     </ul>
@@ -199,8 +197,8 @@
                     <div class="single-box">
                         <h2>Information</h2>
                         <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="FAQ.aspx">FAQ</a></li>
+                            <li><a href="testi.aspx">Testimonials</a></li>
                             
                         </ul>
                     </div>

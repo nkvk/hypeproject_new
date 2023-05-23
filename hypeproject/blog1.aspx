@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="1blogs.aspx.cs" Inherits="hypeproject.blogs.blogs1.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeFile="blog1.aspx.cs" Inherits="hypeproject.WebForm14" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -89,13 +89,7 @@ h2::after {
 	background: #1c47e3;    
 	border: 5px double;    
 }
-        .container2 {
-  position: absolute;
-  text-align: left;
-  color: gray;
-   cursor:pointer;
-  
-}
+        
 
 .bottom-left {
   position: absolute;
@@ -110,7 +104,10 @@ h2::after {
   width: fit-content;
   transition: 0.2s;
 }
-
+img{
+	width: 200px;
+	padding:10px 10px;
+}
 </style>
 
    
@@ -120,42 +117,30 @@ h2::after {
             <h6>Recent Blog</h6>
             
         </div>
-    <div class="col-9" style="margin-left:200px;">
-            <div class="container">
-    <div class="row">
-
-        <!-- Inner Content -->
-        <div class="col-xl-8 col-lg-8">
-            <!-- Blog Post -->
-            <div class="blog-post single-post">
-
-                                <!-- Blog Post Thumbnail -->
-                <div class="blog-post-thumbnail">
-                    <div class="blog-post-thumbnail-inner" width:>
-                        <img src="images/image.png" alt="First Blog">
-                    </div>
-                </div>
-                                <!-- Blog Post Content -->
-                <div class="blog-post-content">
-                    <h3 class="margin-bottom-10">First Blog</h3>
+	<div class="row">
+    <div class="col-lg-12" >
+        <div class="col-lg-9" style="float:left;padding:25px 25px">
+           <img src="images/image.png"  alt="First Blog">
+               <div class="blog-post-content">
+                    <h3 >First Blog</h3>
                     <div class="blog-post-info-list margin-bottom-20">
                         <span class="blog-post-info"><i class="la la-clock-o"></i> 15, Jan 2020</span>
-                        <span class="blog-post-info"><i class="fa fa-folder-o"></i> <a href=""></a></span>
+                        <span class="blog-post-info"><i class="fa fa-folder-o"></i> <a href="#"></a></span>
                     </div>
-                    <div class="user-html">
+                    <div>
                         <p>Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<block>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</block>
+<p><block>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</block></p>
 <p>Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p></div>
 
-      </div>  
-</div>
+<i class="fa fa-share-alt-square" aria-hidden="true"></i>
+                    </div>
+
+      </div> 
+			
             </div>
-        </div>
-            </div>
-        </div>
-        <div style="margin-left:1000px;padding-top:0px;" class="row-16">
+        
+       
+<div class="col-lg-3" style="float:right">
 
             <div class="input-group">
   <div id="search-autocomplete" class="form-outline">
@@ -167,9 +152,8 @@ h2::after {
   </button>
 </div><br/>
 
-          <div class="container-xl">
-	<div class="row">
-		<div class="col-sm-12">
+          
+	
 			<h1>Categories</h1>
 			<h3>Testimonials</h3><br />
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -234,8 +218,7 @@ h2::after {
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	
           <div style="padding:10px 10px;margin:15px 15px">
               <p>Tags</p>
             <button style="background-color:rgba(24,70,152,0.07);color:darkblue;border-radius:3px">Travel fun</button>
@@ -250,11 +233,12 @@ h2::after {
               <i class="fa fa-pinterest-p" aria-hidden="true"></i>
               <i class="fa fa-youtube" aria-hidden="true"></i>
         </div>
-        </div>
         
-            </div>  
-       <%-- right content --%>
-        <div class="card" action="/action_page.php" style="margin-left:200px;width:600px">
+            </div> 
+</div>
+		</div>
+       <%-- comments --%>
+        <div class="card" action="/action_page.php" style="border:none">
             <div class="card-body">
   <h3><label for="textarea">Post a comment</label></h3>
   <p>You are commenting as: komala</p>
@@ -264,5 +248,5 @@ h2::after {
                 </div>
             </div>
     
-    <div style="padding:100px 100px"></div>
+    
 </asp:Content>

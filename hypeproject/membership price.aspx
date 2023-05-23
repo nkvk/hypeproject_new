@@ -67,8 +67,7 @@ div {
 
  <h2>Membership Plan</h2>
 
-<br />
-<br /><br />
+
 <div class="container" style="margin-left:500px">
     <input type="radio" id="radio1" name="options" value="1" onclick="toggleData()">
 <label for="radio1">&nbsp; Monthly&nbsp;</label>
@@ -79,10 +78,12 @@ div {
     
                 
 </div>
-    <br /><br /><br /><br />
-    <label><input type="text" value="Recommended" 
-        style="width:350px;height:50px;margin-left:1000px;background-color:darkblue;color:white;text-align:center;border-radius:6px 6px 0 0;"/></label>
-    <div class="card">
+    
+    
+        <div class="card">
+            <div><label><input type="text" value="Recommended" 
+        style="width:300px;height:50px;margin-left:700px;background-color:darkblue;color:white;text-align:center;border-radius:6px 6px 0 0;"/></label>
+    </div>
         <div class="container" style="text-align:center;padding-top:10px">
     <h4>Free Plan</h4>
         <h4 style="margin-left:300px;">Trial Plan</h4>

@@ -46,7 +46,8 @@
                         </div>
                             <a href="forgotpass.aspx">Forget Password?</a><br><br>
                         <div class="form-group">
-                            <asp:Button  class="btn btn-info btn-block btn-lg" style="left:80%;float:right;background-color:blue;color:white" ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" /> <span><a href="" target="_blank"/></a></span>
+                            <asp:Button  class="btn btn-info btn-block btn-lg" style="left:80%;float:right;background-color:blue;color:white" ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" /> 
+                            <span><a href="forgotpass.aspx" target="_blank"></a></span>
                         </div>
                          
                      </div>

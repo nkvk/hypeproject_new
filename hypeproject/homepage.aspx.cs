@@ -11,7 +11,7 @@ namespace hypeproject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+            //Response.Redirect("login.aspx");
         }
     }
 }

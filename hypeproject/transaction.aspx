@@ -18,7 +18,6 @@ padding: 40px;
 .container{
 
   margin-top:60px;
-  height:5px;
 }
     </style>
     <div class="card-body" style="background-color:lightgray">
@@ -48,5 +47,5 @@ padding: 40px;
         </div>
 
     </div>
-    <div style="padding:150px 150px"></div>
+    
 </asp:Content>

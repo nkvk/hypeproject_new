@@ -35,7 +35,7 @@
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
     width:100%;
-    height: calc(100% - 520px);
+    height: calc(100% - 720px);
     display: grid;
     grid-template-columns: 1fr 8fr 1fr 1fr;
     align-items: center;
@@ -408,6 +408,7 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
 
         });
     </script>
+
     <script>
         
         // When the user clicks the submit button, show the error message

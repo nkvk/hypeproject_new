@@ -41,25 +41,10 @@
     <style class="cp-pen-styles">
         /*chat box*/
         
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  background: #f8f8f8;
-  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-  font-size: 1em;
-  letter-spacing: 0.1px;
-  color: #32465a;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  -webkit-font-smoothing: antialiased;
-  width:100%;
-}
+
 
 #frame {
   width: 100%;
-  min-width: 50px;
   height: 430px;
   min-height: 75px;
   background: #E6EAEA;
@@ -650,15 +635,14 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  z-index: 99;
 }
 #frame .content .message-input .wrap {
   position: relative;
-}
+}*/
 
         
         /*main*/
-.main{
+.content{
     width:70%;
     height:60%;
 }
@@ -809,44 +793,7 @@ div.content {
   }
 }
 
-/*footer*/
-.fa {
-  padding: 0px;
-  font-size: 20px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
 
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  color: gray;
-}
-
-.fa-twitter {
-  color: gray;
-}
-
-.fa-instagram {
-  color: gray;
-}
-
-.fa-linkedin {
-  color: gray;
-}
-
-.fa-pinterest {
-  color: gray;
-}
-
-.fa-youtube {
-  color: gray;
-}
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: gray;
@@ -907,8 +854,11 @@ div.content {
                     </div>
                  </div>
         </header>
-            
+  
 <div class="content">
+    <div class="row">
+      <div class="col-lg-12">
+    <div class="col-lg-3">
            <div class="sidebar" style="position:relative;float:left;width:300px">
     
                       <h5>&nbsp;My Account</h5>  
@@ -942,26 +892,25 @@ div.content {
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     </div>
+    
+          <div class="col-lg-9">
           <div class="dashboard-headline" style="margin-left:370px;background-color:#f8f8f8">
-                        <span class="d-flex align-items-center" style="margin-top: 100px;font-size:20px">
+                        <p class="d-flex align-items-center" style="margin-top: 100px;font-size:20px">
                         AI Chat    
-                            
-                        <div style="text-align:center;background: rgba(24,70,152,0.2);border:0px solid;
+                          
+                        <span style="text-align:center;background: rgba(24,70,152,0.2);border:0px solid;
 border-radius:20px;width:250px;height:35px">
-
-                           <i class="fa-solid fa-chart-simple"></i>
-                            <span>0/10,000 </span>
-                            <span> Words Used</span>
-                        </div>
-                    </span>
+                            <img src="images/all.PNG" /><span>0/10,000 <span>Words Used</span></span>
+                        </span>
+                     </p> 
                     <!-- Breadcrumbs -->
              <button style="float:right;background-color:black;"><a href="homepage.aspx" style="float:right;color:white">Home>AI Chat</a></button>
               <br /> <br />
             
-              <div style="border: 0px solid;background-color:lightcoral;width:700px;height:35px;margin-left:40px;padding:5px 5px;border-radius:3px">
+              <label style="border: 0px solid;background-color:lightcoral;width:380px;height:35px;margin-left:40px;padding:5px 5px;border-radius:3px">
               <span style="font-size:12px;border: 0px solid;color:red">You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</span>
 
-              </div>
+              </label>
                   <div class="card" style="margin:10px 40px;box-shadow:15px">
                       <div class="card-body">
                           <div class="card-text">
@@ -997,7 +946,11 @@ border-radius:20px;width:250px;height:35px">
          </div>
 
           </div>
-    
+    </div>
+
+    </div>
+       
+      
        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       
@@ -1013,7 +966,11 @@ border-radius:20px;width:250px;height:35px">
       <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
     </ul>
   </footer>
-         </form>
+          
+      </div>
+      </div>
+      </form>
+    
      </body>  
    
     
@@ -1068,7 +1025,7 @@ border-radius:20px;width:250px;height:35px">
     <script>
         $("#nav-btn").on("click", function () {
                 $(".sidebar").toggle();
-            $(".main").toggleClass();
+            $(".content").toggleClass();
 
     });
     </script>
@@ -1166,4 +1123,5 @@ border-radius:20px;width:250px;height:35px">
        catch (e) { }
 
    </script>
+    
 </html>

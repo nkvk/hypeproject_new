@@ -289,6 +289,13 @@ div.content {
   background-color: #cccccc;
   border-radius: 1px;
 }
+input, select{
+    border-radius:5px;
+    box-shadow:3px;
+    width:235px;
+    height:35px;
+    display:flex;
+}
 </style>
     </head>
 <body>
@@ -370,20 +377,22 @@ div.content {
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     </div>
-          <div class="dashboard-headline" style="margin-left:370px">
-                        <h4 class="d-flex align-items-center" style="margin-top: 100px;">
-                        AI Images                   
+          
+            <!---Onclick display-->
+
+        <div class="dashboard-headline" style="margin-left:370px">
+                        <span class="d-flex align-items-center" style="margin-top: 100px;">
+                        AI Images                   </span>
                         <div style="text-align:center;background: rgba(24,70,152,0.2);border:0px solid;border-radius:20px;width:350px;height:35px">
 
                            <i class="fa-solid fa-chart-simple"></i>
                             <span>0 / 100 </span>
                             <span> Images Used</span>
                         </div>
-                    </h4>
+                    
                     <!-- Breadcrumbs -->
              <button style="float:right;background-color:black"><a href="homepage.aspx" style="float:right;color:white">Home>AI Image</a></button>
                 </div><br /><br /><br />
-            <!---Onclick display-->
               <div id="ai_images" name="ai_images" method="post" action="#">
                     <span style="padding:25px 25px">Start with a detailed description. <a href="#" class="try-example"><strong>Try an example</strong></a></span>
                     <div class="message-reply ai_image_description margin-bottom-20"style="padding:25px 25px;margin-left:300px">
@@ -404,15 +413,6 @@ div.content {
                             <div class="submit-field margin-bottom-20">
                                 <h6>Art style</h6>
                                 <div class="btn-group bootstrap-select with-border small-input">
-                                   <style>
-                                       input, select{
-                                           border-radius:5px;
-                                           box-shadow:3px;
-                                           width:235px;
-                                           height:35px;
-                                           display:flex;
-                                       }
-                                   </style>
                                    
                                     <div>
                                     <select >
@@ -532,7 +532,7 @@ div.content {
                         </div>
                             </div>
                             </div>
-                            </div>
+                            
         <br />
                     <small><button onclick="hideshow()" style="padding:5px 5px;margin-left:70px;border:none;color:darkblue">Advanced Settings</button> <strong>+</strong></small><hr/>
                     <div id="snackbar" >API Error: The API key is missing or invalid.</div>
@@ -544,9 +544,11 @@ div.content {
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="#"> <i class="fa-brands fa-facebook-f" style="color: #b2b8c2;"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter" style="color: #aaadb1;"></i></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram" style="color: #c2c4c7;"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
     </ul>
   </footer>
      </body>  
@@ -555,7 +557,7 @@ div.content {
         function myFunction3() {
             var x = document.getElementById("snackbar");
             x.className = "show";
-            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, );
         }
     </script>
      <script>

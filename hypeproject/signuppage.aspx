@@ -6,7 +6,7 @@
                              <div class="row">
                              <div class="col">
                                  <h3>Register</h3>
-                                 <a href="C:\Users\SIGB\source\repos\hypeproject\hypeproject\homepage.aspx"><asp:Button  style="left:80%;float:right;background-color:blue;color:white" ID="Button3" runat="server" Text="Home>Register" /></a> 
+                                 <a href="homepage.aspx"><asp:Button  style="left:80%;float:right;background-color:blue;color:white" ID="Button3" runat="server" Text="Home>Register" /></a> 
                              </div>
 </div>
                          </div>
@@ -18,7 +18,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                            <h4>Let's create your account!</h4>
+                            <span><b>Let's create your account!</b></span><br />
                             <span>Already have an account? <a href="login.aspx">
                                 Log In!</a></span>
                         </center>

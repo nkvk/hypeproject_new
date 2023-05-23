@@ -56,15 +56,13 @@ tr:nth-child(odd) {
   background-color: gray;
 }
         /*divs*/
-        .container{
-            margin:0;
-        }
+        
         .main{
             padding-top: 75px;
             margin: 0;
             box-sizing: border-box;
             position: absolute;
-            top: 85px;
+            top: 95px;
             width: calc(100% - 400px);
             left: 350px;
             min-height: calc(100vh - 85px);
@@ -205,7 +203,6 @@ option {
 div.content {
   margin-left: 0px;
   padding: 1px 0px;
-
 }
 
 @media screen and (max-width: 700px) {
@@ -215,7 +212,8 @@ div.content {
     position: relative;
   }
   .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+  div.content {margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -369,6 +367,7 @@ div.content {
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     <div class="main">
+        
             <h4>All Images 
     <span style="border-radius:20px;background-color:#2980B9;padding:10px 10px;color:blue;display:inline-block
     "><img src="images/all.PNG" />0/100 Images Used</span></h4>
@@ -400,7 +399,6 @@ div.content {
                  </div>
               </div>
                </div>
-        <br />
    
     </div>
            

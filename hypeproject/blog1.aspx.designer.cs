@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hypeproject.blogs.blogs1
+namespace hypeproject.blog1
 {
 
 
-    public partial class WebForm2
+    public partial class WebForm14
     {
     }
 }

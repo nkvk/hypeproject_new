@@ -47,7 +47,7 @@
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
     width:100%;
-    height: calc(100% - 520px);
+    height: calc(100% - 560px);
     display: grid;
     grid-template-columns: 1fr 8fr 1fr 1fr;
     align-items: center;
@@ -243,7 +243,7 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
 }
 .container7 {
   background-color: #ffffff;
-  width: 412px;
+  width: calc(100% - 550px);
   height:646px;
   padding: 20px 30px;
   position: absolute;
@@ -374,7 +374,7 @@ input[type="color"]::-moz-color-swatch {
         </header>
             
 <div class="content">
-           <div class="sidebar" style="position:relative;float:left;width:calc(100% - 900px)">
+           <div class="sidebar" style="position:relative;float:left;width:calc(100% - 1000px)">
     
                       <h5>&nbsp;My Account</h5>  
                          <span>
@@ -406,12 +406,14 @@ input[type="color"]::-moz-color-swatch {
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
+    </div>
+        
     <div class="card" style="margin-top: 100px;padding:15px 15px;background-color:#f8f8f8;height:75px">
         <span >Speech to Text &nbsp;&nbsp; <h7 style="background-color:cornflowerblue;border-radius:8px;height:20px"><img src="images/all.PNG" /><i >0 / 0 Used</i></h7></span>
         <div style="margin-left:600px;">
         <a href="homepage.aspx" style="background-color:black;width:175px;border-radius:3px"><span style="color:white;padding:10px 10px;">Home > Speech to Text</span></a>
         </div>
-        <div class="card-body" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 550px)">
+        <div class="card-body" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 650px)">
             <div class="headline" >
                             <span><i class="fa fa-headphones" aria-hidden="true" style="color:darkblue"></i>&nbsp;
                                 Speech to Text</span>
@@ -440,12 +442,13 @@ input[type="color"]::-moz-color-swatch {
     <span>Generate &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></span>
 
 </button>
-                <p style="background-color:#3184ae;opacity: 0.4;color:darkblue">Audio transcription may takes time due to the file size.</p>
+            <p style="background-color:#3184ae;opacity: 0.4;color:darkblue">Audio transcription may takes time due to the file size.</p>
             </div>
     </div>
         </div>
+
         <div class="card-body" style="border: 1px solid gray;margin-top:15px;
-        width:calc(100% - 650px);display:flex; margin-left: 620px;">
+        width:calc(100% - 750px);display:flex; margin-left: 620px;">
         <div class="container8">
     <div style="padding:1px 1px;margin:1px 1px;display:flex">
           <i class='fas fa-align-left fa-2x' style='color:#0769e9'></i>

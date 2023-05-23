@@ -38,21 +38,16 @@
             margin:0;
         }
         .main{
-            padding: 0px;
-            margin: 0;
             box-sizing: border-box;
             position: absolute;
             top: 85px;
-            width: calc(100% - 400px);
-            left: 350px;
-            min-height: calc(100vh - 85px);
             background-color: #f5f5f5;
         }
         .card{
           
            margin-top:30px;
-           left:30px;
-           width:calc(100vh - 100px);
+           left:20px;
+           width:calc(100% - 600px);
         }
         .topbar {
     position: fixed;
@@ -149,18 +144,14 @@ option {
 
 .show {display: block;}
 .sidebar {
-  width: 200px;
-  background-color: white;
+ background-color: white;
   height:calc(100% - 95px);
-  
   padding-top:100px;
   border-spacing:5px;
   position: fixed;
-
-  
-    background: #fff;
-    overflow-y: scroll;
-    box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
+  background: #fff;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
 
 .sidebar a {
@@ -241,7 +232,29 @@ div.container {
 .fa-youtube {
   color: gray;
 }
-/*menu*/
+    /*menu*/
+    .btn {
+      background-color: dodgerblue;
+      border: none;
+      color: white;
+      padding: 12px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    /* Darker background on mouse-over */
+    .btn:hover {
+      background-color: gray;
+    }
+    /*menu toggle*/
+    .sidebar .navbar-toggler .icon-bar {
+      margin: 7px;
+      display: block;
+      width: 22px;
+      height: 1px;
+      background-color: #cccccc;
+      border-radius: 1px;
+    }
+    /*menu*/
 .btn {
   background-color: dodgerblue;
   border: none;
@@ -268,9 +281,8 @@ div.container {
 </head>
 <body>
     <form id="form1" runat="server">
-        
         <header>          
-            <input style="position:fixed" type="text"/>
+           
             <div class="topbar">
                 
                     <div class="logo">
@@ -314,11 +326,12 @@ div.container {
                  </div>
 
         </header>
-           
-<div class="container">
-           <div class="sidebar" style="position:relative;float:left;width:300px">
+         
+<div class="row">
+    <div class="col-lg-3">
+           <div class="sidebar">
     
-                      <h5>&nbsp;My Account</h5>  
+                      <h5>My Account</h5>  
                          <span>
                             <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
 
@@ -330,13 +343,13 @@ div.container {
                                    <a href="#">All AI Images</a>
                               </div>
                             </div>
-                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
+                      <h5>Organize And Manage</h5>
                       <a href="#"><i class="fa fa-bars"></i> Templates</a>
                       <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
                       <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
                       <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
                       <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
-                      <h5>&nbsp;Account</h5> 
+                      <h5>Account</h5> 
                       <div class="dropdown">
                         <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
                           <div id="myDropdown1" class="dropdown-content" >
@@ -349,16 +362,19 @@ div.container {
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
                       <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
-    </div>
+        </div>
+   
         <%-- -------------------------------------a/c setting---------------------------------- --%>
+    <div class="col-lg-9">
     <div class="main">
         <br /><h4>Account Settings</h4>
-        <button style="float:right;background-color:black;"><a href="homepage.aspx" style="color:white">Home > Account Setting</a></button>
-        <br /><div class="card" >
+        <button style=" background-color:black;"><a href="homepage.aspx" style="color:white">Home > Account Setting</a></button>
+        <br />
+        <div class="card" >
     <div class="card-body">
       <h4 class="card-title"><i class="fa fa-cog" aria-hidden="true"></i>Account Setting</h4><hr />
       <p class="card-text">Avatar<br/></p>
-        <button type="button" class="btn btn-outline-primary"><a href="C:\Users\SIGB\Desktop\project video" >Upload Avatar</a></button>
+        <button type="button" class="btn btn-outline-primary"><a href="C:\Users\SIGB\Desktop">Upload Avatar</a></button>
         <h7>Use 150x150px for better use</h7>
         <div class="form-row">
     <div class="form-group col-md-6">
@@ -393,32 +409,32 @@ div.container {
         <div class="card" >
     <div class="card-body">
       <h4 class="card-title"><i class="fa fa-file-image-o" aria-hidden="true"></i>Billing Settings</h4><hr />
-        <div class="notification notice"><input type="text" style="width:600px;background-color:#e9f7fe;height:50px;" value="These details will be used in invoice and payments."/></div>
+        <div class="notification notice"><input type="text" style="width:581px;background-color:#e9f7fe;height:50px;" value="These details will be used in invoice and payments."/></div>
         <label for="text">Type</label>
         <select class="form-control">
         <option selected="">Personal</option>
         <option>Business</option>
       </select>
        <label for="text">Name *</label>
-      <input type="text" required class="form-control" placeholder=" "/>
+      <input type="text"  class="form-control"  placeholder=" "/>
    <label for="inputAddress">Address *</label>
-    <input type="text" required class="form-control" id="inputAddress" placeholder=""/>
+    <input type="text"  class="form-control" id="inputAddress" placeholder=""/>
   
   <div class="form-row">
     <div class="form-group col-md-3">
       <label for="inputCity">City *</label>
-      <input type="text" required class="form-control" id="inputCity"/>
+      <input type="text"  class="form-control" id="inputCity"/>
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">State *</label>
-      <input type="text" required class="form-control" id="inputstate" />
+      <input type="text"  class="form-control" id="inputstate" />
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Zip *</label>
-      <input type="text" required class="form-control" id="inputZip" />
+      <input type="text"  class="form-control" id="inputZip" />
     </div>
       </div>
-      <label for="text" required>Country *</label>
+      <label for="text" >Country *</label>
       <select class="form-control">
         <option selected=" ">India</option>
         <option>USA</option>
@@ -454,8 +470,8 @@ div.container {
 
 </div>
         
-        
-        
+     </div> 
+    </div>
     </form>
      <script>
          /* When the user clicks on the button, 
@@ -504,8 +520,8 @@ div.container {
 <script>
     
     $("#navbtn").on("click", function () {
-        $(".sidebar").toggle();
-        $(".main").toggleClass();
+        $(".col-lg-3").toggle();
+        $(".main").toggleClass("col-lg-12,");
 
     });
 </script>
@@ -513,7 +529,7 @@ div.container {
         function myAlert() {
             alert("Successfully Saved");
         }
-    </script>ipt>
+    </script>
 </body>
 </html>
 
