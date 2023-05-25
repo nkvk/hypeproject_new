@@ -38,11 +38,20 @@
 
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'/>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'/>
-    <style class="cp-pen-styles">
+    <style>
         /*chat box*/
-        
+         #main1{
+     width:100%;
+ }
+  .sidebar-inner{
+    margin-top:80px;
+    width:100%;
+}      
 
-
+.container-fluid{
+    padding:0px;
+    margin:0px;
+}
 #frame {
   width: 100%;
   height: 430px;
@@ -60,7 +69,7 @@
   float: left;
   min-width: 280px;
   max-width: 340px;
-  width: 40%;
+  
   height: 100%;
   background: #2c3e50;
   color: #f5f5f5;
@@ -742,14 +751,12 @@ option {
 
 .show {display: block;}
 .sidebar {
-  width: 200px;
+ width:auto;
   background-color: white;
-  height:calc(100% - 95px);
-  padding-top:100px;
-  border-spacing:5px;
+  height:calc(100vh - 5px);
   position: fixed;
   background: #fff;
-  overflow-y: scroll;
+  overflow-x:hidden;
   box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
 
@@ -799,11 +806,10 @@ div.content {
   background-color: gray;
 }
 /*menu toggle*/
-.sidebar .navbar-toggler .icon-bar .chart-container 
-#myChart {
+.sidebar .navbar-toggler .icon-bar  {
   margin: 7px;
   display: block;
-  width: 22px;
+  
   height: 1px;
   background-color: #cccccc;        
   border-radius: 1px;
@@ -832,16 +838,16 @@ div.content {
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-                        <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                        <a class="dropdown-item" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="template.aspx"> <i class="fa fa-bars"></i> Templates</a>
+                        <a class="dropdown-item" href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                          <a class="dropdown-item" href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="alldocuments.aspx"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
                           <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                          <a class="dropdown-item" href="homepage.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
                         <div class="selectlang">
@@ -854,52 +860,58 @@ div.content {
                     </div>
                  </div>
         </header>
-  
-<div class="content">
-    <div class="row">
-      <div class="col-lg-12">
-    <div class="col-lg-3">
-           <div class="sidebar" style="position:relative;float:left;width:300px">
-    
-                      <h5>&nbsp;My Account</h5>  
-                         <span>
-                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
-                        </span>
-                      <div class="dropdown">
-                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
-                          <div id="myDropdown" class="dropdown-content" >
-                              <a href="alldocuments.aspx">All Documents</a>
+           <div class="container-fluid">
+               <div class="row">
+                   <div class="col-lg-2" id="side1">
+                       <div class="sidebar">
+                           <div class="sidebar-inner">
+                           <h5>&nbsp;My Account</h5>
+                           <%--<span>--%>
+                               <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
+                          <%-- </span>--%>
+                           <div class="dropdown">
+                               <a onclick="myFunction()" class="dropbtn"><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
+                               <div id="myDropdown" class="dropdown-content">
+                                   <a href="alldocuments.aspx">All Documents</a>
                                    <a href="AIImages.aspx">All AI Images</a>
-                              </div>
-                            </div>
-                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
-                      <a href="#"><i class="fa fa-bars"></i> Templates</a>
-                      <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                      <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                      <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
-                      <h5>&nbsp;Account</h5> 
-                      <div class="dropdown">
-                        <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
-                          <div id="myDropdown1" class="dropdown-content" >
-                                   <a href="#">Affiliate Programs</a>
-                                   <a href="#">Withdrawals</a>
-                              </div>
-                            </div>                 
-                      <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-               <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
-                      <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
-            </div>
-    </div>
+                               </div>
+                           </div>
+                           <h5>&nbsp;<br />
+                               <br />
+                               <br />
+                               Organize And Manage</h5>
+
+                           <a href="template.aspx"><i class="fa fa-bars"></i>Templates</a>
+                           <a href="AIImage.aspx"><i class="fa fa-file-image" aria-hidden="true"></i>AI Images</a>
+                           <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                           <a href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                           <a href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                           <h5>&nbsp;Account</h5>
+                           <div class="dropdown">
+                               <a onclick="myFunction1()" class="dropbtn"><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
+                               <div id="myDropdown1" class="dropdown-content">
+                                   <a href="Affiliated program.aspx">Affiliate Programs</a>
+                                   <a href="withdraw.aspx">Withdrawals</a>
+                               </div>
+                           </div>
+                           <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i>Membership</a>
+                           <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+                           <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                           <a href="homepage.aspx"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                       </div>
+                       </div>
+                   </div>
+                   <%-- body --%>
+                   <div class="col-lg-10" id="main1" >
+                       <div class="right-main">
+                      
     
-          <div class="col-lg-9">
-          <div class="dashboard-headline" style="margin-left:370px;background-color:#f8f8f8">
+          <div class="col-lg-9" style="width:100%;">
+          <div class="dashboard-headline" style="background-color:#f8f8f8">
                         <p class="d-flex align-items-center" style="margin-top: 100px;font-size:20px">
-                        AI Chat    
-                          
+                        AI Chat 
                         <span style="text-align:center;background: rgba(24,70,152,0.2);border:0px solid;
-border-radius:20px;width:250px;height:35px">
+border-radius:20px;width:auto;height:35px">
                             <img src="images/all.PNG" /><span>0/10,000 <span>Words Used</span></span>
                         </span>
                      </p> 
@@ -947,11 +959,7 @@ border-radius:20px;width:250px;height:35px">
 
           </div>
     </div>
-
-    </div>
-       
-      
-       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       
       <span class="mb-3 mb-md-0 text-muted">2023 Socius IGB Pvt Ltd, All right reserved</span>
@@ -966,9 +974,14 @@ border-radius:20px;width:250px;height:35px">
       <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
     </ul>
   </footer>
+    </div>
+       
+      
+       
           
       </div>
       </div>
+
       </form>
     
      </body>  
@@ -1022,12 +1035,18 @@ border-radius:20px;width:250px;height:35px">
     
 
     <%-- menu hide --%>
-    <script>
-        $("#nav-btn").on("click", function () {
-                $(".sidebar").toggle();
-            $(".content").toggleClass();
+    <script type="text/javascript">
 
-    });
+        $("#nav-btn").on("click", function () {
+            setTimeout(function () {
+                $("#side1").toggle()
+            }, 200);
+            setTimeout(function () {
+                $("#main1").toggleClass('col-lg-12 ')
+            }, 200);
+
+
+        });
     </script>
    
    
@@ -1059,9 +1078,11 @@ border-radius:20px;width:250px;height:35px">
      <%-- for input --%>
     <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script >$(".messages").animate({scrollTop: $(document).height() }, "fast");
+<script >
+    $(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
-            $("#profile-img").click(function() {
+    $("#profile-img").click(function () {
+
                 $("#status-options").toggleClass("active");
 });
 
@@ -1114,7 +1135,9 @@ border-radius:20px;width:250px;height:35px">
                 newMessage();
             return false;
                 }
-                });
+            });
+
+
 </script>
    <script>
        try {

@@ -1225,7 +1225,7 @@ font-size:13px;margin-left:200px">
         const description = document.getElementById("description");
 
         /*testi js*/
-        let isChickenVisible;
+        
 
         let people = [
 

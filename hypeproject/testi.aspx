@@ -88,7 +88,7 @@
     </style> 
     <div class="box" style="background-color:#f8f8f8">
        <h3 style="margin-left:150px">Testimonials</h3>
-        <button style="background-color:black;padding:10px;margin-left:1200px"><a style="color:white;" href="homepage.aspx">home > Testimonials</a></button>
+        <button style="background-color:black;padding:10px;float:right"><a style="color:white;" href="homepage.aspx">home > Testimonials</a></button>
     </div>
     <br /><br /><br />
       <div class="wrapper">

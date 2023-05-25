@@ -306,16 +306,16 @@ div.content {
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-                        <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                        <a class="dropdown-item" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="template.aspx"> <i class="fa fa-bars"></i> Templates</a>
+                        <a class="dropdown-item" href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                          <a class="dropdown-item" href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="alldocuments.aspx"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                          <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                          <a class="dropdown-item" href="homepage.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
                         <div class="selectlang">
@@ -330,7 +330,7 @@ div.content {
         </header>
             
 <div class="content">
-           <div class="sidebar" style="position:relative;float:left;width:300px">
+           <div class="sidebar" style="position:relative;float:left;">
     
                       <h5>&nbsp;My Account</h5>  
                          <span>
@@ -344,23 +344,24 @@ div.content {
                               </div>
                             </div>
                       <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
-                      <a href="#"><i class="fa fa-bars"></i> Templates</a>
-                      <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                      <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                      <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
+               
+               <a href="template.aspx"><i class="fa fa-bars"></i> Templates</a>
+                      <a href="AIImage.aspx"><i class="fa fa-file-image" aria-hidden="true"></i> AI Images</a>
+                      <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                      <a href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                      <a href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
                       <h5>&nbsp;Account</h5> 
                       <div class="dropdown">
                         <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
                           <div id="myDropdown1" class="dropdown-content" >
-                                   <a href="#">Affiliate Programs</a>
-                                   <a href="#">Withdrawals</a>
+                              <a href="Affiliated program.aspx">Affiliate Programs</a>
+                                   <a href="withdraw.aspx">Withdrawals</a>
                               </div>
-                            </div>                 
-                      <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                            </div>                
+                      <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                      <a href="homepage.aspx"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
     </div>
            

@@ -28,14 +28,36 @@
     
     <title></title>
     <style>
-        
-
+  .container-fluid{
+    padding:0px;
+    margin:0px;
+}      
+  .sidebar {
+ width:auto;
+  background-color: white;
+  height:calc(100vh - 5px);
+  position: fixed;
+  background: #fff;
+  overflow-x:hidden;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
+}
+.sidebar-inner{
+    margin-top:80px;
+    width:100%;
+}
+.right-main{
+    margin:0px;
+   
+}
+#main1{
+     width:100%;
+     margin-top:100px;
+ }
 .topbar {
     position: fixed;
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
     width:100%;
-    height: calc(100% - 720px);
     display: grid;
     grid-template-columns: 1fr 8fr 1fr 1fr;
     align-items: center;
@@ -125,17 +147,7 @@ option {
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-.sidebar {
-  width: 200px;
-  background-color: white;
-  height:calc(100% - 95px);
-  padding-top:100px;
-  border-spacing:5px;
-  position: fixed;
-  background: #fff;
-  overflow-y: scroll;
-  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
-}
+
 
 .sidebar a {
   display: block;
@@ -154,20 +166,16 @@ option {
   color: dodgerblue;
 }
 
-div.content {
-  margin-left: 0px;
-  padding: 1px 0px;
 
-}
 
 @media screen and (max-width: 700px) {
-  .sidebar .container8{
+  .sidebar{
     width: 100%;
     height: auto;
     position: relative;
   }
   .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+  
   
 }
 
@@ -195,8 +203,7 @@ div.content {
   background-color: gray;
 }
 /*menu toggle*/
-.sidebar .navbar-toggler .icon-bar .chart-container 
-#myChart {
+.sidebar .navbar-toggler .icon-bar  {
   margin: 7px;
   display: block;
   width: 22px;
@@ -232,13 +239,14 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>
+       
+
             <div class="topbar">
                     <div class="logo">
                             <img src="images\980385239.png" />
                     </div> 
                         <div>
-                            <nav style="margin-left:200px; height: 15px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
+                            <nav style="margin-left:200px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
                             <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
                                 <span class="fa fa-bars"></span>
 
@@ -252,16 +260,16 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-                        <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                        <a class="dropdown-item" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
+                        <a class="dropdown-item" href="template.aspx"> <i class="fa fa-bars"></i> Templates</a>
+                        <a class="dropdown-item" href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                          <a class="dropdown-item" href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="alldocuments.aspx"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
                           <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                          <a class="dropdown-item" href="homepage.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
                         <div class="selectlang">
@@ -273,47 +281,55 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
                           </select>
                     </div>
                  </div>
-        </header>
-            
-<div class="content">
-           <div class="sidebar" style="position:relative;float:left;width:calc(100% - 900px)">
-    
-                      <h5>&nbsp;My Account</h5>  
-                         <span>
-                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
-                        </span>
-                      <div class="dropdown">
-                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
-                          <div id="myDropdown" class="dropdown-content" >
-                              <a href="alldocuments.aspx">All Documents</a>
+           <div class="container-fluid">
+               <div class="row">
+                   <div class="col-lg-2" id="side1">
+                       <div class="sidebar">
+                           <div class="sidebar-inner">
+                           <h5>&nbsp;My Account</h5>
+                           <%--<span>--%>
+                               <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
+                          <%-- </span>--%>
+                           <div class="dropdown">
+                               <a onclick="myFunction()" class="dropbtn"><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
+                               <div id="myDropdown" class="dropdown-content">
+                                   <a href="alldocuments.aspx">All Documents</a>
                                    <a href="AIImages.aspx">All AI Images</a>
-                              </div>
-                            </div>
-                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
-                      <a href="#"><i class="fa fa-bars"></i> Templates</a>
-                      <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                      <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                      <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
-                      <h5>&nbsp;Account</h5> 
-                      <div class="dropdown">
-                        <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
-                          <div id="myDropdown1" class="dropdown-content" >
-                                   <a href="#">Affiliate Programs</a>
-                                   <a href="#">Withdrawals</a>
-                              </div>
-                            </div>                 
-                      <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-               <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
-                      <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
-            </div>
-    <div class="card" style="margin-top: 100px;padding:15px 15px;background-color:#f8f8f8;height:75px">
-        <span >AI Code &nbsp;&nbsp; <h7 style="background-color:cornflowerblue;border-radius:8px;height:20px"><img src="images/all.PNG" /><i >0 / 10,000 Used</i></h7></span>
-        <div style="margin-left:600px;">
-        <a href="homepage.aspx" style="background-color:black;width:175px;border-radius:3px"><span style="color:white;padding:10px 10px;">Home > AI Code</span></a>
-        </div>
-        <div class="card-body" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 550px)">
+                               </div>
+                           </div>
+                           <h5>&nbsp;<br />
+                               <br />
+                               <br />
+                               Organize And Manage</h5>
+
+                           <a href="template.aspx"><i class="fa fa-bars"></i>Templates</a>
+                           <a href="AIImage.aspx"><i class="fa fa-file-image" aria-hidden="true"></i>AI Images</a>
+                           <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                           <a href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                           <a href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                           <h5>&nbsp;Account</h5>
+                           <div class="dropdown">
+                               <a onclick="myFunction1()" class="dropbtn"><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
+                               <div id="myDropdown1" class="dropdown-content">
+                                   <a href="Affiliated program.aspx">Affiliate Programs</a>
+                                   <a href="withdraw.aspx">Withdrawals</a>
+                               </div>
+                           </div>
+                           <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i>Membership</a>
+                           <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+                           <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                           <a href="homepage.aspx"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                       </div>
+                       </div>
+                   </div>
+                   <%-- body --%>
+                   <div class="col-lg-10" id="main1" >
+                       <div class="right-main">
+        <span style="margin-left:30px">AI Code &nbsp;&nbsp; <h7 style="background-color:cornflowerblue;border-radius:8px;margin-left:10px;"><img src="images/all.PNG" /><i >0 / 10,000 Used</i></h7></span>
+        <a href="homepage.aspx" style="background-color:black;border-radius:3px;float:right"><span style="color:white;padding:10px 10px;">Home > AI Code</span></a>
+        
+        <div class="col-lg-9" style="width:fit-content;display:flex;margin-top:15px;">
+        <div class="card-body" style="border: 1px solid gray;">
             <div class="headline" >
                             <span><i class="fa fa-chevron-left" aria-hidden="true"style="color:darkblue"></i><i class="fa fa-chevron-right" aria-hidden="true" style="color:darkblue"></i>
                                 &nbsp;
@@ -321,16 +337,16 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
                         </div><hr />
             <p style="color:white;background-color:cornflowerblue;padding:2px 2px;font-size:12px">Use this code generator to create code in any programming language.</p>
            <span>Title</span><br />
-            <input type="text" style="width:275px;" min-length="100" value="New Code"/><br />
+            <input type="text"  value="New Code"/><br />
             
             
-    <br /><label for="text" > Description *</label>
-    <textarea style="width:250px" placeholder="Generate a Javascript function to generate a random string"></textarea>
+    <br /><label for="text" > Description *</label><br />
+    <textarea style="width:auto" placeholder="Generate a Javascript function to generate a random string"></textarea>
     
 
 
             <div>
-                <span class="alert alert-danger" role="alert" id="error-msg" style="display:none;background-color:white;border:none;font-size:10px">
+                <span class="alert alert-danger" role="alert" id="error-msg" style="display:none;background-color:white;border:none;font-size:15px">
   Upgrade your membership plan to use this feature
 </span>
 <button type="button" id="submit-btn" style="color:white;background-color:darkblue;width: 150px;">
@@ -340,22 +356,27 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
               
             </div>
     </div>
-        </div>
-    <div class="card" style="border: 1px solid gray;margin-top:15px;width:calc(100% - 650px);display:flex; margin-left: 620px;">
+        
+           
+            <div class="col-lg-8">
+    <div class="card">
         <div class="card-body">
-            <div class="container8">
             <div style="padding:1px 1px;margin:1px 1px;display:flex">
             <span style='font-size:15px'><i class='fas fa-align-left fa-2x' style='color:#0769e9;font-size:15px'></i>Generated Result</span>
+             </div> 
+            <hr />
+             <label style="background-color:#3184ae;opacity:0.7;padding:7px 7px;color:darkblue">Generated code will appear here.</label>
                 
-        
-             </div> <hr />
-                <label style="height:50px;background-color:#3184ae;opacity:0.7;width:450px;padding:7px 7px;color:darkblue">Generated code will appear here.</label>
-                </div>
             </div>
            </div>
 
+            </div>
+   </div>
+                           
     </div>
-    
+                       </div>
+                   </div>
+               </div>
     </form>
     <script>
          /* When the user clicks on the button, 
@@ -401,10 +422,16 @@ box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
         }
     </script>
      <%-- menu hide --%>
-    <script>
+    <script type="text/javascript">
+
         $("#nav-btn").on("click", function () {
-            $(".sidebar").toggle();
-            $(".main").toggleClass();
+            setTimeout(function () {
+                $("#side1").toggle()
+            }, 200);
+            setTimeout(function () {
+                $("#main1").toggleClass('col-lg-12 ')
+            }, 200);
+
 
         });
     </script>

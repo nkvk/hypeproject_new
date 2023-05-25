@@ -35,7 +35,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title></title>
     <style>
-        
+     #main1{
+     width:100%;
+ }
+     
 
 .topbar {
     position: fixed;
@@ -133,17 +136,22 @@ option {
 
 .show {display: block;}
 .sidebar {
-  width: 200px;
+ width:auto;
   background-color: white;
-  height:calc(100% - 95px);
-  padding-top:100px;
-  border-spacing:5px;
+  height:calc(100vh - 5px);
   position: fixed;
   background: #fff;
-  overflow-y: scroll;
+  overflow-x:hidden;
   box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.4);
 }
-
+.sidebar-inner{
+    margin-top:80px;
+    width:100%;
+}
+.right-main{
+    margin:0px;
+    padding:90px 40px 10px 40px;
+}
 .sidebar a {
   display: block;
   color: black;
@@ -183,12 +191,7 @@ div.content {
     float: none;
   }
 }
-.container1{
-    display: flex;
-    flex-wrap: wrap;
-   
-    padding: 10px;
-}
+
 .word-box {
     background-color: white;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .10);
@@ -209,13 +212,13 @@ div.content {
     flex: 1;
     margin-right: 10px;
     margin-bottom: 10px;
-    display:inline-flex;
+    
 }
 
 /*graph*/
 .chart-container {
   position: absolute;
-  width: 80%;
+  width: 100%;
   margin: auto;
   
 }
@@ -252,8 +255,6 @@ div.content {
 #myChart {
   margin: 7px;
   display: block;
-  width: 22px;
-  height: 1px;
   background-color: #cccccc;
   border-radius: 1px;
 }
@@ -263,7 +264,7 @@ div.content {
 <body>
        <form id="form1" runat="server">
          
-        <header>
+      <header>
             <div class="topbar">
                     <div class="logo">
                             <img src="images\980385239.png" />
@@ -287,8 +288,8 @@ div.content {
                         <a class="dropdown-item" href="template.aspx"> <i class="fa fa-bars"></i> Templates</a>
                         <a class="dropdown-item" href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
                           <a class="dropdown-item" href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                          <a class="dropdown-item" href="speech%20to%20text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                          <a class="dropdown-item" href="AI%20Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
                           <a class="dropdown-item" href="alldocuments.aspx"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
                           <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
@@ -305,51 +306,60 @@ div.content {
                     </div>
                  </div>
         </header>
-            
-<div class="content">
-           <div class="sidebar" style="position:relative;float:left;width:300px">
-    
-                      <h5>&nbsp;My Account</h5>  
-                         <span>
-                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
-                        </span>
-                      <div class="dropdown">
-                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
-                          <div id="myDropdown" class="dropdown-content" >
-                              <a href="alldocuments.aspx">All Documents</a>
+           <div class="container-fluid">
+               <div class="row">
+                   <div class="col-lg-2" id="side1">
+                       <div class="sidebar">
+                           <div class="sidebar-inner">
+                           <h5>&nbsp;My Account</h5>
+                           <%--<span>--%>
+                               <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
+                          <%-- </span>--%>
+                           <div class="dropdown">
+                               <a onclick="myFunction()" class="dropbtn"><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
+                               <div id="myDropdown" class="dropdown-content">
+                                   <a href="alldocuments.aspx">All Documents</a>
                                    <a href="AIImages.aspx">All AI Images</a>
-                              </div>
-                            </div>
-                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
-               
-               <a href="template.aspx"><i class="fa fa-bars"></i> Templates</a>
-                      <a href="AIImages.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                      <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                      <a href="speech%20to%20text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                      <a href="AI%20Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
-                      <h5>&nbsp;Account</h5> 
-                      <div class="dropdown">
-                        <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
-                          <div id="myDropdown1" class="dropdown-content" >
-                              <a href="Affiliated%20program.aspx">Affiliate Programs</a>
-                                   <a href="#">Withdrawals</a>
-                              </div>
-                            </div>                
-                      <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-               <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
-                      <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                      <a href="homepage.aspx"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
-            </div>
-    </div>
-        
-       <div class="container1">
+                               </div>
+                           </div>
+                           <h5>&nbsp;<br />
+                               <br />
+                               <br />
+                               Organize And Manage</h5>
+
+                           <a href="template.aspx"><i class="fa fa-bars"></i>Templates</a>
+                           <a href="AIImage.aspx"><i class="fa fa-file-image" aria-hidden="true"></i>AI Images</a>
+                           <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                           <a href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                           <a href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                           <h5>&nbsp;Account</h5>
+                           <div class="dropdown">
+                               <a onclick="myFunction1()" class="dropbtn"><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
+                               <div id="myDropdown1" class="dropdown-content">
+                                   <a href="Affiliated program.aspx">Affiliate Programs</a>
+                                   <a href="withdraw.aspx">Withdrawals</a>
+                               </div>
+                           </div>
+                           <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i>Membership</a>
+                           <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+                           <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                           <a href="homepage.aspx"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                       </div>
+                       </div>
+                   </div>
+                   <%-- temp body --%>
+                   <div class="col-lg-10" id="main1" >
+                       <div class="right-main">
+     
            <div class="word-box">
             <div class="word-text">
                         <h2>&nbsp;Dashboard</h2> </div>
             </div>
+                           
        <div class="word-text">
                         <button style="margin-left:700px;background-color:black" ><a style="color:white" href="homepage.aspx">Home>Dashboard</a></button>
             </div>
+                            <div style="display:flex">
       <div class="word-box">
           <div class="word-text">
                     <span>Words Used&nbsp; &nbsp;&nbsp; &nbsp; <br /><b>0/10,000</b></span>
@@ -361,7 +371,7 @@ div.content {
               <span>Image Used&nbsp; &nbsp;<br />
                   <b>0/100</b>
               </span>
-              <img style="float:right;" src="images/image%20used.PNG" />
+              <img style="float:right" src="images/image%20used.PNG" />
               <h4></h4>
               
                </div>
@@ -373,27 +383,37 @@ div.content {
                </div>
 
 </div>
+                                </div>
   <div>
         <h6><img width="40" src="images/image%20used.PNG" />Words used this Month</h6>
        <canvas id="chart" style="display: block; height:300px; width: 950px;" class="chartjs-render-monitor"></canvas>
        </div>
-</div>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-      
-      <span class="mb-3 mb-md-0 text-muted">2023 Socius IGB Pvt Ltd, All right reserved</span>
+           
+        
+           <div class="col-lg-12" style="display:flex">
+           <footer>
+        <div class="col-lg-12">
+            <hr />
+      <p>2023 Socius IGB Pvt Ltd, All right reserved</p>
+    <div class="col-md-2" style="float:right">
+    <p style="float: right;color: gray;">
+                 <a href="https://www.facebook.com/">   <i class="fa fa-facebook"></i></a>
+                  <a href="https://twitter.com/">   <i class="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/">   <i class="fa fa-instagram"></i></a>
+                   <a href="https://in.pinterest.com/">  <i class="fa fa-pinterest"></i></a>
+                   <a href="https://www.youtube.com/">  <i class="fa fa-youtube"></i></a>
+                    
+                </p>
     </div>
-
-    <ul class="nav col-md-4 justify-content-end list-unstyled ">
-      <li ><a  href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-      <li ><a  href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-      <li ><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li ><a  href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-      <li ><a  href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-      <li ><a  href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-    </ul>
+    </div>
 </footer>
-    </form>
+               </div>
+        </div>
+</div>
+    </div>
+               </div>
+           
+       </form>
      <script>
          /* When the user clicks on the button, 
          toggle between hiding and showing the dropdown content */
@@ -510,12 +530,18 @@ div.content {
 
 </script>
     <%-- menu hide --%>
-    <script>
-        $("#nav-btn").on("click", function () {
-                $(".sidebar").toggle();
-            $(".main").toggleClass();
+    <script type="text/javascript">
 
-    });
+        $("#nav-btn").on("click", function () {
+            setTimeout(function () {
+                $("#side1").toggle()
+            }, 200);
+            setTimeout(function () {
+                $("#main1").toggleClass('col-lg-12 ')
+            }, 200);
+
+
+        });
     </script>
     
 

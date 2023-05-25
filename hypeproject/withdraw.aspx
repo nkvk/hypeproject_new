@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="withdraw.aspx.cs" Inherits="hypeproject.withdraw" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="withdraw.aspx.cs" Inherits="hypeproject.withdraw" %>
 
 <!DOCTYPE html>
 
@@ -218,6 +218,7 @@ li
 {
 padding: 20px 20px 20px 50px;
 }
+
 </style>
 </head>
 <body>
@@ -245,15 +246,15 @@ padding: 20px 20px 20px 50px;
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-                        <a class="dropdown-item" href="#"> <i class="fa fa-bars"></i> Templates</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+                        <a class="dropdown-item" href="template.aspx"> <i class="fa fa-bars"></i> Templates</a>
+                        <a class="dropdown-item" href="AIImage.aspx"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
+                          <a class="dropdown-item" href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                          <a class="dropdown-item" href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                          <a class="dropdown-item" href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>
+                          <a class="dropdown-item" href="alldocuments.aspx"><i class="fa fa-book" aria-hidden="true"></i>All Documents</a>
+                          <a class="dropdown-item" href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
                           <a class="dropdown-item" href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                          <a class="dropdown-item" href="homepage.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                       </div>
                     </div>
                     
@@ -272,38 +273,38 @@ padding: 20px 20px 20px 50px;
         </header>
         <div class="row">
     <div class="col-lg-3">
-           <div class="sidebar">
+           <div class="sidebar" style="position:relative;float:left;">
     
-                      <h5>My Account</h5>  
+                      <h5>&nbsp;My Account</h5>  
                          <span>
-                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="true"></i>Dashboard</a>
-
+                            <a class="active" href="dashboard.aspx"><i class="fa fa-th-large" aria-hidden="false"></i>Dashboard</a>
                         </span>
                       <div class="dropdown">
-                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="true"></i>My Documents</a>
+                         <a onclick="myFunction()" class="dropbtn" ><i class="fa fa-book" aria-hidden="false"></i>My Documents</a>
                           <div id="myDropdown" class="dropdown-content" >
-                                   <a href="#">All Documents</a>
-                                   <a href="#">All AI Images</a>
+                              <a href="alldocuments.aspx">All Documents</a>
+                                   <a href="AIImages.aspx">All AI Images</a>
                               </div>
                             </div>
-                      <h5>Organize And Manage</h5>
-                      <a href="#"><i class="fa fa-bars"></i> Templates</a>
-                      <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> AI Images</a>
-                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
-                      <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
-                      <a href="#"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
-                      <h5>Account</h5> 
+                      <h5>&nbsp;<br /><br /><br />Organize And Manage</h5>
+               
+               <a href="template.aspx"><i class="fa fa-bars"></i> Templates</a>
+                      <a href="AIImage.aspx"><i class="fa fa-file-image" aria-hidden="true"></i> AI Images</a>
+                      <a href="AIChat.aspx"><i class="fa fa-comments" aria-hidden="true"></i>AI Chat</a>
+                      <a href="speech to text.aspx"><i class="fa fa-headphones" aria-hidden="true"></i>Speech to Text</a>
+                      <a href="AI Code.aspx"><i class="fa fa-code" aria-hidden="true"></i>AI Code</a>        
+                      <h5>&nbsp;Account</h5> 
                       <div class="dropdown">
                         <a onclick="myFunction1()" class="dropbtn" ><i class="fa fa-share-alt" aria-hidden="true"></i>Affiliate Program</a>
                           <div id="myDropdown1" class="dropdown-content" >
-                                   <a href="#">Affiliate Programs</a>
-                                   <a href="#">Withdrawals</a>
+                              <a href="Affiliated program.aspx">Affiliate Programs</a>
+                                   <a href="withdraw.aspx">Withdrawals</a>
                               </div>
-                            </div>                 
-                      <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
-                      <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
+                            </div>                
+                      <a href="membership.aspx"><i class="fa fa-gift" aria-hidden="true"></i> Membership</a>
+               <a href="transaction.aspx"><i class="fa fa-file-text" aria-hidden="true"></i>Transaction</a>
                       <a href="account%20setting.aspx"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
+                      <a href="homepage.aspx"><i class="fa fa-power-off" aria-hidden="true"></i>Logout</a>
             </div>
         </div>
             
@@ -311,42 +312,52 @@ padding: 20px 20px 20px 50px;
              <div class="col-lg-9" style="margin-top:100px">
 
               <div>
-        <p><strong>Withdraw</strong></p>
+        <p><bold>Withdrawals</bold></p>
         <label style="float:right;height:30px;background-color:black"><a href="homepage.aspx" style="color:white">Home > Affiliate Program</a></label>
-        </div>  
+        </div> <br /> 
                  <div class="col-lg-10">
-        <div class="accordion" id="accordionExample">
+                     <div class="card" class="accordion" id="accordionExample">
 
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-bell-o" aria-hidden="true" style="color:darkblue"></i> Request withdrawal</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fa fa-bell" aria-hidden="true" style="color:darkblue"></i>&nbsp;
+                    Request withdrawal</button>
             </h2>
             
             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <hr />
                 <div class="accordion-body">
-                  <p>The requested amount will be deducted from your wallet and the amount will be blocked until it get approved or rejected by the administrator. Once its approved, the requested amount will be manually pay to you.</P>
+                  <p style="color:#3184ae;background-color:#e9f7fe;">The requested amount will be deducted from your wallet and the amount will be blocked until it get approved or rejected by the administrator. Once its approved, the requested amount will be manually pay to you.</p>
 <div style="display:none;background-color: #ffe9e9;
     color: red;" id="show">Insufficient fund, withdrawal amount must be lower than your wallet amount.</div>
               <span>Withdrawal Amount (₹)</span><br/>
-              <input type="number" style="width:175px"/><br/><small>Minimum withdraw amount : 50 ₹</small>
+           <div style="display:flex">   
+          <input type="number" style="width:185px" value="50" min="50" />
+               <i class="fa fa-money" aria-hidden="true" style="font-size:30px;color:lightgray"></i>
+               </div>
+              <p><small>Minimum withdraw amount : 50 ₹</small></p>
+               
           <p>Payment Method</p>
-          <input type="radio" />Pay Pal<br/>
-          <input type="radio" />Bank Deposit
+  <input type="radio" id="Paypal" name="Payment_Method" value="Paypal"/>
+  <label for="Paypal">Paypal</label><br/>
+  <input type="radio" id="Bank" name="Payment_Method" value="Bank"/>
+  <label for="Bank">Bank Deposit</label><br/>
          <p>Account Details</p> 
-          <textarea style="width:300px" placeholder="Write Payment Details..."></textarea>
-          <smal>Write here your payment id or payment details of selected payment gateways.</smal><br/>
-          <button onclick="myFunction()">Withdraw</button>
+          <textarea style="width:300px" required placeholder="Write Payment Details..."></textarea>
+          <p style="font-size:12px"><smal>Write here your payment id or payment details of selected payment gateways.</smal></p>
+          <button onclick="myFunction2()">Withdraw</button>
                 </div>
             </div>
         </div>
-            </div>
+                         </div>
                      </div>
             <br />
             <div class="col-lg-10">
         <div class="card">
             <div class="card-head">
-                <i class="fa fa-money" aria-hidden="true"  style="color:darkblue;padding:15px 15px"></i>&nbsp;
+                <i class="fa fa-money" aria-hidden="true"  style="color:darkblue;padding:15px 15px"></i>
                 <span>Withdrawal Requests</span>
              </div><hr />
             <div class="card-body" >
@@ -371,16 +382,13 @@ padding: 20px 20px 20px 50px;
   
                  
                  </div>
-                 <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    
+                 
 
     </form>
     <%-- show hidding content --%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-        function myFunction() {
+        function myFunction2() {
             var x = document.getElementById("show");
             if (x.style.display === "none") {
                 x.style.display = "block";
@@ -389,6 +397,57 @@ padding: 20px 20px 20px 50px;
             }
             event.preventDefault();
         }
+    </script>
+     <script>
+         /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function (event) {
+             if (!event.target.matches('.dropbtn')) {
+                 var dropdowns = document.getElementsByClassName("dropdown-content");
+                 var i;
+                 for (i = 0; i < dropdowns.length; i++) {
+                     var openDropdown = dropdowns[i];
+                     if (openDropdown.classList.contains('show')) {
+
+                     }
+                 }
+             }
+         }
+     </script>
+   
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction1() {
+            document.getElementById("myDropdown1").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+
+                    }
+                }
+            }
+        }
+    </script>
+    <%-- menu hide --%>
+    <script>
+        $("#navbtn").on("click", function () {
+            $(".sidebar").toggle();
+            $(".col-lg-9").toggleClass("col-lg-12");
+
+        });
     </script>
 </body>
 </html>
