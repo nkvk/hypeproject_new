@@ -33,6 +33,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <%-- tooltip --%>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+ 
     <style>
         .container-fluid {
             padding: 0px;
@@ -471,7 +474,7 @@
                                             <p>Affiliate URL</p>
                                             <input type="text" style="width: 300px; height: 35px" value="http://hype.sociusus.com/?ref=ehm6q6437a0f128940" readonly="" />
 
-                                            <a href="#" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Copy URL">
+                                            <a href="#" data-toggle="tooltip" data-placement="top" title="Copy URL">
                                                 <i class="fa fa-files-o" aria-hidden="true" style="font-size: 28px; color: darkblue" onclick="showSnackbar()"></i></a>
                                         </div>
                                     </div>
@@ -587,7 +590,7 @@
     </script>
     <script>
         $(document).ready(function () {
-            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
     <%-- show snack bar --%>

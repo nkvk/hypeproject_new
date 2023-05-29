@@ -32,19 +32,19 @@
                   <div class="row">
                      <div class="col">                       
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="firstname"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="firstname" Required=""></asp:TextBox>
                         </div>
                       
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="username" ></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="username" Required=""></asp:TextBox>
                         </div>
 
                          <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="email" ></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="email" Required=""></asp:TextBox>
                         </div>
 
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="password" ></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="password" Required=""></asp:TextBox>
                         </div>
 
                         <div class="form-group">

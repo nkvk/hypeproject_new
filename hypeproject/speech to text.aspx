@@ -35,6 +35,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <%-- tooltip --%>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+ 
     <title></title>
     <style>
         .container-fluid {
@@ -414,11 +417,12 @@
                     <div class="right-main">
                         <div style="display:flex">
                         <h3>Speech to Text </h3>
-                            <span style="background-color: cornflowerblue; border-radius: 8px; height: 20px">
-                                <img src="images/all.PNG" />0 / 0 Used</span>
+                            <div>
+                            <span style="background-color: cornflowerblue; border-radius: 8px; height:20px">
+                             <img src="images/all.PNG" />0 / 0 Used</span></div>
                             </div>
                         <a href="homepage.aspx" style="background-color: black; width: auto; border-radius: 3px; float: right"><span style="color: white; padding: 10px 10px;">Home > Speech to Text</span></a>
-                        <br />
+                        <br /><br /><br />
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="inside-card" style="width: 100%;">
@@ -473,13 +477,18 @@
                                                <div class="col-lg-1">
                                                     <i class='fas fa-align-left' style='color: #0769e9'></i>
                                                </div>
-                                               <div class="col-lg-6">
+                                               <div class="col-lg-10">
                                                    <span>Generated Result</span>
                                                </div>
-                                               <div class="col-lg-2" style="display:flex;float:right">
-                                                    <i class='fas fa-file-word fa-2x' style='color: #007bff'></i>
-                                                    <i class='fas fa-file-alt fa-2x' style='color: #0a18e6'></i>
-                                                    <i class='far fa-copy fa-2x' style='color: #1708e2'></i>
+                                               <div class="col-lg-2" style="display:flex;">
+                                                   <a href="#" data-toggle="tooltip" data-placement="top" title="Export as Word Document">
+                                                    <i class='fas fa-file-word fa-2x' style='color: #007bff'></i></a>
+                                                   <a href="#" data-toggle="tooltip" data-placement="top" title="Export as Text File">
+                                                    <i class='fas fa-file-alt fa-2x' style='color: #0a18e6'></i></a>
+                                                   <a href="#" data-toggle="tooltip" data-placement="top" title="Copy Text">
+                                                    <i class='far fa-copy fa-2x' style='color: #1708e2'></i></a>
+
+                                                   
                                                </div>
                                            </div>
                                        </div> 
@@ -571,6 +580,8 @@
                 </div>
         <footer>
         </footer>
+                </div>
+            </div>
     </form>
     <script>
         /* When the user clicks on the button, 
@@ -759,11 +770,11 @@
             document.getElementById("wordCount").textContent = wordCount + " Word ";
         }
     </script>
+   
     <script>
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-            return new bootstrap.Popover(popoverTriggerEl)
-        })
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
 </body>
 </html>

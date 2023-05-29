@@ -39,10 +39,10 @@
                         <div class="form-group">
                             
                            
-                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="USER NAME/EMAIL ADDRESS"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="USER NAME/EMAIL ADDRESS" Required=""></asp:TextBox>
                         </div>
                          <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="PASSWORD" ></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="PASSWORD" Required=""></asp:TextBox>
                         </div>
                             <a href="forgotpass.aspx">Forget Password?</a><br><br>
                         <div class="form-group">

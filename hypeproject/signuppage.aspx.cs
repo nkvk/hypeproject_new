@@ -22,11 +22,13 @@ namespace hypeproject
         {
             if (Check_Existing_Users())
             {
-                Response.Write("<script>alert('Email Id already exist.  Please enter new Email Id');</script>");
+                MessageBox.Show("Email Id already exist.  Please enter new Email Id");
             }
             else
             {
                 Registeration_New_User();
+                
+
             }
         }
 
@@ -61,13 +63,14 @@ namespace hypeproject
 
 
                 con.Close();
-                Response.Write("<script>alert('Sign Up Successful.Go to User Login');</script>");
+                Response.Write("<script>alert('Sign Up Successful');</script>");
 
             }
             catch (Exception ex)
             {
 
-                Response.Write("<script>alert('" + ex.Message + "');</script>"); return false;
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
             }
 
         }
@@ -86,9 +89,6 @@ namespace hypeproject
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO logins(firstname,username,email,password)values(@firstname,@username,@email,@password)", con);
 
-
-
-
                 cmd.Parameters.AddWithValue("@firstname", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@username", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@email", TextBox3.Text.Trim());
@@ -96,13 +96,18 @@ namespace hypeproject
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Sign Up Successful. Go to User Login');</script>");
+                MessageBox.Show("Sign Up Successful. Go to User Login");
                 Response.Redirect("login.aspx");
+                TextBox1.Text = string.Empty;
+                TextBox2.Text = string.Empty;
+                TextBox3.Text = string.Empty;
+                TextBox4.Text = string.Empty;
+                
             }
             catch (Exception ex)
             {
+                Response.Write("<script>alert('Mail Already Exist');</script>");
 
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
 
