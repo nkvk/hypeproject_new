@@ -68,11 +68,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="A-c Setting1.aspx" />
     <Content Include="Affiliated program.aspx" />
+    <Content Include="affitemp.aspx" />
+    <Content Include="AI Chat1.aspx" />
     <Content Include="AI Code.aspx" />
+    <Content Include="ai codetemp.aspx" />
+    <Content Include="AI Image.aspx" />
     <Content Include="AIChat.aspx" />
     <Content Include="AIImage.aspx" />
-    <Content Include="article.aspx" />
+    <Content Include="All Document.aspx" />
+    <Content Include="All Image.aspx" />
+    <Content Include="article1.aspx" />
     <Content Include="articleblog.aspx" />
     <Content Include="bootstrap\css\bootstrap1.js" />
     <Content Include="bootstrap\css\fontawesome.min.css" />
@@ -83,6 +90,7 @@
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="Contact Feed.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="dashtemp.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="Feedback Thankyou.aspx" />
     <Content Include="Feedback.aspx" />
@@ -108,9 +116,12 @@
     <Content Include="images\user.PNG" />
     <Content Include="images\wire.png" />
     <Content Include="login.aspx" />
+    <Content Include="Membership1.aspx" />
     <Content Include="signuppage.aspx" />
     <Content Include="speech to text.aspx" />
+    <Content Include="SpeechToText.aspx" />
     <Content Include="template.aspx" />
+    <Content Include="Template1.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="forgotpass.aspx" />
@@ -130,6 +141,13 @@
     <Content Include="withdraw.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="A-c Setting1.aspx.cs">
+      <DependentUpon>A-c Setting1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A-c Setting1.aspx.designer.cs">
+      <DependentUpon>A-c Setting1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Affiliated program.aspx.cs">
       <DependentUpon>Affiliated program.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,12 +155,40 @@
     <Compile Include="Affiliated program.aspx.designer.cs">
       <DependentUpon>Affiliated program.aspx</DependentUpon>
     </Compile>
+    <Compile Include="affitemp.aspx.cs">
+      <DependentUpon>affitemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="affitemp.aspx.designer.cs">
+      <DependentUpon>affitemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AI Chat1.aspx.cs">
+      <DependentUpon>AI Chat1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AI Chat1.aspx.designer.cs">
+      <DependentUpon>AI Chat1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AI Code.aspx.cs">
       <DependentUpon>AI Code.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AI Code.aspx.designer.cs">
       <DependentUpon>AI Code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ai codetemp.aspx.cs">
+      <DependentUpon>ai codetemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ai codetemp.aspx.designer.cs">
+      <DependentUpon>ai codetemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AI Image.aspx.cs">
+      <DependentUpon>AI Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AI Image.aspx.designer.cs">
+      <DependentUpon>AI Image.aspx</DependentUpon>
     </Compile>
     <Compile Include="AIChat.aspx.cs">
       <DependentUpon>AIChat.aspx</DependentUpon>
@@ -158,12 +204,26 @@
     <Compile Include="AIImage.aspx.designer.cs">
       <DependentUpon>AIImage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="article.aspx.cs">
-      <DependentUpon>article.aspx</DependentUpon>
+    <Compile Include="All Document.aspx.cs">
+      <DependentUpon>All Document.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="article.aspx.designer.cs">
-      <DependentUpon>article.aspx</DependentUpon>
+    <Compile Include="All Document.aspx.designer.cs">
+      <DependentUpon>All Document.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All Image.aspx.cs">
+      <DependentUpon>All Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All Image.aspx.designer.cs">
+      <DependentUpon>All Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="article1.aspx.cs">
+      <DependentUpon>article1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="article1.aspx.designer.cs">
+      <DependentUpon>article1.aspx</DependentUpon>
     </Compile>
     <Compile Include="articleblog.aspx.cs">
       <DependentUpon>articleblog.aspx</DependentUpon>
@@ -185,6 +245,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashtemp.aspx.cs">
+      <DependentUpon>dashtemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashtemp.aspx.designer.cs">
+      <DependentUpon>dashtemp.aspx</DependentUpon>
     </Compile>
     <Compile Include="FAQ.aspx.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
@@ -221,6 +288,13 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Membership1.aspx.cs">
+      <DependentUpon>Membership1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership1.aspx.designer.cs">
+      <DependentUpon>Membership1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="signuppage.aspx.cs">
       <DependentUpon>signuppage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,12 +310,26 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
     <Compile Include="speech to text.aspx.cs">
       <DependentUpon>speech to text.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="speech to text.aspx.designer.cs">
       <DependentUpon>speech to text.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SpeechToText.aspx.cs">
+      <DependentUpon>SpeechToText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpeechToText.aspx.designer.cs">
+      <DependentUpon>SpeechToText.aspx</DependentUpon>
     </Compile>
     <Compile Include="sqlDataReader.cs" />
     <Compile Include="template.aspx.cs">
@@ -250,6 +338,13 @@
     </Compile>
     <Compile Include="template.aspx.designer.cs">
       <DependentUpon>template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template1.aspx.cs">
+      <DependentUpon>Template1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template1.aspx.designer.cs">
+      <DependentUpon>Template1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -367,6 +462,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
+    <Content Include="Site3.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

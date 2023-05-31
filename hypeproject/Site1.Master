@@ -77,13 +77,20 @@
     color:gray;
 }
 @media (max-width: 767px) {
-	.single-box {
-		margin-bottom: 50px;
+	.navbar navbar-inverse .nav navbar-nav navbar-right{
+		display:block;
+        font-size:12px;
+        font-weight:100;
 	}
+    .container-fluid{
+        display:block;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-	.single-box {
-		margin-bottom: 50px;
+	.navbar navbar-inverse .nav navbar-nav navbar-right{
+		display:block;
+        font-size:20px;
+        font-weight:500;
 	}
 }
     </style>
@@ -93,17 +100,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="row" style="background-color:lightgoldenrodyellow;">
-            <div class="col-lg-10">
-        <label style="height:75px;padding:20px 20px;">
-            <i class="fa fa-lock" aria-hidden="true">Your email address is not verified. Please verify your email address to use all the features.</i>
-            </label> </div>
-            <div class="col-lg-2" style="padding:20px 20px;">
-            <button onclick="myFunction()" style="background-color:gray;float:right;width:105px;height:55px;">Resend Email</button>
-            <p id="click"></p>
-            </div>
-               
-    </div>
+        
         
           <nav class="navbar navbar-inverse" >
               <div class="container-fluid"> 
@@ -160,7 +157,7 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
          </asp:ContentPlaceHolder>
         <%--maincontent placeholder--%>
-    <%--<div style="padding:100px 100px"></div>--%>
+   
            <footer style="background-color:black">
               <div class="row" style="background-color:black">
                   
@@ -229,7 +226,7 @@
 
     
 </body>
-<script>
+<%--<script>
 function myFunction() {
   let text;
   let email = prompt("Please enter your email:", "");
@@ -240,6 +237,6 @@ function myFunction() {
   }
   document.getElementById("demo").innerHTML = text;
 }
-</script>
+</script>--%>
 
 </html>

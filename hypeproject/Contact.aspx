@@ -34,11 +34,7 @@
           border-radius:5px;
       }
       
-      #color, #color1{
-          background-color:#f8f8f8;
-          padding:30px 30px;
-          height:150px;
-      }
+      
       #space{
           display:flex;
           padding:4px 4px 4px 4px;
@@ -77,21 +73,23 @@ position:absolute;
 }
         </style>
     <div class="row">
-        <div class="col-lg-10" id="color">
+        <div class="col-lg-12" id="color">
 
-            <div class="col-lg-10" style="float: right">
+            <div class="col-lg-10">
 
                 <h2>Contact  US</h2>
             </div>
-        </div>
+        
 
-        <div class="col-lg-2" id="color1">
-            <label><a href="homepage.aspx">Home > Feedback</a></label>
+        <div class="col-lg-2" style="float: right">
+            <label style="padding:10px;border-radius:10px;background-color:black;"><a href="homepage.aspx" style="color:white">Home > Feedback</a></label>
         </div>
-
+</div>
     </div>
+    <br />
     <%-- map --%>
     <div class="row">
+        <div class="col-lg-12">
         <center>
         <div class="col-lg-8">
             
@@ -99,10 +97,11 @@ position:absolute;
 <iframe src="https://www.google.com/maps/embed?p="></iframe>
 </div>
             
+         </div>
             </div>
-            </center>
     </div>
     <div class="row">
+        <div class="col-lg-12" style="display:flex">
         <div class="col-lg-8" >
             <div class="col-md-12" id="left-main">
                 <span>Contact  US</span>
@@ -159,6 +158,9 @@ position:absolute;
         </div>  
         
             </div>
+        </div>
+
+
 
     
   

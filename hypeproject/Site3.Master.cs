@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hypeproject
 {
-    public partial class article : System.Web.UI.Page
+    public partial class Site3 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

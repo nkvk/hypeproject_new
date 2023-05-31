@@ -45,10 +45,16 @@
           border-radius:5px;
           color:white;
       }
-      #color, #color1{
+      #color{
           background-color:#f8f8f8;
           padding:30px 30px;
           height:150px;
+      }
+      #color1{
+          padding:10px;
+          border-radius:10px;
+          background-color:black;
+          float:right;
       }
       .carousel .carousel-item {
 	color: #999;
@@ -106,17 +112,17 @@ a:hover{
 }
     </style>
     <div class="row">
-        <div class="col-lg-10" id="color">
+        <div class="col-lg-12" id="color">
 
-            <div class="col-lg-10" style="float: right">
+            <div class="col-lg-10">
 
                 <h2>Feedback</h2>
             </div>
+       
+        <div id="color1">
+            <label><a style="color:white" href="homepage.aspx">Home > Feedback</a></label>
         </div>
-        <div class="col-lg-2" id="color1">
-            <label><a href="homepage.aspx">Home > Feedback</a></label>
-        </div>
-
+ </div>
     </div>
     <div class="row">
         <div class="col-lg-8">

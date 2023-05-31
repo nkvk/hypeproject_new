@@ -81,8 +81,9 @@ div {
     
     
         <div class="card">
-            <div><label><input type="text" value="Recommended" 
-        style="width:300px;height:50px;margin-left:700px;background-color:darkblue;color:white;text-align:center;border-radius:6px 6px 0 0;"/></label>
+            <div>
+                <label><input type="text" value="Recommended" 
+        style="width:300px;height:50px;margin-left:700px;background-color:darkblue;color:white;text-align:center;border-radius:10px;"></label>
     </div>
         <div class="container" style="text-align:center;padding-top:10px">
     <h4>Free Plan</h4>

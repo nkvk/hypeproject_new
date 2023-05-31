@@ -17,7 +17,7 @@
         <img width="200" src="images/home-hero-icon.png" alt="brain" />
     </p>
 
-    <div class="animated_rainbow_2" style="margin-left: 425px/; text-align: center;">
+    <div class="animated_rainbow_2" style="text-align: center;">
         <h1>Best AI Content Writer</h1>
 
     </div>
@@ -31,7 +31,10 @@
             font-family: Arial Black, Gadget, sans-serif;
             -webkit-animation: animatedBackground_b 5s linear infinite alternate;
         }
-
+        #Button2
+        {
+            background-color:rgba(24,70,152,1);
+        }
         @keyframes animatedBackground_b {
             0% {
                 color: #000000
@@ -146,6 +149,7 @@
             transition: 0.2s;
             border-radius: 10px;
             height:300px;
+            margin-left:100px;
         }
 
         .bottom-left {
@@ -297,6 +301,32 @@
 	background: gray;    
 	border: 5px double;    
 }
+@media (max-width: 1000px) {
+ section .text-center {
+     display:block;
+
+ }
+ #pillNav2{
+     display:block;
+     height:auto;
+ }
+ .nav-pills{
+     height:auto;
+ }
+ .form-group .text-center{
+     width:100%;
+     display:block;
+     font-size:15px;
+     font-weight:100;
+     justify-items:left;
+ }
+ #temp{
+    word-wrap:break-word;
+    display:compact ;
+    font-size:12px;
+    font-weight:100;
+ }
+}
     </style>
     <!-- Written part and a button -->
     
@@ -307,81 +337,78 @@
     
     
     <section>
-            <center>
-                <div>
-                    <p>
-                        SEO-optimized and unique content for your blogs,ads,
-                        <br>
-                        emails,and website 10X faster & save hours of work.
-                    <p>
-                </div>
-                <div class="form-group">
-                    <a href="signuppage.aspx">
-                        <input class="btn btn-info btn200" id="Button2" type="button" value="Get Started For Free" /></a>
-                </div>
-            </center>
+  <div class="text-center">
+    <div>
+      <p>
+        SEO-optimized and unique content for your blogs, ads,
+        <br>
+        emails, and website 10X faster & save hours of work.
+      </p>
+    </div>
+    <div class="form-group">
+      <a href="signuppage.aspx">
+        <input class="btn btn-info btn200" id="Button2" type="button" value="Get Started For Free" />
+      </a>
+    </div>
+    <p class="text-center">
+      <small>
+        No credit card required.
+      </small>
+    </p>
+  </div>
+</section>
 
-
-
-            <center>
-            <p>
-                <h7>
-                    No credit card required. 
-                    <h7>
-            </p>
-            <center>
-        </section>
 
         <!-- How it work part -->
 
         <hr style="border-top: dotted 1px;" />
+    <div class="section gray padding-top-65 padding-bottom-65">
         <div class="row">
-            <div class="col-lg-12">
-                <center>
-                    <h2>How it Works?</h2>
-                    <center>
-            </div>
 
+            <center>
+                <div class="col-lg-12">
+                    <!-- Section Headline -->
+                    <div class="section-headline centered margin-top-0 margin-bottom-5">
+                        <h3>How It Works?</h3>
+                    </div>
+                </div>
+            </center>
 
-            <div class="col-md-4">
-                <center>
-                    <i class="fa fa-database" aria-hidden="true"></i>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="text-center">
+                    <i class="fa fa-database" aria-hidden="true" style="font-size: 24px;"></i>
                     <br />
-                    <span style="font-size: 30px">Select a template</span><br />
-                    <span>Choose a content creation template. Multiple templates are available for your all needs.
-                    </span>
-                </center>
+                    <span style="font-size: 18px;">Select a template</span><br />
+                    <span style="font-size: 14px;">Choose a content creation template. Multiple templates are available for all your needs.</span>
+                </div>
             </div>
 
-            <div class="col-md-4">
-                <center>
-                    <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="text-center">
+                    <i class="fa fa-folder-o" aria-hidden="true" style="font-size: 24px;"></i>
                     <br />
-                    <span style="font-size: 30px">Fill the form</span><br />
-                    <span>Enter a detailed description of your content. Tell the AI what do you want.
-                    </span>
-                </center>
+                    <span style="font-size: 18px;">Fill the form</span><br />
+                    <span style="font-size: 14px;">Enter a detailed description of your content. Tell the AI what you want.</span>
+                </div>
             </div>
 
-            <div class="col-md-4">
-                <center>
-
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="text-center">
+                    <i class="fa fa-file-text-o" aria-hidden="true" style="font-size: 24px;"></i>
                     <br />
-                    <span style="font-size: 30px">Get your content</span><br />
-                    <span>Get a unique high quality content. The content is plagiarism free and you can use it anywhere.
-                    </span>
-                </center>
+                    <span style="font-size: 18px;">Get your content</span><br />
+                    <span style="font-size: 14px;">Get unique high-quality content. The content is plagiarism-free and can be used anywhere.</span>
+                </div>
             </div>
-
         </div>
+    </div>
         <br />
         <%-- temp body --%>
        <center>
         <p style="font-size: 20px;"><b>Templates</b></p>
         <p style="font-size: 20px;">Generate your required content with over 60+ content creation templates</p>
         <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm"
-            id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white); height: 50px; width: fit-content; font-size: 13px; margin-left: 200px">
+            id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white); height: 50px; width: fit-content; font-size: 13px;">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active rounded-5" onclick="toggleData()" id="All-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">All Templates</button>
             </li>
@@ -1239,8 +1266,9 @@
         <%-- testimonials --%>
         <hr />
         <div class="row">
+             <center>
         <p style="text-align: center; font-size: 20px;">Testimonials</p>
-        <center>
+       
             <div class="content-wrapper">
                 <div class="wrapper-for-arrows">
                     <fieldset>
@@ -1291,8 +1319,8 @@
         <%-- partnership slides  --%>
     <center>
     <div class="row">
-          <div class="col-lg-12">
-  <div id="demo" class="carousel slide">
+          <div class="col-lg-12" >
+  <div id="demo" class="carousel slide" >
 
   <!-- Indicators -->
   <ul class="carousel-indicators">
@@ -1305,10 +1333,12 @@
       <li data-target="#demo" data-slide-to="6"></li>
   </ul>
 <!-- The slideshow -->
-      
+      <center>
+  <div class="row" >    
+      <div class="col-lg-12" style="display:flex">
   <div class="carousel-inner" >
-      <div class="row" style="display:flex;">
-    <div class="carousel-item active">
+      
+    <div class="carousel-item active" >
       <img src="la.jpg">
     </div>
     <div class="carousel-item">
@@ -1331,8 +1361,13 @@
     </div>
           </div>
   </div>
-              </div>
-</div></div>        </center>    <script>
+      </div>
+        </center>      </div>
+</div>
+</div>
+        
+    </center>
+    <script>
         var x = 0;
 
         function slideright() {
@@ -1604,7 +1639,8 @@
         }
 
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
     </script>

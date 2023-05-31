@@ -3,20 +3,26 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
-        
         .card{
           margin:30px;
            left:30px;
-           width:70%;
+           width:auto;
            border: none;
         }
     </style>
     
-      <h4 class="card-title">Billing Details</h4><hr />
-        <button style="background-color:gray;float:right"><a href="homepage.aspx" style="color:black">Home > Membership Plan > Billing Details</a></button>
-    <div class="card" >
-    <div class="card-body">
-        <div class="notification notice"><input type="text" style="width:900px;background-color:#e9f7fe;height:50px;" value="These details will be used in invoice and payments."/></div>
+     <div> <h4 class="card-title">Billing Details</h4>
+        <label style="background-color:black;float:right;padding:10px;border-radius:10px"><a href="homepage.aspx" style="color:white">Home > Membership Plan > Billing Details</a></label>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="width:100%">
+         <div class="card" >
+        <div>
+            <label style="background-color:#e9f7fe;padding:10px;width:auto">These details will be used in invoice and payments.</label>
+        
+        </div>
         <label for="text" >Type</label><br />
         <select class="form-control" id="my-dropdown" onchange="toggleTextarea()">
   <option value="1">Personal</option>
@@ -61,6 +67,8 @@
   
   
   </div>
+        </div>
+            </div>
         </div>
     <script>
         function toggleTextarea() {

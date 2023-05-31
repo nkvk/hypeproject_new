@@ -34,8 +34,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <%-- tooltip --%>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
- 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+
     <style>
         .container-fluid {
             padding: 0px;
@@ -160,7 +160,7 @@
         .right-main {
             margin: 0px;
             padding: 90px 40px 10px 40px;
-            width:100%;
+            width: 100%;
         }
 
         .sidebar a {

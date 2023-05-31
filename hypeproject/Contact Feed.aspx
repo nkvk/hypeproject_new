@@ -6,6 +6,8 @@
         #back{
             background-color:darkblue;
             color:white;
+            padding:10px;
+            border-radius:10px;
         }
         #thanks{
             justify-items:center;
@@ -19,7 +21,7 @@
     <div id="thanks">
     <span><b>Thanks!</b></span>
         <p>Thank you for contacting us.</p>
-        <button id="back"><a style="color:white" href="Contact.aspx">Back</a></button>
+        <label id="back"><a style="color:white" href="Contact.aspx">Back</a></label>
         </div>
     </div>
 

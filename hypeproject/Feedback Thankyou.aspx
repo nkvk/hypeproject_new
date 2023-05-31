@@ -6,6 +6,8 @@
         #back{
             background-color:darkblue;
             color:white;
+            padding:10px;
+            border-radius:10px;
         }
         #thanks{
             justify-items:center;
@@ -14,12 +16,12 @@
         }
     </style>
     <div class="row">
-        <div class="col-lg-10">
-            <div class="col-lg-6">
+        <div class="col-lg-12">
+            <div class="col-lg-8">
     <div id="thanks">
     <span><b>Thanks!</b></span>
         <p>Thank you for your feedback.</p>
-        <button id="back"><a style="color:white" href="Feedback.aspx">Back</a></button>
+        <label id="back"><a style="color:white" href="Feedback.aspx">Back</a></label>
         </div>
     </div>
 

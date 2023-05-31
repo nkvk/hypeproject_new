@@ -40,24 +40,23 @@
 
 }
 .col-lg-12{
-    margin-left:100px;
-    font-size:25px;
+    font-size:20px;
     font-weight:100;
 }
 </style>
-    <div style="background-color:#f8f8f8">
+   
 <div class="col-lg-12">
 <span>Frequently Asked Questions</span><br>
 <span>Got Questions? We've Got Answers!</span>
-<div class="col-lg-4" style="float:right">
-<label style="background-color:black"><a href="homepage.aspx" style="color:white">Home > FAQ</a></label>
-</div>
+<div style="float:right">
+<label style="background-color:black;padding:10px;border-radius:10px"><a href="homepage.aspx" style="color:white">Home > FAQ</a></label>
 </div>
 </div>
 <div class="col-lg-10">
 <button class="collapsible">Lorem ipsum dolor sit smet</button>
 <p class="content" style="color:gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vestibulum rhoncus libero ut condimentum. Etiam pretium diam odio, vitae varius dolor tristique quis. Fusce sodales dolor commodo iaculis vehicula. Maecenas laoreet leo massa, ut sagittis nulla pellentesque vel. In hac habitasse platea dictumst. In rhoncus vehicula tristique. Fusce auctor iaculis ornare. Duis condimentum est non massa lobortis, quis pellentesque nisi pulvinar. </p>
 </div>
+    <div style="padding:100px 100px"></div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");

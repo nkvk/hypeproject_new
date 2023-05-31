@@ -45,7 +45,7 @@ namespace hypeproject
                         Session["username"] = dr.GetValue(1).ToString();
                     }
                     MessageBox.Show("Login Successful");
-                    Response.Redirect("dashboard.aspx?email='"+userEmail+"'");
+                    Response.Redirect("dashtemp.aspx?email='" + userEmail+"'");
                 }
                     
              
