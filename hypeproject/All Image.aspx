@@ -35,13 +35,13 @@
                  <span><b>All Image</b> <small><img src="images/all.PNG" />0/10,000 Words Used</small></span>
              </div>
              <div class="col-lg-5">
-                 <div class="all-home-btn">
-                     <a href="homepage.aspx" style="color:white">Home</a><span>->All Image</span>
+                 <div class="all-home-btn" style="background-color:black" >
+                     <a href="homepage.aspx" style="color:white">Home</a><span>>All Image</span>
                  </div>
              </div>
          </div><br />
     <div class="col-lg-12" >
-        <div class="card">
+        <div class="card" style="box-shadow:1px 1px 1px 1px">
             <div class="card-body">
                 <div class="card-text" style="display: flex">
                     <i class="fa fa-file-text-o" aria-hidden="true"></i>

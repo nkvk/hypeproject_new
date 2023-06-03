@@ -11,16 +11,25 @@ namespace hypeproject
 {
 
 
-    public partial class WebForm10
+    public partial class TestForm
     {
 
         /// <summary>
-        /// values control.
+        /// TestDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell values;
+        protected global::System.Web.UI.HtmlControls.HtmlForm TestDiv;
+
+        /// <summary>
+        /// anchorPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button anchorPage;
     }
 }

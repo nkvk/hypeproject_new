@@ -38,51 +38,50 @@
             height: auto;
         }
     </style>
-   
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Dashboard</h2>
-                <div style="float:right">
-                <label style="background-color: black;padding:10px;border-radius:10px;"><a style="color: white" href="homepage.aspx">Home>Dashboard</a></label>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Dashboard</h2>
+            <div style="float: right">
+                <label style="background-color: black; padding: 10px; border-radius: 10px;"><a style="color: white" href="homepage.aspx">Home>Dashboard</a></label>
             </div>
-                    </div>
-                </div>
-            <div style="display: flex">
-                <div class="word-box">
-                    <div class="word-text">
-                        <span>Words Used&nbsp; &nbsp;&nbsp; &nbsp;
+        </div>
+    </div>
+
+    <div style="display: flex">
+        <div class="word-box">
+            <div class="word-text">
+                <span>Words Used&nbsp; &nbsp;&nbsp; &nbsp;
                             <br />
-                            <b>0/10,000</b></span>
-                        <img style="float: right;" src="images/growth.jpg" />
-                    </div>
-                </div>
-                <div class="word-box">
-                    <div class="word-text">
-                        <span>Image Used&nbsp; &nbsp;<br />
-                            <b>0/100</b>
-                        </span>
-                        <img style="float: right" src="images/image%20used.PNG" />
-                        <h4></h4>
-
-                    </div>
-                </div>
-                <div class="word-box">
-                    <div class="word-text" style="width: 10px">
-                        <span>Speech to Text &nbsp; &nbsp;<br />
-                            <b>0/0</b></span>
-                        <img style="float: right;" src="images/music.png" />
-                    </div>
-
-                </div>
+                    <b>0/10,000</b></span>
+                <img style="float: right;" src="images/growth.jpg" />
             </div>
-            <div>
-                <h6>
-                    <img width="40" src="images/image%20used.PNG" />Words used this Month</h6>
-                <canvas id="chart" style="display: block; height: 300px; width: 950px;" class="chartjs-render-monitor"></canvas>
+        </div>
+        <div class="word-box">
+            <div class="word-text">
+                <span>Image Used&nbsp; &nbsp;<br />
+                    <b>0/100</b>
+                </span>
+                <img style="float: right" src="images/image%20used.PNG" />
+                <h4></h4>
+
+            </div>
+        </div>
+        <div class="word-box">
+            <div class="word-text" style="width: 10px">
+                <span>Speech to Text &nbsp; &nbsp;<br />
+                    <b>0/0</b></span>
+                <img style="float: right;" src="images/music.png" />
             </div>
 
+        </div>
+    </div>
+    <div>
+        <h6>
+            <img width="40" src="images/image%20used.PNG" />Words used this Month</h6>
+        <canvas id="chart" style="display: block; height: 300px; width: 950px;" class="chartjs-render-monitor"></canvas>
+    </div>
 
-            
     <script>
         Chart.defaults.global.defaultFontColor = '#888';
         Chart.defaults.global.defaultFontSize = '18';

@@ -31,7 +31,7 @@
                         </tbody>
                         <tr>
                         <th>Total Cost </th>
-                        <td>5 ₹</td>
+                        <td id="values" runat="server"></td>
                     </tr>
                         
 

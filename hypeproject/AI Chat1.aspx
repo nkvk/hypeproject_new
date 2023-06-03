@@ -11,7 +11,7 @@
   width: 100%;
   height: 430px;
   min-height: 75px;
-  background: #E6EAEA;
+  background: #fff;
 }
 @media screen and (max-width: 360px) {
   #frame {
@@ -603,7 +603,8 @@
 #frame .content .message-input .wrap {
   position: relative;
 }
-.all-home-btn{
+.all-home-btn
+{
             background-color:#184698;
             color:#fff;
             border-radius:5px;
@@ -611,37 +612,33 @@
             padding:10px;
         }
     </style>
-   
-    
-          <div class="col-lg-12" style="width:100%;">
-          <div class="dashboard-headline" style="background-color:#f8f8f8">
                         <div class="row" style="padding-bottom:50px;">
              <div class="col-lg-7">
-                 <span><b>AI Chat</b> <small><img src="images/all.PNG" />0/10,000 Words Used</small></span>
+                 <span><b>AI Chat</b><small><img src="images/all.PNG" />0/10,000 Words Used</small></span>
              </div>
              <div class="col-lg-5">
-                 <div class="all-home-btn">
-                     <a href="homepage.aspx" style="color:white">Home</a><span>->AI Chat</span>
+                 <div class="all-home-btn" style="background-color:black ">
+                     <a href="homepage.aspx" style="color:white">Home</a><span>>AI Chat</span>
                  </div>
              </div>
          </div>
-                    <!-- Breadcrumbs -->
-             <button style="float:right;background-color:black;"><a href="homepage.aspx" style="float:right;color:white">Home>AI Chat</a></button>
-              <br /> <br />
-            
-              <label style="border: 0px solid;background-color:lightcoral;width:380px;height:35px;margin-left:40px;padding:5px 5px;border-radius:3px">
-              <span style="font-size:12px;border: 0px solid;color:red">You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</span>
-
-              </label>
-                  <div class="card" style="margin:10px 40px;box-shadow:15px">
+                   <div class="row">
+                       <div class="col-lg-12">
+                           <label style="padding:10px;background-color:#ffe9e9;color:#de5959;width:100%">You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</label>
+                       </div>
+                   </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-12">
+                  <div class="card">
                       <div class="card-body">
                           <div class="card-text">
-                              <i class="fa fa-user-circle" aria-hidden="true"></i>AI Chat Bot
-                              <button id="deleteBtn" style="float:right;padding-right:15px;background-color:red;color:white;border:none;border-radius:3px;">
-<i class="fas fa-trash-alt"></i></button>
-                             <button id="downloadBtn" style="float:right;padding-right:15px;background-color:darkblue;color:white;border:none;border-radius:3px"><i class="fas fa-download"></i></button>
-                              
-                          </div>
+                              <img src="images/user.PNG" style="border-radius:50%;width:30px;height:30px"/>
+                              AI Chat Bot
+                              <button id="deleteBtn" style="float:right;padding-right:15px;color:red;border:none;border-radius:3px;">
+<i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                             <button id="downloadBtn" style="float:right;padding-right:15px;color:darkblue;border:none;border-radius:3px"><i class="fa fa-download" aria-hidden="true"></i></button>
+                                                      </div>
                           </div>
 
                       
@@ -657,8 +654,14 @@
         <hr />
 		<div class="message-input" >
 			<div class="wrap">
-			<input type="text" style="border:none;background-color:lightgray;" placeholder="Write your message..." />
-<button class="submit" style="color:white;background-color:blue;float:right;padding:10px 10px;margin:10px 10px">Send</button>
+                <div class="row" >
+                    <div class="col-lg-9">
+<input type="text" style="border:none;width:100%;" placeholder="Write your message..." />
+                    </div>
+                    <div class="col-lg-3">
+<button class="submit" style="color:white;background-color:darkblue;float:right;padding:10px;margin:10px 10px;border-radius:8px">Send</button>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</div>
@@ -666,9 +669,9 @@
 
 
          </div>
-
-          </div>
-              </div>
+</div>
+         </div>
+             
               <%-- for download and delete --%>
      <script>
          // Add click event listeners for the download buttons

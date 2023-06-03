@@ -217,5 +217,20 @@
                                 </div>
                             </div>
                         </div>
-                        
+     <div id="snackbar">Copied Successfully.</div>
+                 <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+                 </script>       
+    <%-- show snack bar --%>
+    <script>
+        function showSnackbar() {
+            var snackbar = document.getElementById("snackbar");
+            snackbar.className = "show";
+            setTimeout(function () {
+                snackbar.className = snackbar.className.replace("show", "");
+            }, 3000);
+        }
+    </script>
 </asp:Content>

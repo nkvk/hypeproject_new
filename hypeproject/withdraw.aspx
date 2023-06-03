@@ -59,10 +59,12 @@
         }
 
         #show {
-            width: 100%;
-            padding: 50px 0;
-            text-align: center;
-            margin-top: 20px;
+            width: auto;
+            padding: 10px;
+            display: none; 
+            background-color: #ffe9e9; 
+            color: red;
+            text-align:left
         }
 
         .topbar {
@@ -299,7 +301,7 @@
             </div>
         </header>
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <div class="sidebar">
 
                     <h5>&nbsp;My Account</h5>
@@ -339,18 +341,19 @@
             </div>
 
 
-            <div class="col-lg-10" style="margin-top: 100px">
+            <div class="col-lg-9" style="margin-top: 100px">
                 
                 <div class="row" style="padding-bottom: 50px;">
-                    <div class="col-lg-7">
-                        <h3 style="margin-left: 20px;"><b>Withdraw</b></h3>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="all-home-btn">
-                            <a href="homepage.aspx" style="color: white">Home</a><span>->Withdraw</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-lg-7">
+            <h5><b>Withdraw</b> <small>
+                <img src="images/all.PNG" />0/0 Used</small></h5>
+        </div>
+        <div class="col-lg-5">
+            <div class="all-home-btn" style="background-color: black">
+                <a href="homepage.aspx" style="color: white">Home</a><span>>Withdraw</span>
+            </div>
+        </div>
+    </div>
 
 
                 <div class="col-lg-12">
@@ -369,24 +372,23 @@
                                     <hr />
                                     <div class="accordion-body">
                                         <p style="color: #3184ae; background-color: #e9f7fe;">The requested amount will be deducted from your wallet and the amount will be blocked until it get approved or rejected by the administrator. Once its approved, the requested amount will be manually pay to you.</p>
-                                        <div style="display: none; background-color: #ffe9e9; color: red;"
-                                            id="show">
+                                        <div id="show">
                                             Insufficient fund, withdrawal amount must be lower than your wallet amount.
                                         </div>
                                         <span>Withdrawal Amount (₹)</span><br />
                                         <div style="display: flex">
-                                            <input type="number" style="width: 185px" value="50" min="50" />
+                                            <input type="number" style="width: auto" value="50" min="50" />
                                             <i class="fa fa-money" aria-hidden="true" style="font-size: 30px; color: lightgray"></i>
                                         </div>
                                         <p><small>Minimum withdraw amount : 50 ₹</small></p>
 
                                         <p>Payment Method</p>
-                                        <input type="radio" id="Paypal" name="Payment_Method" value="Paypal" />
+                                        <input type="radio" id="Paypal" name="Payment_Method" value="Paypal" required=""/>
                                         <label for="Paypal">Paypal</label><br />
-                                        <input type="radio" id="Bank" name="Payment_Method" value="Bank" />
+                                        <input type="radio" id="Bank" name="Payment_Method" value="Bank" required=""/>
                                         <label for="Bank">Bank Deposit</label><br />
                                         <p>Account Details</p>
-                                        <textarea style="width: 300px" required="" placeholder="Write Payment Details..."></textarea>
+                                        <textarea style="width: auto" required="" placeholder="Write Payment Details..."></textarea>
                                         <p style="font-size: 12px">
                                             <smal>Write here your payment id or payment details of selected payment gateways.</smal></p>
                                         <button onclick="myFunction2()">Withdraw</button>
@@ -510,7 +512,7 @@
     <script>   
         $("#navbtn").on("click", function () {
                $(".sidebar").toggle();
-               $(".col-lg-10").toggleClass("col-lg-12");
+               $(".col-lg-9").toggleClass("col-lg-12");
 
            });
     </script>

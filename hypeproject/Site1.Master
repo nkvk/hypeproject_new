@@ -104,15 +104,14 @@
         
           <nav class="navbar navbar-inverse" >
               <div class="container-fluid"> 
-                <div class ="navbar header">
+                <div class ="navbar header" >
                   <a href="homepage.aspx">  <img  src="images/980385239.png" style="border: none;max-width: 100px;height: auto;"/>
                    </a>
                </div>
-            <div class="nav navbar-nav navbar-right"  >
+            <div class="nav navbar-nav navbar-right" >
                       
                        <div class="form-group" style="display:flex;">
                           <a href="login.aspx"  class="btn btn-primary active" id="Button1" aria-current="page" style="text-align:end;">Join Now</a>
-                         <%-- <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
 
                          
               
@@ -158,17 +157,23 @@
          </asp:ContentPlaceHolder>
         <%--maincontent placeholder--%>
    
-           <footer style="background-color:black">
-              <div class="row" style="background-color:black">
-                  
-                <div class="col-lg-3 col-sm-6">
+           
+        
+    </form>
+        
+   <footer style="background-color:black;margin-bottom:0">
+              <div class="row" >
+                <div class="col-lg-12" style="display:flex;margin:40px">
+                <div class="col-lg-6" >
                     <div class="single-box">
                         <img src="images/980385239.png" alt="">
-                    <p>Aenean sodales mattis augue. Morbi euismod, felis at volutpat volutpat, quam lectus porttitor massa, tur ex a neque pulvinar pulvinar.</p>
+                    <p style="line-height: 26px;">Aenean sodales mattis augue. Morbi euismod, felis at <br />volutpat volutpat, quam lectus porttitor massa, tur ex a <br />neque pulvinar pulvinar.</p>
                     
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                   
+                  <div class="col-lg-6" style="display:flex;margin-top:20px">
+                <div class="col-lg-4">
                     <div class="single-box">
                         <h2>My Account</h2>
                     <ul>
@@ -178,7 +183,7 @@
                     </ul>
                     </div>                    
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4">
                     <div class="single-box">
                         <h2>Helpful Links</h2>
                     <ul>
@@ -189,7 +194,7 @@
                     </ul>
                     </div>                    
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4">
                     <div class="single-box">
                         <h2>Information</h2>
                         <ul>
@@ -201,11 +206,15 @@
                     
                 
             </div>
-            <hr style="color: gray;"/>
-            <div class="col-lg-3" style="color: gray;">
+                      </div>
+                 </div>       
+            <hr style="color: white;"/>
+                <div class="row">
+                    <div class="col-lg-12" style="display:flex">
+            <div class="col-lg-4" style="color: gray;">
                 <p>2023 Socius IGB Pvt Ltd, All right reserved</p>
             </div>
-                <div class="col-sm-9" >
+                <div class="col-lg-8" >
                 <p class="socials" style="float: right;color: gray;">
                  <a href="https://www.facebook.com/">   <i class="fa fa-facebook"></i></a>
                   <a href="https://twitter.com/">   <i class="fa fa-twitter"></i></a>
@@ -215,13 +224,10 @@
                     
                 </p>
             </div>
+                        </div>
+                      </div>  
                       </div>
     </footer>
-           
-        
-    </form>
-        
-   
 
 
     

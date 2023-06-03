@@ -9,24 +9,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
         rel="stylesheet" />
+     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
 
     <style>
-        /*button choose file*/
-        input[type="file"]::-webkit-file-upload-button {
-            visibility: hidden;
-        }
-
-        input[type="file"]::before {
-            content: 'Upload Media';
-            padding: 6px 12px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        input[type="file"]:hover::before {
-            background-color: #0069d9;
-        }
         
         .options {
             display: flex;
@@ -94,63 +80,216 @@
         .active {
             background-color: #e0e9ff;
         }
-    </style>
-    <div>
-        <h3>Speech to Text </h3>
 
+        .all-home-btn {
+            background-color: #184698;
+            color: #fff;
+            border-radius: 5px;
+            float: right;
+            padding: 10px;
+        }
+
+        .speech-left {
+            width: auto;
+            padding: 10px;
+            margin: 0;
+            padding: 10px;
+            box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.08);
+            background-color: #fff;
+        }
+        .speech-right {
+            width: auto;
+            padding: 10px;
+            margin: 0;
+            padding: 10px;
+            box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.08);
+            background-color: #fff;
+        }
+
+        .headline {
+            margin: 20px;
+        }
+
+        .upload {
+            border: none;
+            border-radius: 5px;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+
+
+        .uploadmedia {
+            background-color: white;
+            border: 2px solid darkblue;
+        }
+
+            .uploadmedia:hover {
+                background-color: darkblue;
+                color: white;
+            }
+             /* for snackbar*/
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+            #snackbar.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        .tox-notifications-container{    display:none !important;}.tox .tox-notification--warn, .tox .tox-notification--warning{    display:none;}
+.tox .tox-statusbar__branding svg{display:none;}
+    </style>
+    <div class="row" style="padding-bottom: 50px;">
+        <div class="col-lg-7">
+            <h5><b>Speech to Text</b> <small>
+                <img src="images/all.PNG" />0/0 Used</small></h5>
+        </div>
+        <div class="col-lg-5">
+            <div class="all-home-btn" style="background-color: black">
+                <a href="homepage.aspx" style="color: white">Home</a><span>>Speech to Text</span>
+            </div>
+        </div>
     </div>
-    <a href="homepage.aspx" style="background-color: black; width: auto; border-radius: 3px; float: right"><span style="color: white; padding: 10px 10px;">Home > Speech to Text</span></a>
-    <br />
-    <br />
     <div class="row">
         <div class="col-lg-4">
-            <div class="inside-card" style="width: 100%;">
-                <div class="card-inside" style="padding: 10px; box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.08); background-color: #fff;">
-                    <div class="card-body">
+            <div class="speech-left">
+                <div class="card" style="width: 100%; border: none">
+                    <div class="card-title">
                         <div class="headline">
                             <span><i class="fa fa-headphones" aria-hidden="true" style="color: darkblue"></i>&nbsp;
                                 Speech to Text</span>
                         </div>
-                        <hr />
-                        <div style="color: white; background-color: cornflowerblue; padding: 2px 2px">
-                            <span>Create audio transcription from a file.</span>
+                    </div>
+                    <hr />
+                    <div class="card-body">
+                        <div class="col-lg-12">
+                            <label style="padding: 10px; background-color: #e9f7fe; color: #3184ae; width: 100%">
+                                Create audio transcription from a file.
+                            </label>
                         </div>
-                        <span>Title</span><br />
-                        <input type="text" style="width: auto;" /><br />
+                        <div class="col-lg-12">
+                            <div>
+                                <span>Title</span>
+                            </div>
 
-                        <label for="fileInput" style="color: darkblue;"
-                            class="customFileUpload">
-                        </label>
-                        <div class="customButton">
-                            <span>Upload Media  *</span>
+                            <div>
+                                <input type="text" style="width: 100%; border-radius: 3px" />
+                            </div>
+                            <br />
+                        </div>
+                        <div class="col-lg-12">
+                            <div>
+                                <span>Upload Media*</span>
+                            </div>
+                            <br />
+                            <div class="uploadbut">
+                                <a href="C:\Users\SIGB\Desktop">
+                                    <label class="upload uploadmedia">
+                                        Upload Media</label></a>
+                                <p>.mp3, .mp4, .mpeg, .mpga, .m4a, .wav, .webm allowed. Max file size: 0 MB</p>
+                            </div>
+
 
                         </div>
-                        <input type="file" id="fileInput" name="fileInput" class="hiddenInput" />
-                        <p>.mp3, .mp4, .mpeg, .mpga, .m4a, .wav, .webm allowed. Max file size: 0 MB</p>
-                        <br />
-
-                        <div>
+                        <div class="col-lg-12">
                             <label for="text">Audio Description</label>
-                            <textarea style="width: auto"></textarea>
-                            <p>Describe the speech from the file to help the AI. (Optional)</p>
-
                         </div>
-                        <div>
-                            <span class="alert alert-danger" role="alert" id="error-msg" style="display: none; background-color: white; border: none; font-size: 15px">Unexpected error, please try again.
+                        <div class="col-lg-12">
+                            <textarea style="width: 100%; border-radius: 5px"></textarea>
+                            <p>Describe the speech from the file to help the AI. (Optional)</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <span class="alert alert-danger" role="alert" id="error-msg" style="width: 100%; display: none; background-color: white; border: none; font-size: 15px">Unexpected error, please try again.
                             </span>
                             <button type="button" id="submit-btn" style="color: white; background-color: darkblue; width: auto;">
-                                <span>Generate &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                <span>Generate<i class="fa fa-arrow-right" aria-hidden="true"></i></span>
 
                             </button>
-                            <p style="background-color: #3184ae; color: darkblue">Audio transcription may takes time due to the file size.</p>
                         </div>
+                        <div class="col-lg-12">
+                            <label style="padding: 10px; background-color: #e9f7fe; color: #3184ae; width: 100%">
+                                Audio transcription may takes time due to the file size.
+                            </label>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-lg-8">
-            <div class="inside-card" style="width: 100%;">
-                <div class="card-inside" style="padding: 10px; box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.08); background-color: #fff;">
+            <div class="speech-right" >
+                <div class="card-title" style="padding: 20px; box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.08); background-color: #fff;">
                     <div class="col-lg-9" style="display: flex">
                         <div class="col-lg-1">
                             <i class='fas fa-align-left' style='color: #0769e9'></i>
@@ -158,101 +297,29 @@
                         <div class="col-lg-10">
                             <span>Generated Result</span>
                         </div>
-                        <div class="col-lg-2" style="display: flex;">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Export as Word Document">
-                                <i class='fas fa-file-word fa-2x' style='color: #007bff'></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Export as Text File">
-                                <i class='fas fa-file-alt fa-2x' style='color: #0a18e6'></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Copy Text">
-                                <i class='far fa-copy fa-2x' style='color: #1708e2'></i></a>
+                        <div class="col-lg-1" style="display: flex;float:right">
+                            <button  id="expword" data-toggle="tooltip" data-placement="top" title="Export as Word Document">
+                                <i class='fas fa-file-word fa-2x' style='color: #007bff' ></i></button>
+
+                            <button  id="exptext" data-toggle="tooltip" data-placement="top" title="Export as Text File">
+                                <i class='fas fa-file-alt fa-2x' style='color: #0a18e6'  ></i></button>
+                            <a data-toggle="tooltip" id="copytxt" data-placement="top" title="Copy Text">
+                                <i class='far fa-copy fa-2x' style='color: #1708e2' onclick="showSnackbar2()"></i></a>
 
 
                         </div>
                     </div>
                 </div>
-            </div>
+           
 
-            <div style="border: 1px solid black">
-                <div class="options">
+            
 
-                    <!-- Headings -->
-                    <select id="formatBlock" class="adv-option-button">
-                        <option value="H1">Paragraph</option>
-                        <option value="H1">Heading 1</option>
-                        <option value="H2">Heading 2</option>
-                        <option value="H3">Heading 3</option>
-                        <option value="H4">Heading 4</option>
-                        <option value="H5">Heading 5</option>
-                        <option value="H6">Heading 6</option>
-                    </select>
 
-                    <!-- Text Format -->
-                    <button id="bold" class="option-button format">
-                        <i class="fa fa-bold " aria-hidden="true"></i>
-                    </button>
-                    <button id="italic" class="option-button format">
-                        <i class="fa-solid fa-italic"></i>
-                    </button>
-                    <button id="underline" class="option-button format">
-                        <i class="fa-solid fa-underline"></i>
-                    </button>
-                    <button id="strikethrough" class="option-button format">
-                        <i class="fa-solid fa-strikethrough"></i>
-                    </button>
-
-                    <!-- Alignment -->
-                    <button id="justifyLeft" class="option-button align">
-                        <i class="fa-solid fa-align-left"></i>
-                    </button>
-                    <button id="justifyCenter" class="option-button align">
-                        <i class="fa-solid fa-align-center"></i>
-                    </button>
-                    <button id="justifyRight" class="option-button align">
-                        <i class="fa-solid fa-align-right"></i>
-                    </button>
-
-                    <!-- Link -->
-                    <button id="createLink" class="adv-option-button">
-                        <i class="fa fa-link"></i>
-                    </button>
-                    <!-- blockquote -->
-                    <button>
-                        <i class="fa fa-quote-right" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div style="border: 1px solid black"></div>
-                <div class="options">
-
-                    <!-- Undo/Redo -->
-                    <button id="undo" class="option-button">
-                        <i class="fa-solid fa-rotate-left"></i>
-                    </button>
-                    <button id="redo" class="option-button">
-                        <i class="fa-solid fa-rotate-right"></i>
-                    </button>
-
-                    <!-- List -->
-                    <button id="insertOrderedList" class="option-button">
-                        <div class="fa-solid fa-list-ol"></div>
-                    </button>
-                    <button id="insertUnorderedList" class="option-button">
-                        <i class="fa-solid fa-list"></i>
-                    </button>
-                    <!-- indentation -->
-                    <button id="outdent" class="option-button spacing">
-                        <i class="fa-solid fa-outdent"></i>
-                    </button>
-
-                    <button id="indent" class="option-button spacing">
-                        <i class="fa-solid fa-indent"></i>
-                    </button>
-
-                </div>
-
-                <div style="border: 1px solid black" id="text-input" contenteditable="true"></div>
-            </div>
+                  <div id="pc" style="min-height:400px;width:100%;padding-top:10px;background-color:white;border:none">                                           <div class="row justify-content-md-center mt-4 mb-4">                                               <div class="form-group">                                                   <textarea id="editor"></textarea>                                               </div>                                           </div>                                           <%--<button type="submit" class="btn btn-primary">Submit</button>--%>                                       </div>  
+                 </div>
         </div>
     </div>
+    <div id="snackbar">Copied Successfully.</div>
     <script>
 
         // When the user clicks the submit button, show the error message
@@ -365,28 +432,28 @@
         window.onload = initializer();
 
     </script>
-    <script>
-        function countWords() {
-            // Get the input value
-            var inputText = document.getElementById("inputText").value;
-
-            // Remove leading and trailing whitespaces
-            inputText = inputText.trim();
-
-            // Split the input into an array of words
-            var words = inputText.split(/\s+/);
-
-            // Count the number of words
-            var wordCount = words.length;
-
-            // Display the word count
-            document.getElementById("wordCount").textContent = wordCount + " Word ";
-        }
-    </script>
+   
 
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
+    </script>
+    <%-- for export --%>
+    
+     <script>
+         //----------------Export-to-Word-Formate-----------------------//         $('#expword').on('click', function (e) {             e.preventDefault();             var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";             var postHtml = "</body></html>";             var html = preHtml + tinymce.activeEditor.getContent() + postHtml;             var blob = new Blob(['\ufeff', html], {                 type: 'application/msword'             });             // Specify link url             var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);             // Specify file name             var filename = 'document.doc';             // Create download link element             var downloadLink = document.createElement("a");             document.body.appendChild(downloadLink);             if (navigator.msSaveOrOpenBlob) {                 navigator.msSaveOrOpenBlob(blob, filename);             } else {                 // Create a link to the file                 downloadLink.href = url;                 // Setting the file name                 downloadLink.download = filename;                 //triggering the function                 downloadLink.click();             }             document.body.removeChild(downloadLink);         });         //-------------- Export to text file--------------------//         $('#exptext').on('click', function (e) {             e.preventDefault();             var txt = tinymce.activeEditor.getContent();             // replace br with \n             var regex = /<br\s*[\/]?>/gi;             txt = txt.replace(regex, "\n");             // remove html tags             txt = $('<div>' + txt + '</div>').text();             var downloadableLink = document.createElement('a');             downloadableLink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(txt));             downloadableLink.download = "Text File" + ".txt";             document.body.appendChild(downloadableLink);             downloadableLink.click();             document.body.removeChild(downloadableLink);         });         $('#copy_text').on('click', function (e) {             e.preventDefault();             tinyMCE.activeEditor.selection.select(tinyMCE.activeEditor.getBody());             tinyMCE.activeEditor.execCommand("Copy");             Snackbar.show({                 text: LANG_COPIED_SUCCESSFULLY,                 pos: 'bottom-center',                 showAction: false,                 actionText: "Dismiss",                 duration: 3000,                 textColor: '#fff',                 backgroundColor: '#383838'             });         });         //--------------------copy text------------------------//            $('#copytxt').on('click', function (e) {             e.preventDefault();             tinyMCE.activeEditor.selection.select(tinyMCE.activeEditor.getBody());             tinyMCE.activeEditor.execCommand("Copy");             Snackbar.show({                 text: LANG_COPIED_SUCCESSFULLY,                 pos: 'bottom-center',                 showAction: false,                 actionText: "Dismiss",                 duration: 3000,                 textColor: '#fff',                 backgroundColor: '#383838'             });         });
+     </script>
+    <script>
+        function showSnackbar2() {
+            var snackbar = document.getElementById("snackbar");
+            snackbar.className = "show";
+            setTimeout(function () {
+                snackbar.className = snackbar.className.replace("show", "");
+            }, 3000);
+        }
+    </script>
+    <script>
+        tinymce.init({            plugins: 'code',            theme: 'silver',            selector: 'textarea#editor',            min_height: 500,            resize: true,            plugins: 'advlist lists table autolink link wordcount fullscreen autoresize',            toolbar: [                "blocks | bold italic underline strikethrough | alignleft aligncenter alignright  | link blockquote",                "undo redo | removeformat | table | bullist numlist | outdent indent"            ],            menubar: "",            // link            relative_urls: false,            link_assume_external_targets: true,            content_style: 'body { font-size:14px }'        });
     </script>
 </asp:Content>

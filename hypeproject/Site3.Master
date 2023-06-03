@@ -318,8 +318,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-10" id="main1">
-                    <div class="right-main">
+                <div class="col-lg-10" id="main1" >
+                    <div class="right-main"style="background-color:#eee">
                 <%-- body --%>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
@@ -328,10 +328,10 @@
                             <hr />
                             <div class="row">
                                 
-                                <div class="col-lg-6">
+                                <div class="col-lg-8">
                                     <span style="color: black; float: left">2023 Socius IGB Pvt Ltd, All right reserved</span>
                                     </div>
-                                    <div class="col-lg-6" >
+                                    <div class="col-lg-4" >
                                         <div style="float:right">
                                             <i class="fa fa-facebook" aria-hidden="true"><a href="https://www.facebook.com/"></a></i>
                                             <i class="fa fa-twitter" aria-hidden="true"><a href="https://twitter.com/"></a></i>

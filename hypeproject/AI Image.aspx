@@ -34,14 +34,15 @@
     <div class="col-lg-12">
         <div class="row" style="padding-bottom:50px;">
              <div class="col-lg-7">
-                 <span><b>AI Image</b> <small><img src="images/all.PNG" />0/10,000 Words Used</small></span>
+                 <h3><b>AI Image</b> <small><img src="images/all.PNG" />0/100 Words Used</small></h3>
              </div>
              <div class="col-lg-5">
-                 <div class="all-home-btn">
-                     <a href="homepage.aspx" style="color:white">Home</a><span>->AI Image</span>
+                 <div class="all-home-btn" style="background-color:black ">
+                     <a href="homepage.aspx" style="color:white">Home</a><span>>AI Image</span>
                  </div>
              </div>
          </div>
+        
 
 
        <br />
@@ -49,11 +50,18 @@
         <div id="ai_images" name="ai_images" method="post" action="#">
             <span style="padding: 25px 25px">Start with a detailed description. <a href="#" class="try-example"><strong>Try an example</strong></a></span>
             <div class="message-reply ai_image_description margin-bottom-20" style="padding: 25px 25px;">
-                <textarea style="width: 75%; height: 35px; border-radius: 50px; overflow: hidden" name="description" class="with-border small-input image-description" placeholder="SpongeBob SquarePants dressed as a mailman drinking a cup of coffee in a mountainside scene, watercolors by 5 year old" required=""></textarea>
+            <div class="row" style="display:flex">
+                <div class="col-lg-9" >
+            
+                <textarea style="width: 100%; min-height: 30px; border-radius: 50px; overflow: hidden" name="description" class="with-border small-input image-description" placeholder="SpongeBob SquarePants dressed as a mailman drinking a cup of coffee in a mountainside scene, watercolors by 5 year old" required=""></textarea>
+                    </div>
+                    
+                <div class="col-lg-3">
                 <button type="submit" name="submit" class="button ripple-effect border-pilled" style="background-color: darkblue; color: white; border-radius: 20px;" onclick="myFunction3()">
                     Generate<i class="fa fa-arrow-right" aria-hidden="true"></i>
-
                 </button>
+                    </div>
+                </div>
             </div>
             <div id="main" style="display: none">
                 <div style="display: flex">

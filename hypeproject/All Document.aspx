@@ -30,25 +30,18 @@
         }
     </style>
      <div class="col-lg-12"  >
-         <%--<div>
-            <h4>All Documents 
-    <span style="border-radius:20px;background-color:#2980B9;padding:5px 5px;color:blue;display: inline-block;
-    "><img src="images/all.PNG" />0/10,000 Words Used</span></h4>
-            <label style="float:right;background-color:black;color:white">
-                <a href="homepage.aspx" style="color:white">Home > Membership</a></label>
-</div>--%>
+         
          <div class="row" style="padding-bottom:50px;">
              <div class="col-lg-7">
                  <span><b>All Documents</b> <small><img src="images/all.PNG" />0/10,000 Words Used</small></span>
              </div>
              <div class="col-lg-5">
-                 <div class="all-home-btn">
-                     <a href="homepage.aspx" style="color:white">Home</a><span>->All Documents</span>
+                 <div class="all-home-btn" style="background-color:black ">
+                     <a href="homepage.aspx" style="color:white">Home</a><span>>All Documents</span>
                  </div>
              </div>
          </div>
-            <div class="card">
-                
+            <div class="card" style="box-shadow:1px 1px 1px 1px">
                <div class="card-body">
                     <div class="card-text" style="display:flex">
                         <i class="fa fa-file-text-o" aria-hidden="true"></i><h6> All Documents</h6>

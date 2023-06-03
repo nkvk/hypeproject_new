@@ -122,6 +122,7 @@
     <Content Include="SpeechToText.aspx" />
     <Content Include="template.aspx" />
     <Content Include="Template1.aspx" />
+    <Content Include="TestForm.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="forgotpass.aspx" />
@@ -345,6 +346,13 @@
     </Compile>
     <Compile Include="Template1.aspx.designer.cs">
       <DependentUpon>Template1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.aspx.cs">
+      <DependentUpon>TestForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestForm.aspx.designer.cs">
+      <DependentUpon>TestForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

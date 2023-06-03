@@ -19,11 +19,23 @@ padding: 40px;
 
   margin-top:60px;
 }
+
     </style>
-    <div class="card-body" style="background-color:lightgray">
-        <button style="background-color:black;float:right;"><a href="homepage.aspx" style="color:white">Home > Transactions</a></button>
-        <h3 style="height:75px">Transactions</h3>
-    </div><br />
+    
+        <div class="row">
+            <div class="col-lg-12" style="display:flex;">
+                <div class="col-lg-7">
+                <h2>Transactions</h2>
+                    </div>
+                <div class="col-lg-5" style="float:right;">
+                 <div class="all-home-btn">
+                <span><a href="homepage.aspx">
+                    <asp:Button Style="float: right; background-color: #000; color: white; padding: 10px; border-radius: 3px;" ID="Button3" runat="server" Text="Home>Transactions" /></a></span>
+            </div>
+           </div>
+        </div>
+    </div>
+<br />
     
     <div class="container" >
         <h4 >Transactions</h4>

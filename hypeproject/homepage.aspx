@@ -12,15 +12,16 @@
     <!-- Brain logo -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 
-   <%--<div class="row">--%>
+  <div class="row">
     <p style="text-align: center;">
         <img width="200" src="images/home-hero-icon.png" alt="brain" />
     </p>
-
-    <div class="animated_rainbow_2" style="text-align: center;">
-        <h1>Best AI Content Writer</h1>
+       <div class="animated_rainbow_2">
+        <h1><strong>Best AI Content Writer</strong></h1>
 
     </div>
+</div>
+   
 
 
     <!-- Colored text -->
@@ -30,10 +31,13 @@
             font-size: 42px;
             font-family: Arial Black, Gadget, sans-serif;
             -webkit-animation: animatedBackground_b 5s linear infinite alternate;
+            text-align: center;
+            font-size: 75px;
         }
         #Button2
         {
             background-color:rgba(24,70,152,1);
+            width: 274.094px;
         }
         @keyframes animatedBackground_b {
             0% {
@@ -44,8 +48,13 @@
                 color: #0094ff
             }
         }
-
-
+        /*for text below brain*/
+        .text-center{
+            font-size: 20px;
+    width: 60%;
+    line-height: 32px;
+    margin: 0 auto 1.5rem;
+        }
 
         .card6-block:hover {
             margin-top: -10px;
@@ -71,16 +80,7 @@
             border: 1px gray;
             box-shadow: gray 2px 2px 2px 2px;
         }
-        /*check mark container*/
-        .container4 {
-            display: flex;
-            position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-            justify-items: center;
-        }
+        
         /* On mouse-over, add a grey background color */
         .container:hover input ~ .checkmark {
             background-color: #ccc;
@@ -144,12 +144,13 @@
         .blog2 {
             position: absolute;
             text-align: left;
-            color: gray;
+            color: darkgray;
             cursor: pointer;
-            transition: 0.2s;
+            transition: 0.5s;
             border-radius: 10px;
             height:300px;
-            margin-left:100px;
+            margin:10px;
+            
         }
 
         .bottom-left {
@@ -244,6 +245,7 @@
         .arrow-wrap {
             position: absolute;
             top: 50%;
+            
         }
 
         .arrow {
@@ -253,6 +255,7 @@
             border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
             cursor: pointer;
             transition: transform 0.3s;
+            
         }
 
             .arrow:hover {
@@ -327,7 +330,16 @@
     font-weight:100;
  }
 }
-    </style>
+.works{
+  margin:30px;
+  }
+.nav-pills{
+    background: #eee;
+    padding: 10px;
+    border-radius: 50vh;
+    font-size: 14px;
+}
+  </style>  
     <!-- Written part and a button -->
     
 
@@ -340,7 +352,7 @@
   <div class="text-center">
     <div>
       <p>
-        SEO-optimized and unique content for your blogs, ads,
+        Created SEO-optimized and unique content for your blogs, ads,
         <br>
         emails, and website 10X faster & save hours of work.
       </p>
@@ -360,55 +372,64 @@
 
 
         <!-- How it work part -->
-
-        <hr style="border-top: dotted 1px;" />
-    <div class="section gray padding-top-65 padding-bottom-65">
+<div class="card" style="background-color:#f8f8f8">
         <div class="row">
-
             <center>
                 <div class="col-lg-12">
                     <!-- Section Headline -->
-                    <div class="section-headline centered margin-top-0 margin-bottom-5">
-                        <h3>How It Works?</h3>
+                    
+                    <div class="works">
+                        <h3 style="color: #333;font-size: 26px; line-height: 36px;font-weight: 500;">
+                            How It Works?
+
+                        </h3>
                     </div>
                 </div>
             </center>
-
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="row">
+                <center>
+                    <div class="col-md-12" style="display:flex;padding:10px">
+            <div class="col-xl-4 col-md-4">
                 <div class="text-center">
-                    <i class="fa fa-database" aria-hidden="true" style="font-size: 24px;"></i>
-                    <br />
-                    <span style="font-size: 18px;">Select a template</span><br />
-                    <span style="font-size: 14px;">Choose a content creation template. Multiple templates are available for all your needs.</span>
+                   <i class="fa fa-database" aria-hidden="true" style="font-size: 60px;"></i>
+                    <h3 style="font-size: 22px;font-weight: 500;">Select a template</h3>
+                    <p style="font-size: 16px;padding: 0 10px;
+    color: gray;">Choose a content creation template. Multiple templates are available for all your needs.</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-xl-4 col-md-4">
                 <div class="text-center">
-                    <i class="fa fa-folder-o" aria-hidden="true" style="font-size: 24px;"></i>
-                    <br />
-                    <span style="font-size: 18px;">Fill the form</span><br />
-                    <span style="font-size: 14px;">Enter a detailed description of your content. Tell the AI what you want.</span>
+                    <i class="fa fa-folder-o" aria-hidden="true" style="font-size: 60px;"></i>
+                    <h3 style="font-size: 22px;font-weight: 500;">Fill the form</h3>
+                    <p style="font-size: 16px;padding: 0 10px;
+    color: gray;">Enter a detailed description of your content. Tell the AI what you want.</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-xl-4 col-md-4">
                 <div class="text-center">
-                    <i class="fa fa-file-text-o" aria-hidden="true" style="font-size: 24px;"></i>
-                    <br />
-                    <span style="font-size: 18px;">Get your content</span><br />
-                    <span style="font-size: 14px;">Get unique high-quality content. The content is plagiarism-free and can be used anywhere.</span>
+                    <i class="fa fa-file-text-o" aria-hidden="true" style="font-size: 60px;"></i>
+                    <h3 style="font-size: 22px;font-weight: 500;">Get your content</h3>
+                    <p style="font-size: 16px;padding: 0 10px;
+    color: gray;">Get unique high-quality content. The content is plagiarism-free and can be used anywhere.</p>
                 </div>
             </div>
+                        </div>
+                        </center>
+                </div>
         </div>
     </div>
-        <br />
         <%-- temp body --%>
        <center>
-        <p style="font-size: 20px;"><b>Templates</b></p>
-        <p style="font-size: 20px;">Generate your required content with over 60+ content creation templates</p>
-        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm"
-            id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white); height: 50px; width: fit-content; font-size: 13px;">
+           <div style="margin:30px">
+        <p style="font-size: 24px;"><b>Templates</b></p>
+        <p style="font-size: 16px;color:dimgrey">Generate your required content with over 60+ content creation templates</p>
+        </div>
+
+           <div class="template-categories home-templates">
+               <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-gray rounded-5 shadow-sm"
+            id="pillNav2" role="tablist" style="background-color:#f8f8f8; height: 50px; width: fit-content; font-size: 13px;">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active rounded-5" onclick="toggleData()" id="All-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">All Templates</button>
             </li>
@@ -434,17 +455,18 @@
                 <button class="nav-link rounded-5" onclick="toggleData()" id="other-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Other</button>
             </li>
         </ul>
-        
+            </div>
         </center>
-       <div class="row">
-       <div class="col-md-12" id="temp">
-            <div class="row" style="padding: 20px 20px; width: auto;" id="data1">
-                    <div class="col-lg-10">
+       <div class="row" id="temp" style="width:auto;background-color:#fff;">
+       
+            <%-- article & blog --%>
+            <div class="row" style="padding: 20px" id="data1">
+               <div class="col-lg-12">
                         <h5>Article And Blogs</h5>
-                        <hr style="border: 2px dotted" />
+                        <hr style="border: 1px dashed" />
                     </div>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-comment-o" aria-hidden="true"></i></h4>
@@ -455,7 +477,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-align-left" aria-hidden="true"></i></h4>
@@ -465,7 +487,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></h4>
@@ -476,9 +498,8 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-address-book" aria-hidden="true"></i></h4>
@@ -488,7 +509,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-check-square" aria-hidden="true"></i></h4>
@@ -498,7 +519,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-pencil-square" aria-hidden="true"></i></h4>
@@ -509,8 +530,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h4>
@@ -523,7 +544,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-list" aria-hidden="true"></i></h4>
@@ -533,7 +554,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-list-ol" aria-hidden="true"></i></h4>
@@ -547,13 +568,13 @@
                 </div>
 
                 <%-- ads and marketing --%>
-                <div class="row" style="padding: 20px 20px" id="data2">
-                    <div class="col-lg-10">
+                <div class="row" style="padding: 20px" id="data2">
+                    <div class="col-lg-12">
                         <h5>Ads And Marketing Tools</h5>
-                        <hr style="border: 2px dotted" />
+                        <hr style="border: 1px dashed" />
                     </div>
-
-                    <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-facebook-square" aria-hidden="true"></i></h4>
@@ -563,7 +584,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-facebook-square" aria-hidden="true"></i></h4>
@@ -573,7 +594,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
@@ -583,9 +604,9 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    </div>
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
@@ -595,7 +616,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-linkedin-square" aria-hidden="true"></i></h4>
@@ -605,7 +626,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-linkedin-square" aria-hidden="true"></i></h4>
@@ -616,8 +637,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-bell" aria-hidden="true"></i></h4>
@@ -627,15 +648,16 @@
                             </div>
                         </div>
                     </div>
+                        </div>
                 </div>
                 <%-- General Writing --%>
-                <div class="row" style="padding: 20px 20px" id="data3">
-                    <div class="col-lg-10">
+                <div class="row" style="padding: 20px" id="data3">
+                    <div class="col-lg-12">
                         <h5>General Writing</h5>
-                        <hr style="border: 2px dotted" />
+                        <hr style="border: 1px dashed" />
                     </div>
-
-                    <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-text-width" aria-hidden="true"></i></h4>
@@ -645,7 +667,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-text-width" aria-hidden="true"></i></h4>
@@ -655,7 +677,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-quora" aria-hidden="true"></i></h4>
@@ -665,9 +687,9 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    </div>
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-child" aria-hidden="true"></i></h4>
@@ -677,7 +699,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-heart-o" aria-hidden="true"></i></h4>
@@ -687,7 +709,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-list" aria-hidden="true"></i></h4>
@@ -698,8 +720,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-server" aria-hidden="true"></i></h4>
@@ -709,7 +731,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-check-circle" aria-hidden="true"></i></h4>
@@ -719,7 +741,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-question-circle" aria-hidden="true"></i></h4>
@@ -730,8 +752,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-sort-alpha-desc" aria-hidden="true"></i></h4>
@@ -741,7 +763,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-key" aria-hidden="true"></i></h4>
@@ -751,7 +773,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-refresh" aria-hidden="true"></i></h4>
@@ -762,8 +784,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i></h4>
@@ -773,7 +795,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i></h4>
@@ -783,7 +805,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></h4>
@@ -794,8 +816,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row " style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row " style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-bullhorn" aria-hidden="true"></i></h4>
@@ -805,7 +827,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-file-text" aria-hidden="true"></i></h4>
@@ -815,7 +837,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-list-ol" aria-hidden="true"></i></h4>
@@ -826,8 +848,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row " style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row " style="padding: 10px ">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-align-left" aria-hidden="true"></i></h4>
@@ -840,12 +862,13 @@
                     </div>
                 </div>
                 <%-- Ecommerce --%>
-                <div class="row" style="padding: 20px 20px" id="data4">
-                    <div class="col-lg-10">
+                <div class="row" style="padding: 20px" id="data4">
+                    <div class="col-lg-12">
                         <h5>Ecommerce</h5>
-                        <hr style="border: 2px dotted" />
+                        <hr style="border: 1px dashed" />
                     </div>
-                    <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-gift" aria-hidden="true"></i></h4>
@@ -855,7 +878,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-gift" aria-hidden="true"></i></h4>
@@ -865,7 +888,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-amazon" aria-hidden="true"></i></h4>
@@ -875,9 +898,9 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    </div>
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-amazon" aria-hidden="true"></i></h4>
@@ -887,7 +910,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-amazon" aria-hidden="true"></i></h4>
@@ -901,12 +924,13 @@
                     </div>
                 </div>
                 <%-- Social Media --%>
-                <div class="row" style="padding: 20px 20px" id="data5">
-                    <div class="col-lg-10">
+                <div class="row" style="padding: 20px" id="data5">
+                    <div class="col-lg-12">
                         <h5>Social Media</h5>
-                        <hr style="border: 2px dotted" />
+                        <hr style="border: 1px dashed" />
                     </div>
-                    <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-facebook-square" aria-hidden="true"></i></h4>
@@ -916,7 +940,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-facebook-square" aria-hidden="true"></i></h4>
@@ -926,7 +950,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-instagram" aria-hidden="true"></i></h4>
@@ -936,9 +960,9 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row hidden-md-up" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    </div>
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-instagram" aria-hidden="true"></i></h4>
@@ -948,7 +972,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-twitter" aria-hidden="true"></i></h4>
@@ -958,7 +982,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
@@ -967,10 +991,12 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+
                     </div>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                   
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
@@ -980,7 +1006,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
@@ -990,7 +1016,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-linkedin-square" aria-hidden="true"></i></h4>
@@ -1001,8 +1027,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-film" aria-hidden="true"></i></h4>
@@ -1013,15 +1039,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <%-- Website --%>
-                <div class="row" style="padding: 20px 20px" id="data6">
-                    <div class="col-lg-10">
+                <div class="row" style="padding: 20px" id="data6">
+                    <div class="col-lg-12">
                         <h5>Website</h5>
-                        <hr style="border: 2px dotted" />
+                        <hr style="border: 1px dashed" />
                     </div>
-
-                    <div class="col-lg-3">
+<div class="row" style="padding: 10px">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
@@ -1031,7 +1057,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
@@ -1041,7 +1067,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
@@ -1052,15 +1078,15 @@
                         </div>
                     </div>
                 </div>
-
+</div>
                 <%-- Other --%>
-                <div class="row" style="padding: 20px 20px" id="data7">
-                    <div class="col-lg-10">
+                <div class="row" style="padding:20px" id="data7">
+                    <div class="col-lg-12">
                         <h5>Other</h5>
-                        <hr style="border: 2px dotted" />
+                        <hr style="border: 1px dashed" />
                     </div>
-
-                    <div class="col-lg-3">
+                    <div class="row" style="padding: 10px">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-refresh" aria-hidden="true"></i></h4>
@@ -1070,7 +1096,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-music" aria-hidden="true"></i></h4>
@@ -1080,7 +1106,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card6-block">
                                 <h4 class="card-title"><i class="fa fa-globe" aria-hidden="true"></i></h4>
@@ -1090,9 +1116,9 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row" style="padding: 20px 20px">
-                        <div class="col-lg-3">
+                  </div>
+                    <div class="row" style="padding:10px">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
@@ -1102,7 +1128,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
@@ -1112,7 +1138,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card6-block">
                                     <h4 class="card-title"><i class="fa fa-star-half-o" aria-hidden="true"></i></h4>
@@ -1127,56 +1153,58 @@
                 </div>
       
 </div>
-           </div>
+    <br />
         <%-- membership body --%>
-        <hr />
-        <div class="row">
+        <div class="row" style="padding: 20px">
             <div class="col-lg-12">
                 <center>
-                    <p>Membership Plan</p>
+                    <h3>Membership Plan</h3>
                 </center>
+                 </div>
+                     <div class="row" style="padding: 20px">
+                         <div class="col-lg-12">
 
-                <div class="container4" style="margin-left: 500px">
+                         <center >
                     <input type="radio" id="radio1" name="options" value="1" checked onclick="toggleData()">
-                    <label for="radio1">&nbsp; Monthly&nbsp;</label>
-                    <input type="radio" id="radio2" name="options" value="2" onclick="toggleData()">
-                    <label for="radio2">&nbsp;Yearly&nbsp;</label>
+                    <label for="radio1" >Monthly</label>
+                    <input type="radio" id="radio2" name="options" value="2"  onclick="toggleData()">
+                    <label for="radio2">Yearly</label>
                     <input type="radio" id="radio3" name="options" value="3" onclick="toggleData()">
-                    <label for="radio3">&nbsp;Lifetime&nbsp;</label>
-
-
-                </div>
-
-
-
+                    <label for="radio3">Lifetime</label>
+               
+                        </center>
+                             </div>
+                         </div>
+            
+            <div class="row">
                 <div class="card2">
                     <div class="row">
                         <div class="col-lg-12">
-                            <label style="float: right; background-color: darkblue; color: white; width: calc(100% - 675px); text-align: center">Recommended</label>
+                            <label style="float: right; background-color: darkblue; color: white; min-width: calc(100% - 675px); text-align: center;min-height:40px">Recommended</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
-                            <span>Free Plan</span>
-                            <div class="card-deck mb-3 text-center">
+                            
+                            
                                 <div class="card mb-4 box-shadow">
-
+                                    <div style="min-height:50px"><h4>Free Plan</h4></div>
                                     <div class="card-header">
-                                        <h4 class="my-0 font-weight-normal">Free </h4>
+                                        <h4 style="text-align:center">Free </h4>
                                     </div>
                                     <div class="card-body">
 
                                         <ul class="list-unstyled mt-3 mb-4" style="text-align: left">
                                             <li>Features of Free Plan</li>
-                                            <li>32 AI Document Templates<br />
+                                            <li>32 AI Document Templates
                                             </li>
-                                            <li>10,000 Words per month<br />
+                                            <li>10,000 Words per month
                                             </li>
-                                            <li>100 Images per month<br />
+                                            <li>100 Images per month
                                             </li>
-                                            <li>0 Speech to Text per month<br />
+                                            <li>0 Speech to Text per month
                                             </li>
-                                            <li>0 MB Audio file size limit<br />
+                                            <li>0 MB Audio file size limit
                                             </li>
                                             <li><i class="mdi mdi-close"></i>AI Chat <span class="font-weight-bold">?</span></li>
                                             <li><i class="mdi mdi-close"></i>AI Code <span class="font-weight-bold">?</span></li>
@@ -1188,28 +1216,28 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            
                         </div>
                         <div class="col-lg-4">
-                            <span>Trial Plan</span>
+                            
                             <div class="card mb-4 box-shadow">
-
+                                <div style="min-height:50px"><h4>Trial Plan</h4></div>
                                 <div class="card-header">
 
-                                    <h4 class="my-0 font-weight-normal">Trial</h4>
+                                    <h4 style="text-align:center">Trail </h4>
                                 </div>
                                 <div class="card-body">
                                     <ul class="list-unstyled mt-3 mb-4" style="text-align: left;">
                                         <li>Features of Trial Plan</li>
-                                        <li>61 AI Document Templates<br />
+                                        <li>61 AI Document Templates
                                         </li>
-                                        <li>50,000 Words per month<br />
+                                        <li>50,000 Words per month
                                         </li>
-                                        <li>500 Images per month<br />
+                                        <li>500 Images per month
                                         </li>
-                                        <li>0 Speech to Text per month<br />
+                                        <li>0 Speech to Text per month
                                         </li>
-                                        <li>0 MB Audio file size limit<br />
+                                        <li>0 MB Audio file size limit
                                         </li>
                                         <li><i class="mdi mdi-close"></i>AI Chat <span class="font-weight-bold">?</span></li>
                                         <li><i class="mdi mdi-close"></i>AI Code <span class="font-weight-bold">?</span></li>
@@ -1222,32 +1250,31 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <span>Extended Plan</span>
-                            <br />
+                            
                             <div class="card mb-4 box-shadow">
-
+                                <div style="min-height:50px"><h4>Extended Plan</h4></div>
                                 <div class="card-header">
-
-                                    <h4 class="my-0 font-weight-normal">Extended Plan</h4>
+                                    
+                                <h4 style="text-align:center;color: darkblue">
+                                <span id="data8" style="color: blue; font-size: 15px"><strong style="font-size:24px;font-weight:700">₹5/</strong>Month</span>
+                                    <span id="data9" style="color: blue; font-size: 15px;"><strong style="font-size:24px;font-weight:700">₹50/</strong>Month</span>
+                                    <span id="data10" style="color: blue; font-size: 15px"><strong style="font-size:24px;font-weight:700">₹550/</strong>Month</span>
+                                    </h4>
                                 </div>
-                            </div>
+                            
                             <div class="card-body">
-                                <span class="my-0 font-weight-normal" style="color: darkblue"></span>
-                                <center>
-                                    <span id="data8" style="color: blue; font-size: 15px"><b>₹5/</b>Month</span>
-                                    <span id="data9" style="color: blue; font-size: 15px;"><b>₹50/</b>Month</span>
-                                    <span id="data10" style="color: blue; font-size: 15px"><b>₹550/</b>Month</span></center>
+                                
                                 <ul class="list-unstyled mt-3 mb-4" style="text-align: left;">
                                     <li>Features of Extended Plan</li>
-                                    <li>61 AI Document Templates<br />
+                                    <li>61 AI Document Templates
                                     </li>
-                                    <li>100,000 Words per month<br />
+                                    <li>100,000 Words per month
                                     </li>
-                                    <li>1000 Images per month<br />
+                                    <li>1000 Images per month
                                     </li>
-                                    <li>0 Speech to Text per month<br />
+                                    <li>0 Speech to Text per month
                                     </li>
-                                    <li>0 MB Audio file size limit<br />
+                                    <li>0 MB Audio file size limit
                                     </li>
                                     <li><i class="mdi mdi-close"></i>AI Chat <span class="font-weight-bold">?</span></li>
                                     <li><i class="mdi mdi-close"></i>AI Code <span class="font-weight-bold">?</span></li>
@@ -1257,23 +1284,32 @@
                                 </ul>
                                 <button type="button" class="btn btn-lg btn-block btn-primary"><a href="upgrade5.aspx" style="color: white">Upgrade</a></button>
                             </div>
-
+</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <%-- testimonials --%>
-        <hr />
-        <div class="row">
-             <center>
-        <p style="text-align: center; font-size: 20px;">Testimonials</p>
+        
+        <div class="row" style="background-color:#f8f8f8">
+            <center>
+         <div class="col-lg-12" style="font-size: 20px;
+    padding: 0;margin:40px">
+             <h4 >Testimonials</h4>
+             </div>   
+              <div class="row">
+           <div class="col-lg-4" style="cursor:grab">
+           <i class="fa fa-quote-right" aria-hidden="true" style="float:right;font-size:40px;"></i>
+</div>
+       </div> 
        
             <div class="content-wrapper">
                 <div class="wrapper-for-arrows">
+
                     <fieldset>
                         <legend>
-                            <i class="fa fa-user-circle" id="imgDiv" aria-hidden="true" style="background-image: url(&quot;&quot;);"></i>
+                            <i class="fa fa-user-circle" id="imgDiv" aria-hidden="true" style="font-size:80px;color:gray"></i>
                         </legend>
 
                         <div id="reviewWrap" class="review-wrap" style="transform: translate(0px, 0px); opacity: 1;">
@@ -1283,7 +1319,7 @@
                             <div id="description" style="height: 96px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                         </div>
                         <div class="left-arrow-wrap arrow-wrap">
-                            <div class="arrow" id="leftArrow"></div>
+                            <div class="arrow" id="leftArrow" style="color:black"></div>
                         </div>
                         <div class="right-arrow-wrap arrow-wrap">
                             <div class="arrow" id="rightArrow"></div>
@@ -1293,13 +1329,13 @@
             </div>
         </center>
             </div>
-        <hr />
         <%-- blog --%>
-    <div style="padding-bottom:400px;">
-        <div class="row">
+    <div class="row" style="margin:50px">
         <div class="col-lg-12">
             <a href="blog.aspx" rel="Blog" style="float: right">View Blog<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             <h3>Recent Blog</h3>
+            </div>
+            <div style="padding-bottom:400px;">
             <div class="blog2">
                 <a href="blog.aspx" style="color: gray">
                     <img src="images/image.png" style="height: 300px" alt="blog" />
@@ -1313,9 +1349,8 @@
                 </a>
             </div>
         </div>
-      </div>
+      
         </div>
-       <br />
         <%-- partnership slides  --%>
     <center>
     <div class="row">
@@ -1615,6 +1650,7 @@
 
     </script>
     <script>
+        
         function toggleData() {
             var radio1 = document.getElementById("radio1");
             var radio2 = document.getElementById("radio2");
@@ -1624,6 +1660,7 @@
             var data10 = document.getElementById("data10");
 
             if (radio1.checked) {
+                
                 data8.style.display = "block";
                 data9.style.display = "none";
                 data10.style.display = "none";
